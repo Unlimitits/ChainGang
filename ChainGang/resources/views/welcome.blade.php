@@ -8,7 +8,6 @@
 
     </head>
 
-    <  </>
     @include('Layout.layout')
 
     <div class="container-fluid">

@@ -84,3 +84,29 @@ form {
     margin-top: 75px;
     margin-left: 100px;
 }
+
+@media screen and (max-width: 992px) {
+
+    .card {
+    }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .bd-example {
+        display: none;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+    .spacer {
+        display: none;
+    }
+
+
+}
