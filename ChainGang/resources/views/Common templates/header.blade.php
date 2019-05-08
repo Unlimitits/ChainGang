@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <img class="navbar-brand" src="{{ asset('img/logo.png') }}">
