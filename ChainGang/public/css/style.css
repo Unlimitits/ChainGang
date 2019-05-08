@@ -3,9 +3,21 @@
 
 }
 
+.spacer {
+    display: none;
+}
+
+.bd-example {
+    display: none;
+}
+
+.carousel {
+    display: none;
+}
+
 body {
     max-width: 100%;
-    background-color: #fbeaeb;
+    background-color: #2f3c7e;
 }
 .card-img-caption {
     border-top-left-radius: calc(.25rem - 1px);
@@ -55,7 +67,7 @@ body {
 }
 
 .navbar {
-    background-color: #2f3c7e;
+    background-color: #2f3c7e !important;
 
 }
 
@@ -84,9 +96,7 @@ body {
     color: #2f3c7e;
 }
 
-.row {
-    margin-right: 0;
-}
+
 
 .sale_card {
     border: 1px solid black;
@@ -96,6 +106,7 @@ body {
     min-height: 200px;
     background-color: #2f3c7e;
     width: 100%;
+    color: #fbeaeb;
 }
 
 #nieuwsbrief-form {
@@ -112,5 +123,73 @@ body {
 
 #footer{
     text-align: center;
-    background-color: #fbeaeb;
+    background-color: #2f3c7e;
+    color: #fbeaeb;
 }
+
+.kleur-nav {
+    color: #fbeaeb !important;
+}
+
+
+/*!* Extra small devices (phones, 600px and down) *!*/
+/*@media only screen and (max-width: 600px) {...}*/
+
+/*!* Small devices (portrait tablets and large phones, 600px and up) *!*/
+/*@media only screen and (min-width: 600px) {...}*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header-mobile {
+        display: none;
+    }
+
+    .header-web {
+        display: initial;
+    }
+
+    .spacer {
+        display: initial;
+    }
+
+    .bd-example {
+        display: initial;
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232f3c7e' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232f3c7e' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    .carousel-caption{
+        color: #2f3c7e !important;
+    }
+
+    .carousel-indicators li {
+        background-color: #2f3c7e ;
+    }
+
+    .carousel {
+        display: initial;
+    }
+
+    .spacer-height {
+        min-height: 100px;
+    }
+
+    .spacer {
+        background-color: #2f3c7e;
+        min-height: 100px;
+        height: 100px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...}*/
+
+/*!* Extra large devices (large laptops and desktops, 1200px and up) *!*/
+/*@media only screen and (min-width: 1200px) {...}*/
