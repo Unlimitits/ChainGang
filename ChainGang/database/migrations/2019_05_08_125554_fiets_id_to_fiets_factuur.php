@@ -26,8 +26,8 @@ class FietsIdToFietsFactuur extends Migration
      */
     public function down()
     {
-        Schema::table('fiets_factuur', function (Blueprint $table) {
-            //
-        });
+    Schema::table('factuur', function (Blueprint $table) {
+
+    });
     }
 }
