@@ -1,0 +1,163 @@
+.container-fluid{
+    padding: 0;
+    width: 100%;
+}
+
+.col {
+    padding: 0;
+}
+
+.bg-light {
+    background-color: #2f3c7e !important;
+}
+
+.padding-nav {
+    padding-top: 10px;
+}
+
+.kleur-nav {
+    color: #fbeaeb !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232f3c7e' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232f3c7e' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-caption{
+    color: #2f3c7e !important;
+}
+
+.carousel-indicators li {
+    background-color: #2f3c7e ;
+}
+
+.card-img-caption {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.card-img-caption .card-img-top {
+    z-index: 0;
+}
+
+.card-img-caption .card-text {
+    text-align: center;
+    width: 100%;
+    margin: 75% 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 50px;
+}
+
+.card{
+    margin-left: 10%;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.card-row {
+    background-color: #2f3c7e;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.roze-kleur{
+    background-color: #fbeaeb;
+}
+
+#h1-margin {
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.spacer {
+    background-color: #2f3c7e;
+    min-height: 100px;
+}
+
+.nieuwsbrief {
+    background-color: #2f3c7e;
+    min-height: 200px;
+}
+
+form {
+    margin-top: 75px;
+    margin-left: 100px;
+}
+
+
+
+
+
+/*@include media-breakpoint-up(xl) {*/
+    /*.card {*/
+        /*margin-left: 50px;*/
+    /*}*/
+/*}*/
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .bd-example{
+        display: none;
+    }
+
+    .spacer {
+        display: none;
+    }
+
+    .carousel {
+        display: none;
+
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .bd-example {
+        display: none;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+    .spacer {
+        display: none;
+    }
+
+    .card-row {
+        padding-right: 3%;
+    }
+}
+/*!* Medium devices (landscape tablets, 768px and up) *!*/
+/*@media only screen and (min-width: 768px) {...}*/
+
+/*!* Large devices (laptops/desktops, 992px and up) *!*/
+/*@media only screen and (min-width: 992px) {...}*/
+
+@media only screen and (min-width: 1006px) {
+    .card{
+        margin-left: 8%;
+    }
+}
+
+@media only screen and (min-width: 996px){
+    .card {
+        margin-left: 2%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    form {
+        margin-left: 0;
+    }
+    /* margin-left: 100px; */
+}
+

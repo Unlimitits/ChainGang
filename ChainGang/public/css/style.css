@@ -1,35 +1,24 @@
 .container-fluid{
     padding: 0;
+
 }
 
-.bg-light {
-    background-color: #2f3c7e !important;
+.spacer {
+    display: none;
 }
 
-.padding-nav {
-    padding-top: 10px;
+.bd-example {
+    display: none;
 }
 
-.kleur-nav {
-    color: #fbeaeb !important;
+.carousel {
+    display: none;
 }
 
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232f3c7e' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+body {
+    max-width: 100%;
+    background-color: #2f3c7e;
 }
-
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232f3c7e' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-}
-
-.carousel-caption{
-    color: #2f3c7e !important;
-}
-
-.carousel-indicators li {
-    background-color: #2f3c7e ;
-}
-
 .card-img-caption {
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
@@ -49,9 +38,14 @@
 }
 
 .card{
-    margin-left: 75px;
     border: none;
-    margin-bottom: 20px;
+    margin: 0 auto !important;
+    margin-bottom: 20px !important;
+    background-color: #fbeaeb;
+}
+
+.card-text {
+    color: #2f3c7e;
 }
 
 .card-row {
@@ -60,53 +54,142 @@
     padding-bottom: 75px;
 }
 
+.header-web {
+    display: none;
+}
+
+.fa-1x {
+    font-size: 1.5rem;
+    color: #fbeaeb;
+}
+.navbar-toggler.toggler-example {
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #2f3c7e !important;
+
+}
+
+.col {
+    padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fbeaeb;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #fbeaeb;
+}
+
+.nav-link {
+    margin-left: 5%;
+}
+
 .roze-kleur{
     background-color: #fbeaeb;
 }
 
-#h1-margin {
-    margin-left: 60px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.h1-margin {
+    margin-left: 5%;
+    color: #2f3c7e;
 }
 
-.spacer {
-    background-color: #2f3c7e;
-    min-height: 100px;
+
+
+.sale_card {
+    border: 1px solid black;
 }
 
-.nieuwsbrief {
-    background-color: #2f3c7e;
+#nieuwsbrief {
     min-height: 200px;
+    background-color: #2f3c7e;
+    width: 100%;
+    color: #fbeaeb;
 }
 
-form {
-    margin-top: 75px;
-    margin-left: 100px;
+#nieuwsbrief-form {
+    /*width: 50%;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 992px) {
+#email_form {
+    margin-bottom: 10px;
+}
 
-    .card {
-    }
+#footer{
+    text-align: center;
+    background-color: #2f3c7e;
+    color: #fbeaeb;
+}
 
-
+.kleur-nav {
+    color: #fbeaeb !important;
 }
 
 
-@media screen and (max-width: 600px) {
+/*!* Extra small devices (phones, 600px and down) *!*/
+/*@media only screen and (max-width: 600px) {...}*/
 
-    .bd-example {
+/*!* Small devices (portrait tablets and large phones, 600px and up) *!*/
+/*@media only screen and (min-width: 600px) {...}*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header-mobile {
         display: none;
     }
 
-    .carousel {
-        display: none;
+    .header-web {
+        display: initial;
     }
 
     .spacer {
-        display: none;
+        display: initial;
     }
 
+    .bd-example {
+        display: initial;
+    }
 
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232f3c7e' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232f3c7e' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    .carousel-caption{
+        color: #2f3c7e !important;
+    }
+
+    .carousel-indicators li {
+        background-color: #2f3c7e ;
+    }
+
+    .carousel {
+        display: initial;
+    }
+
+    .spacer-height {
+        min-height: 100px;
+    }
+
+    .spacer {
+        background-color: #2f3c7e;
+        min-height: 100px;
+        height: 100px;
+    }
 }
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...}*/
+
+/*!* Extra large devices (large laptops and desktops, 1200px and up) *!*/
+/*@media only screen and (min-width: 1200px) {...}*/
