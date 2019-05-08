@@ -17,9 +17,9 @@ class CreateReviewTable extends Migration
             $table->increments('review_id');
             $table->unsignedInteger('klant_id');
             $table->unsignedInteger('fiets_id');
-            $table->string('titel');
-            $table->string('omschrijving');
-            $table->integer('waardering');
+            $table->string('review_titel');
+            $table->string('review_omschrijving');
+            $table->integer('review_waardering');
 
 
 

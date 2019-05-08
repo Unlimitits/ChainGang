@@ -16,9 +16,9 @@ class CreateKlantTable extends Migration
         Schema::create('klant', function (Blueprint $table) {
             $table->increments('klant_id');
             $table->unsignedInteger('gebruiker_id');
-            $table->string('straat');
-            $table->string('postcode');
-            $table->string('plaats');
+            $table->string('klant_straat');
+            $table->string('klant_postcode');
+            $table->string('klant_plaats');
             $table->timestamps();
         });
     }

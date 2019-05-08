@@ -17,7 +17,7 @@ class CreateFietsFactuurTable extends Migration
             $table->increments('fiets_factuur_id');
             $table->unsignedInteger('fiets_id');
             $table->unsignedInteger('factuur_id');
-            $table->integer('aantal');
+            $table->integer('fiets_factuur_aantal');
             $table->timestamps();
         });
     }
