@@ -17,7 +17,10 @@
             <li class="nav-item padding-nav">
                 <a class="nav-link kleur-nav" href="#">Inloggen</a>
             </li>
-            <img class="navbar-brand" src="{{ asset('img/avatar-placeholder.png') }}">
+            <li class="nav-item padding-nav">
+                <a class="nav-link kleur-nav" href="#"><i class="fas fa-shopping-cart"></i></a>
+            </li>
         </ul>
     </div>
 </nav>
+
