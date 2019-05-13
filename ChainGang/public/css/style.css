@@ -58,6 +58,8 @@ body {
     color: #fbeaeb !important;
 }
 
+
+
 /* End header CSS*/
 
 
@@ -202,6 +204,81 @@ body {
 
 /* End Home CSS*/
 
+
+/* categoriepagina CSS */
+
+.btn-secondary {
+    color: #fbeaeb;
+    background-color: transparent;
+    border-color: #fbeaeb;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fbeaeb;
+    background-color: transparent;
+    border-color: #fbeaeb;
+}
+
+.btn-secondary:hover {
+    color: #fbeaeb;
+    background-color: transparent;
+    border-color: #fbeaeb;
+}
+
+.dropdown-menu.show {
+    background-color: #2f3c7e;
+}
+
+.categorie-h1 {
+    color: #fbeaeb;
+    text-align: center;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    border: 1px solid #fbeaeb;
+    background-color: #fbeaeb;
+    color: #2f3c7e;
+}
+
+@media only screen and (min-width: 1200px) {
+    .dropdown {
+        display: none;
+    }
+}
+
+.list-group {
+    margin-left: 10%;
+    color: #2f3c7e;
+}
+
+.list-group-item {
+    background-color: #fbeaeb;
+}
+
+.list-group {
+    display: none;
+}
+
+.spacer-list {
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    .list-group {
+        display: initial;
+    }
+
+    .spacer-list {
+        display: initial;
+    }
+}
+
+/* End Categoriepagina CSS */
 
 
 
