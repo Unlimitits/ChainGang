@@ -1,3 +1,5 @@
+/* Common css*/
+
 .container-fluid{
     padding: 0;
 
@@ -7,6 +9,93 @@
     display: none;
 }
 
+body {
+    max-width: 100%;
+    background-color: #2f3c7e;
+}
+
+.roze-kleur{
+    background-color: #fbeaeb;
+}
+
+/* End Common css*/
+
+
+
+/* Header CSS*/
+
+
+.header-web {
+    display: none;
+}
+
+.fa-1x {
+    font-size: 1.5rem;
+    color: #fbeaeb;
+}
+.navbar-toggler.toggler-example {
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #2f3c7e !important;
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fbeaeb;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #fbeaeb;
+}
+
+.nav-link {
+    margin-left: 5%;
+}
+
+.kleur-nav {
+    color: #fbeaeb !important;
+}
+
+/* End header CSS*/
+
+
+/* Nieuwsbrief CSS*/
+
+#nieuwsbrief {
+    min-height: 200px;
+    background-color: #2f3c7e;
+    width: 100%;
+    color: #fbeaeb;
+}
+
+#nieuwsbrief-form {
+    /*width: 50%;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#email_form {
+    margin-bottom: 10px;
+}
+
+/* End Nieuwsbrief CSS*/
+
+
+/* Footer CSS*/
+#footer{
+    text-align: center;
+    background-color: #2f3c7e;
+    color: #fbeaeb;
+}
+
+/* End footer CSS*/
+
+
+/* Home CSS*/
 .bd-example {
     display: none;
 }
@@ -15,10 +104,6 @@
     display: none;
 }
 
-body {
-    max-width: 100%;
-    background-color: #2f3c7e;
-}
 .card-img-caption {
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
@@ -54,41 +139,8 @@ body {
     padding-bottom: 75px;
 }
 
-.header-web {
-    display: none;
-}
-
-.fa-1x {
-    font-size: 1.5rem;
-    color: #fbeaeb;
-}
-.navbar-toggler.toggler-example {
-    cursor: pointer;
-}
-
-.navbar {
-    background-color: #2f3c7e !important;
-
-}
-
 .col {
     padding: 0;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: #fbeaeb;
-}
-
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: #fbeaeb;
-}
-
-.nav-link {
-    margin-left: 5%;
-}
-
-.roze-kleur{
-    background-color: #fbeaeb;
 }
 
 .h1-margin {
@@ -96,49 +148,10 @@ body {
     color: #2f3c7e;
 }
 
-
-
 .sale_card {
     border: 1px solid black;
 }
 
-#nieuwsbrief {
-    min-height: 200px;
-    background-color: #2f3c7e;
-    width: 100%;
-    color: #fbeaeb;
-}
-
-#nieuwsbrief-form {
-    /*width: 50%;*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#email_form {
-    margin-bottom: 10px;
-}
-
-#footer{
-    text-align: center;
-    background-color: #2f3c7e;
-    color: #fbeaeb;
-}
-
-.kleur-nav {
-    color: #fbeaeb !important;
-}
-
-
-/*!* Extra small devices (phones, 600px and down) *!*/
-/*@media only screen and (max-width: 600px) {...}*/
-
-/*!* Small devices (portrait tablets and large phones, 600px and up) *!*/
-/*@media only screen and (min-width: 600px) {...}*/
-
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .header-mobile {
         display: none;
@@ -187,9 +200,36 @@ body {
     }
 }
 
+/* End Home CSS*/
 
-/* Large devices (laptops/desktops, 992px and up) */
-/*@media only screen and (min-width: 992px) {...}*/
 
-/*!* Extra large devices (large laptops and desktops, 1200px and up) *!*/
-/*@media only screen and (min-width: 1200px) {...}*/
+
+
+/* Voorbeelden Media Queries*/
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 600px) {
+}
+
+
+/*Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+
+/*!* Large devices (laptops/desktops, 992px and up) *!*/
+@media only screen and (min-width: 992px) {
+
+}
+
+/*Extra large devices (large laptops and desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px) {
+
+}
