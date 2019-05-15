@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/categoriepagina', function () {
     return view('categoriepagina');
 });
+
+Route::get('/detailpagina', function (){
+    return view('detailpagina');
+});

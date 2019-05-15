@@ -280,6 +280,99 @@ body {
 
 /* End Categoriepagina CSS */
 
+/* Detailpagina css*/
+
+.img-fiets-size {
+    width: 60%;
+    margin-left: 20%;
+}
+
+#fiets-title {
+    color: #fbeaeb;
+    margin-left: 20%;
+    margin-top: 10px;
+}
+
+.btn-block {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #fbeaeb;
+    border-color: transparent;
+    color: #2f3c7e;
+}
+
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #2f3c7e;
+    background-color: #fbeaeb;
+    border-color: transparent;
+}
+
+.btn-primary:hover {
+    color: #2f3c7e;
+    background-color: #fbeaeb;
+    border-color: transparent;
+}
+
+td{
+    color: #fbeaeb;
+}
+
+table {
+    border-collapse: collapse;
+    border: solid #fbeaeb 1px;
+    margin: 0 auto;
+    width: 60%;
+}
+
+tr {
+    border-bottom: solid #fbeaeb 1px;
+}
+
+.ster{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.ster-col {
+    max-width: 30px;
+    max-height: 30px;
+
+}
+
+.eerste-ster-col {
+    margin-left: 20%;
+}
+
+.review {
+    width: 100%;
+    height: 200px;
+}
+
+.review-button {
+    float: right;
+    margin-left: -50%;
+    background-color: #fbeaeb;
+    color: #2f3c7e;
+}
+
+.schrijf-review {
+    padding: 3%;
+}
+
+@media only screen and (max-width: 768px) {
+    .review-table {
+        display: none;
+    }
+
+    .review-title {
+        display: none;
+    }
+
+}
+/*End detailpagina css*/
+
 
 
 /* Voorbeelden Media Queries*/
