@@ -14,12 +14,31 @@
             <li class="nav-item padding-nav">
                 <a class="nav-link kleur-nav" href="#">Contact</a>
             </li>
-            <li class="nav-item padding-nav">
-                <a class="nav-link kleur-nav" href="#">Inloggen</a>
-            </li>
+            {{--<li class="nav-item padding-nav">--}}
+                {{--<a class="nav-link kleur-nav" href="#">Inloggen</a>--}}
+            {{--</li>--}}
+
+
+
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        {{--<a href="{{ url('/home') }}">Home</a>--}}
+                    @else
+                        <a class="nav-link kleur-nav" href="{{ route('login') }}">Inloggen</a>
+
+                        {{--@if (Route::has('register'))--}}
+                        {{--<a href="{{ route('register') }}">Register</a>--}}
+                        {{--@endif--}}
+                    @endauth
+                </div>
+            @endif
+
+
             <li class="nav-item padding-nav">
                 <a class="nav-link kleur-nav" href="#"><i class="fas fa-shopping-cart"></i></a>
             </li>
+
         </ul>
     </div>
 </nav>

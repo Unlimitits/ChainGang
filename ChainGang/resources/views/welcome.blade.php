@@ -9,7 +9,7 @@
     @include('Layout.layout')
 
 </head>
-<body>
+<body style="overflow-x: hidden;">
 <div class="container-fluid">
 
     <div class="row header-web">

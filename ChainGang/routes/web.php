@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
 
-Route::get('/categoriepagina', function () {
-    return view('categoriepagina');
-});
+Route::get('/home', 'HomeController@index')->name('home');
