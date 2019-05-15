@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/categoriepagina', function () {
+    return view('categoriepagina');
+});
