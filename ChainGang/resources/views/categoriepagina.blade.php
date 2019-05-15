@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-    {{--<link href="{{ asset('style.css') }}" rel="stylesheet" type="text/css" >--}}
     @include('Layout.layout')
-
 </head>
+
 <body>
 <div class="container-fluid">
 
