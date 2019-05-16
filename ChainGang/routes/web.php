@@ -27,6 +27,8 @@ Route::get('/detailpagina', function (){
     return view('detailpagina');
 });
 
+
 Route::get('/profiel', function (){
     return view('profiel');
 })->name('profiel');
+
