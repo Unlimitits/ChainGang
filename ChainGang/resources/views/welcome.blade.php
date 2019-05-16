@@ -9,7 +9,7 @@
     @include('Layout.layout')
 
 </head>
-<body>
+<body style="overflow-x: hidden;">
 <div class="container-fluid">
 
     <div class="row header-web">
@@ -37,21 +37,21 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('img/actie.png') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/banner.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/actie.png') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/lukassen_home.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Second slide label</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/actie.png') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/slider-alexander1.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Third slide label</h5>
                                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -77,7 +77,7 @@
             <div class="card" style="width: 20rem;">
                 <div class="card-img-caption">
                     <p class="card-text">Damesfietsen</p>
-                    <img class="card-img-top img-fluid" src="{{ asset('img/dames-fiets.png') }}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{{ asset('img/Dames Fietsen/dames-fiets 10.38.32.png') }}" alt="Card image cap">
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
             <div class="card" style="width: 20rem;">
                 <div class="card-img-caption">
                     <p class="card-text">Herenfietsen</p>
-                    <img class="card-img-top" src="{{ asset('img/dames-fiets.png') }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('img/Heren Fietsen/heren-fiets.jpg') }}" alt="Card image cap">
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
             <div class="card" style="width: 20rem;">
                 <div class="card-img-caption">
                     <p class="card-text">Kinderfietsen</p>
-                    <img class="card-img-top" src="{{ asset('img/dames-fiets.png') }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('img/Kinder Fietsen/kinder-fiets.jpg') }}" alt="Card image cap">
                 </div>
             </div>
         </div>

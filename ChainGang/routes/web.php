@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/categoriepagina', function () {
     return view('categoriepagina');
@@ -23,3 +26,7 @@ Route::get('/categoriepagina', function () {
 Route::get('/detailpagina', function (){
     return view('detailpagina');
 });
+
+Route::get('/profiel', function (){
+    return view('profiel');
+})->name('profiel');
