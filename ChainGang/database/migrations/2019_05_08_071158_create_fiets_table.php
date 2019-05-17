@@ -15,12 +15,20 @@ class CreateFietsTable extends Migration
     {
         Schema::create('fiets', function (Blueprint $table) {
             $table->increments('fiets_id');
+            $table->unsignedInteger('aanbieding_id');
             $table->string('fiets_naam');
+            $table->string('fiets_serie');
+            $table->string('fiets_motortechniek');
+            $table->string('fiets_motorpositie');
+            $table->string('fiets_versnellingen');
+            $table->string('fiets_materiaal');
+            $table->string('fiets_kleur');
+            $table->string('fiets_frameType');
+            $table->string('fiets_jaar');
             $table->string('fiets_merk');
             $table->string('fiets_type');
             $table->double('fiets_prijs');
             $table->string('fiets_omschrijving');
-            $table->string('fiets_specificaties');
             $table->binary('fiets_foto');
             $table->timestamps();
         });
