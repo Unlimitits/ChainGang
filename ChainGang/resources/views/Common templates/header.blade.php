@@ -12,7 +12,7 @@
                 <a class="nav-link kleur-nav" href="#">Producten</a>
             </li>
             <li class="nav-item padding-nav">
-                <a class="nav-link kleur-nav" href="#">Contact</a>
+                <a class="nav-link kleur-nav" href="{{ route('contact') }}">Contact</a>
             </li>
             {{--<li class="nav-item padding-nav">--}}
                 {{--<a class="nav-link kleur-nav" href="#">Inloggen</a>--}}
