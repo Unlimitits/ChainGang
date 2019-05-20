@@ -36,3 +36,6 @@ Route::get('/winkelwagen', function (){
     return view('winkelwagen');
 })->name('winkelwagen');
 
+Route::get('/profiel.blade.php', function (){
+    return view('profiel.blade.php');
+})->name('profiel.blade.php');

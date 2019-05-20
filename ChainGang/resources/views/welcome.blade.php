@@ -37,21 +37,21 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('img/actie.png') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/banner.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/actie.png') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/lukassen_home.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Second slide label</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/actie.png') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/slider-alexander1.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Third slide label</h5>
                                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -72,91 +72,91 @@
     </div>
 </div>
 
-    <div class="row card-row">
-        <div class="col">
-            <div class="card" style="width: 20rem;">
-                <div class="card-img-caption">
-                    <p class="card-text">Damesfietsen</p>
-                    <img class="card-img-top img-fluid" src="{{ asset('img/dames-fiets.png') }}" alt="Card image cap">
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 20rem;">
-                <div class="card-img-caption">
-                    <p class="card-text">Herenfietsen</p>
-                    <img class="card-img-top" src="{{ asset('img/dames-fiets.png') }}" alt="Card image cap">
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 20rem;">
-                <div class="card-img-caption">
-                    <p class="card-text">Kinderfietsen</p>
-                    <img class="card-img-top" src="{{ asset('img/dames-fiets.png') }}" alt="Card image cap">
-                </div>
+<div class="row card-row">
+    <div class="col">
+        <div class="card" style="width: 20rem;">
+            <div class="card-img-caption">
+                <p class="card-text">Damesfietsen</p>
+                <img class="card-img-top img-fluid" src="{{ asset('img/Dames Fietsen/dames-fiets 10.38.32.png') }}" alt="Card image cap">
             </div>
         </div>
     </div>
 
-    <div class="row roze-kleur">
-        <div class="col">
-            <h1 class="h1-margin">Sale</h1>
-        </div>
-
-    </div>
-
-    <div class="row roze-kleur">
-        <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="card sale_card" style="width: 18rem;">
-                <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="card sale_card" style="width: 18rem;">
-                <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="card sale_card" style="width: 18rem;">
-                <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="card sale_card" style="width: 18rem;">
-                <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    {{--Spacer--}}
-    <div class="row">
-        <div class="col spacer-height">
-            <div class="spacer">
+    <div class="col">
+        <div class="card" style="width: 20rem;">
+            <div class="card-img-caption">
+                <p class="card-text">Herenfietsen</p>
+                <img class="card-img-top" src="{{ asset('img/Heren Fietsen/heren-fiets.jpg') }}" alt="Card image cap">
             </div>
         </div>
     </div>
+
+    <div class="col">
+        <div class="card" style="width: 20rem;">
+            <div class="card-img-caption">
+                <p class="card-text">Kinderfietsen</p>
+                <img class="card-img-top" src="{{ asset('img/Kinder Fietsen/kinder-fiets.jpg') }}" alt="Card image cap">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row roze-kleur">
+    <div class="col">
+        <h1 class="h1-margin">Sale</h1>
+    </div>
+
+</div>
+
+<div class="row roze-kleur">
+    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="card sale_card" style="width: 18rem;">
+            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="card sale_card" style="width: 18rem;">
+            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="card sale_card" style="width: 18rem;">
+            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="card sale_card" style="width: 18rem;">
+            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{--Spacer--}}
+<div class="row">
+    <div class="col spacer-height">
+        <div class="spacer">
+        </div>
+    </div>
+</div>
 
 
 <div class="row">
@@ -186,59 +186,59 @@
 </div>
 
 
-    {{--Spacer--}}
-    <div class="row">
-        <div class="col spacer-height">
-            <div class="spacer"></div>
-        </div>
+{{--Spacer--}}
+<div class="row">
+    <div class="col spacer-height">
+        <div class="spacer"></div>
     </div>
+</div>
 
-    <div class="row roze-kleur">
-        <div class="col">
-            <h1 class="h1-margin">Nieuw</h1>
-        </div>
+<div class="row roze-kleur">
+    <div class="col">
+        <h1 class="h1-margin">Nieuw</h1>
     </div>
+</div>
 
-    <div class="row roze-kleur">
-        <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="card sale_card" style="width: 18rem;">
-                <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="card sale_card" style="width: 18rem;">
-                <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="card sale_card" style="width: 18rem;">
-                <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="card sale_card" style="width: 18rem;">
-                <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+<div class="row roze-kleur">
+    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="card sale_card" style="width: 18rem;">
+            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
     </div>
+    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="card sale_card" style="width: 18rem;">
+            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="card sale_card" style="width: 18rem;">
+            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="card sale_card" style="width: 18rem;">
+            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {{--Spacer--}}
 <div class="row">
@@ -274,26 +274,26 @@
 </div>
 
 
-    <div class="row">
-        <div class="col">
-            <div id="nieuwsbrief" class="my-auto">
-                <form id="nieuwsbrief-form" >
-                    <div class="form-group">
-                        <p>Abonneer op onze nieuwsbrief!</p>
-                        <input type="email" class="form-control" placeholder="Email" id="email_form">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
+<div class="row">
+    <div class="col">
+        <div id="nieuwsbrief" class="my-auto">
+            <form id="nieuwsbrief-form" >
+                <div class="form-group">
+                    <p>Abonneer op onze nieuwsbrief!</p>
+                    <input type="email" class="form-control" placeholder="Email" id="email_form">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
 
-    <div class="row">
-        <div class="col">
-            @include('Common templates.footer')
-        </div>
+<div class="row">
+    <div class="col">
+        @include('Common templates.footer')
     </div>
+</div>
 
 
 </div>

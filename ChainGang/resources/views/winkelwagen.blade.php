@@ -25,15 +25,26 @@
     </div>
 
 
-
-
-    <div class="autoMargin">
-
+    <div>
         <div class="row" >
-            <div class="col-12 autoMargin">
-                <p>test</p>
+            <div class="col-4">
+                {{--image moet er nog bij--}}
+                <img src="" alt="het werkt niet">
+
+
+
 
             </div>
+
+            <div class="col-4">
+
+                <p> Mannen fiets</p>
+
+            </div>
+
+
+
+
         </div>
     </div>
 </div>
