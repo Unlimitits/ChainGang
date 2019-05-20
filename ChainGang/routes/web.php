@@ -27,3 +27,12 @@ Route::get('/detailpagina', function (){
     return view('detailpagina');
 });
 
+
+Route::get('/contact', function (){
+    return view('/contactpagina');
+})->name('contact');
+
+Route::get('/winkelwagen', function (){
+    return view('winkelwagen');
+})->name('winkelwagen');
+
