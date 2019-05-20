@@ -19,23 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/categoriepagina', function () {
-    return view('categoriepagina');
-});
+Route::get('/categoriepagina', 'FietsController@index')->name('categoriepagina');
 
 Route::get('/detailpagina', function (){
     return view('detailpagina');
 });
-
-
-Route::get('/contact', function (){
-    return view('/contactpagina');
-})->name('contact');
-
-Route::get('/winkelwagen', function (){
-    return view('winkelwagen');
-})->name('winkelwagen');
-
-Route::get('/profiel.blade.php', function (){
-    return view('profiel.blade.php');
-})->name('profiel.blade.php');

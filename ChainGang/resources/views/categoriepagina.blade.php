@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
+
     @include('Layout.layout')
 </head>
 
@@ -118,73 +119,19 @@
         </ul>
     </div>
 
-
+    <!-- Vanaf hier komen database fietsen -->
+    @foreach ($fietsen as $fiets)
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
+            <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 spacer-list">
-
-    </div>
-
-
-    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
+                <p class="card-text">S{{$fiets->fiets_omschrijving}}</p>
             </div>
         </div>
     </div>
 </div>
-
+@endforeach
 <div class="row">
     <div class="col spacer-height">
         <div class="spacer">
@@ -192,36 +139,12 @@
     </div>
 </div>
 
-
-<div class="row">
-    <div class="col-sm-12">
-        <div class="text-center">
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Eerste</a></li>
-                <li class="page-item"><a class="page-link" href="#">Vorige</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Volgende</a></li>
-                <li class="page-item"><a class="page-link" href="#">Laatste</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-
-
-
 <div class="row">
     <div class="col">
         @include('Common templates.footer')
     </div>
 </div>
-
-
-</div>
-
+{{$fietsen->links()}}
 
 </body>
 </html>
