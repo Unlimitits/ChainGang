@@ -26,3 +26,4 @@ Route::get('/categoriepagina', function () {
 Route::get('/detailpagina', function (){
     return view('detailpagina');
 });
+

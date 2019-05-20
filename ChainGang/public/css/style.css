@@ -639,6 +639,65 @@ tr {
 }
 /*End detailpagina css*/
 
+/* winkelwagen CSS */
+
+.autoMargin{
+    margin: 0 auto;
+}
+
+
+
+/* end winkelwagen CSS
+
+
+
+
+/*Profiel css*/
+
+
+
+.img-profiel {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5%;
+}
+
+.text-area-profiel{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5%;
+    height: 60%;
+}
+
+.p-profiel {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    color: #fbeaeb;
+    margin-bottom: 5%;
+}
+
+.btn-profiel{
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    float: none;
+    margin-bottom: 5%;
+}
+.table-profiel {
+    margin-bottom: 2%;
+}
+/*End profiel css*/
+
+
+
+
+
+
+
 
 
 /* Voorbeelden Media Queries*/
