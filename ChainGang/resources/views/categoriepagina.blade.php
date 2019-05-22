@@ -121,29 +121,29 @@
 
     <!-- Vanaf hier komen database fietsen -->
     @foreach ($fietsen as $fiets)
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card" style="width: 18rem;">
-                <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
-                <div class="card-body">
-                    <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
-                    <p class="card-text">S{{$fiets->fiets_omschrijving}}</p>
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card" style="width: 18rem;">
+            <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
+            <div class="card-body">
+                <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
+                <p class="card-text">S{{$fiets->fiets_omschrijving}}</p>
 
-                </div>
             </div>
         </div>
-    @endforeach
-    <div class="row">
-        <div class="col spacer-height">
-            <div class="spacer">
-            </div>
+</div>
+@endforeach
+<div class="row">
+    <div class="col spacer-height">
+        <div class="spacer">
         </div>
     </div>
+</div>
 
-    <div class="row">
-        <div class="col">
-            @include('Common templates.footer')
-        </div>
+<div class="row">
+    <div class="col">
+        @include('Common templates.footer')
     </div>
+</div>
 {{$fietsen->links()}}
 
 </body>

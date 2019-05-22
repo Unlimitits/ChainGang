@@ -6,7 +6,7 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item padding-nav">
-                <a class="nav-link kleur-nav" href="#">Home</a>
+                <a class="nav-link kleur-nav" href="{{ route('home') }}">Home</a>
             </li>
             <li class="nav-item padding-nav">
                 <a class="nav-link kleur-nav" href="#">Producten</a>
@@ -36,7 +36,7 @@
 
 
             <li class="nav-item padding-nav">
-                <a class="nav-link kleur-nav" href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a class="nav-link kleur-nav" href="{{ route('winkelwagen') }}"><i class="fas fa-shopping-cart"></i></a>
             </li>
 
         </ul>

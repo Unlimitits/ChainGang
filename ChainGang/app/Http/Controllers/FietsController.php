@@ -14,13 +14,21 @@ class FietsController extends Controller
      */
     public function index()
     {
-        //      $fietsen = DB::table('fiets')->paginate(6);
-        //
+//      $fietsen = DB::table('fiets')->paginate(6);
+//
 //      return view('categoriepagina', ['fiets' => $fietsen]);
         //$fietsen = DB::table('fiets')->get();
         $fietsen = DB::table('fiets')->paginate(3);
-
-        return view('categoriepagina', ['fietsen' => $fietsen]);
+        $damesfietsen = DB::table('fiets')
+            ->where('fiets_frameType', '=', 'Vrouwen')
+            ->paginate(3);
+        $herenfietsen = DB::table('fiets')
+            ->where('fiets_frameType', '=', 'Mannen')
+            ->paginate(3);
+        $kinderfietsen = DB::table('fiets')
+            ->where('fiets_frameType', '=', 'Kinderen')
+            ->paginate(3);
+        return view('categoriepagina', ['fietsen' => $fietsen , 'damesfietsen' => $damesfietsen , 'herenfietsen' => $herenfietsen , 'kinderfietsen' => $kinderfietsen] );
     }
 
     /**
