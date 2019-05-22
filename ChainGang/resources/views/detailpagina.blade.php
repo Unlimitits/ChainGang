@@ -81,7 +81,7 @@
         <div class="col">
             <table class="review-table">
                 <tr>
-                    @foreach($review as $reviews)
+                    {{--@foreach($review as $reviews)--}}
                     <td class="schrijf-review">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nobis repellendus tenetur! Aperiam deleniti facilis fugit illum modi nam neque, nulla odio odit quidem rerum sapiente, similique sit vero voluptates.
                         <br><br> geplaatst door: henk
@@ -99,6 +99,7 @@
                         <br><br> geplaatst door: henk
                     </td>
                 </tr>
+                {{--@endforeach--}}
 
                 <tr>
                     <td class="schrijf-review">
