@@ -91,12 +91,12 @@
 
                             <div class="col-md-10 loginStyleMargin">
                                 <input id="email" type="email" placeholder="Emailadres" class="Loginform-controlStyle form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+
                             </div>
                         </div>
 

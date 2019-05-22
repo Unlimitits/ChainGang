@@ -127,9 +127,9 @@
             <div class="card-body">
                 <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
                 <p class="card-text">S{{$fiets->fiets_omschrijving}}</p>
+
             </div>
         </div>
-    </div>
 </div>
 @endforeach
 <div class="row">

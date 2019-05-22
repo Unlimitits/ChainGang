@@ -25,7 +25,7 @@
 
     <div class="row">
         <div class="col">
-            <img class="img-fiets-size" src="{{ asset('img/fiets.jpg') }}">
+            <img class="img-fiets-size" src="{{ asset('img/Dames Fietsen/dames-fiets 10.38.32.png') }}" >
         </div>
     </div>
 
