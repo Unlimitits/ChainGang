@@ -119,19 +119,143 @@
         </ul>
     </div>
 
+
+
+
+    <!-- Vanaf hier komen database fietsen -->
+    @php
+        if(isset($_GET['type']))
+        {
+            $link = $_GET['type'];
+        }
+        else
+        {
+            $link = 'default';
+        }
+    @endphp
+
+{{--@foreach ($fietsen as $fiets)--}}
+
+
+    {{--@if(isset($link))--}}
+
+
+        {{--@if($link == 'dames')--}}
+            {{--@foreach ($damesfietsen as $damesfiets)--}}
+                {{--<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">--}}
+                    {{--<a href="/fiets/{{$fiets->fiets_id}}">--}}
+                        {{--<div class="card" style="width: 18rem;">--}}
+                            {{--<img src="data:image/png;base64,{{ chunk_split(base64_encode($damesfiets->fiets_foto)) }}" height="200" width="288">--}}
+                            {{--<div class="card-body">--}}
+                                {{--<h5 class="card-title">{{$damesfiets->fiets_naam}}</h5>--}}
+                                {{--<p class="card-text">S{{$damesfiets->fiets_omschrijving}}</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--@endforeach--}}
+        {{--@elseif($link == 'mannen')--}}
+            {{--@foreach ($herenfietsen as $mannenfiets)--}}
+                {{--<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">--}}
+                    {{--<a href="/fiets/{{$fiets->fiets_id}}">--}}
+                        {{--<div class="card" style="width: 18rem;">--}}
+                            {{--<img src="data:image/png;base64,{{ chunk_split(base64_encode($mannenfiets->fiets_foto)) }}" height="200" width="288">--}}
+                            {{--<div class="card-body">--}}
+                                {{--<h5 class="card-title">{{$mannenfiets->fiets_naam}}</h5>--}}
+                                {{--<p class="card-text">S{{$mannenfiets->fiets_omschrijving}}</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--@endforeach--}}
+        {{--@elseif($link == 'kinderen')--}}
+            {{--@foreach ($kinderfietsen as $kinderfiets)--}}
+                {{--<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">--}}
+                    {{--<a href="/fiets/{{$fiets->fiets_id}}">--}}
+                    {{--<div class="card" style="width: 18rem;">--}}
+                        {{--<img src="data:image/png;base64,{{ chunk_split(base64_encode($kinderfiets->fiets_foto)) }}" height="200" width="288">--}}
+                        {{--<div class="card-body">--}}
+                            {{--<h5 class="card-title">{{$kinderfiets->fiets_naam}}</h5>--}}
+                            {{--<p class="card-text">S{{$kinderfiets->fiets_omschrijving}}</p>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--@endforeach--}}
+        {{--@elseif($link == 'default')--}}
+            {{--@foreach ($fietsen as $fiets)--}}
+                {{--<a href="/fiets/{{$fiets->fiets_id}}">--}}
+                {{--<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">--}}
+                    {{--<div class="card" style="width: 18rem;">--}}
+                        {{--<img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">--}}
+                        {{--<div class="card-body">--}}
+                            {{--<h5 class="card-title">{{$fiets->fiets_naam}}</h5>--}}
+                            {{--<p class="card-text">S{{$fiets->fiets_omschrijving}}</p>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--</a>--}}
+            {{--@endforeach--}}
+        {{--@endif--}}
+    {{--@endif--}}
+
+
+{{--@endforeach--}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Vanaf hier komen database fietsen -->
     @foreach ($fietsen as $fiets)
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <a href="/fiets/{{$fiets->fiets_id}}">
             <div class="card" style="width: 18rem;">
                 <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
                 <div class="card-body">
                     <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
                     <p class="card-text">S{{$fiets->fiets_omschrijving}}</p>
+
                 </div>
             </div>
-        </div>
-</div>
-@endforeach
+        </a>
+    </div>
+    @endforeach
 <div class="row">
     <div class="col spacer-height">
         <div class="spacer">
@@ -139,12 +263,24 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col">
-        @include('Common templates.footer')
+    <div class="row catogoriePaginationStyle">
+        <div class="col-12">
+            {{$fietsen->links()}}
+        </div>
     </div>
+
+    <div class="row categoriePaginaStyle">
+        <div class="col-12">
+            @include('Common templates.footer')
+        </div>
+    </div>
+
+
+
+
+
+
 </div>
-{{$fietsen->links()}}
 
 </body>
 </html>
