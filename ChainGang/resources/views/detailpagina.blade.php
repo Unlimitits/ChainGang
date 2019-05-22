@@ -25,25 +25,25 @@
 
     <div class="row">
         <div class="col">
-            <img class="img-fiets-size" src="{{ asset('img/Dames Fietsen/dames-fiets 10.38.32.png') }}" >
+            <img class="img-fiets-size" src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" >
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <h3 id="fiets-title">De titel van deze fiets</h3>
+            <h3 id="fiets-title">{{$fiets->fiets_naam}}</h3>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <p id="fiets-title">De adviesprijs: €1200,-</p>
-        </div>
-    </div>
+    {{--<div class="row">--}}
+        {{--<div class="col">--}}
+            {{--<p id="fiets-title">De advies=prijs: €1200,-</p>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
     <div class="row">
         <div class="col">
-            <h1 id="fiets-title"> €1000,-</h1>
+            <h1 id="fiets-title"> € {{$fiets->fiets_prijs}},-</h1>
         </div>
     </div>
 
@@ -129,40 +129,40 @@
             <table>
                 <tr>
                     <td>Merk</td>
-                    <td>Brinckers</td>
+                    <td>{{$fiets->fiets_merk}}</td>
                 </tr>
                 <tr>
                     <td>Serie</td>
-                    <td>Brisbane</td>
+                    <td>{{$fiets->fiets_serie}}</td>
                 </tr>
                 <tr>
                     <td>Type fiets</td>
-                    <td>Elektrisch</td>
+                    <td>{{$fiets->fiets_type}}</td>
                 </tr>
                 <tr>
                     <td>Motor</td>
-                    <td>Midden</td>
+                    <td>{{$fiets->fiets_motorpositie}}</td>
                 </tr>
                 <tr>
                     <td>Kleur</td>
-                    <td>Zwart</td>
+                    <td>{{$fiets->fiets_kleur}}</td>
                 </tr>
                 <tr>
                     <td>Frametype</td>
-                    <td>Damesfiets</td>
+                    <td>{{$fiets->fiets_frameType}}</td>
                 </tr>
                 <tr>
                     <td>Collectie jaar</td>
-                    <td>2019</td>
+                    <td>{{$fiets->fiets_jaar}}</td>
                 </tr>
                 <tr>
                     <td>Motortechniek</td>
-                    <td>Midden</td>
+                    <td>{{$fiets->fiets_motortechniek}}</td>
                 </tr>
-                <tr>
-                    <td>Kleur</td>
-                    <td>Zwart</td>
-                </tr>
+                {{--<tr>--}}
+                    {{--<td>Kleur</td>--}}
+                    {{--<td>Zwart</td>--}}
+                {{--</tr>--}}
             </table>
         </div>
     </div>
