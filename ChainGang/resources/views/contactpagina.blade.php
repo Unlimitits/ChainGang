@@ -53,7 +53,10 @@
         <div class="card contactCardStyle">
             <div class="card-body">
                 <h1 class="card-title contactStyleH1">E-mail</h1>
-                <p class="card-text contactStyle">contact@chaingang.com</p>
+
+
+                <p class="card-text contactStyle"><a class="contactStyleA" href="mailto:contact@chaingang.com">contact@chaingang.com</a></p>
+
             </div>
         </div>
         </div>

@@ -30,6 +30,7 @@ class FietsController extends Controller
             ->paginate(3);
         return view('categoriepagina', ['fietsen' => $fietsen , 'damesfietsen' => $damesfietsen , 'herenfietsen' => $herenfietsen , 'kinderfietsen' => $kinderfietsen] );
     }
+
     /**
      * Show the form for creating a new resource.
      *

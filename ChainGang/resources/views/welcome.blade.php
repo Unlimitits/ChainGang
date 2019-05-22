@@ -200,44 +200,20 @@
 </div>
 
 <div class="row roze-kleur">
-    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <div class="card sale_card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <div class="card sale_card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
 
-    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <div class="card sale_card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
+    @foreach ($fietsen as $fiets)
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card" style="width: 18rem;">
+                <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
+                <div class="card-body">
+                    <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
+                    <p class="card-text">S{{$fiets->fiets_omschrijving}}</p>
 
-    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <div class="card sale_card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
             </div>
         </div>
-    </div>
+
+    @endforeach
 </div>
 
 {{--Spacer--}}

@@ -48,9 +48,22 @@
             <div class="col-7 col-sm-2  col-lg-3" >
                 <p class="winkelwagenColorStyle winkelwagenMargin besteldStyle">Nu besteld, morgen in huis </p>
 
+    <div>
+        <div class="row" >
+            <div class="col-4">
+                {{--image moet er nog bij--}}
+                <img src="" alt="het werkt niet">
+
+
+
+
             </div>
 
+            <div class="col-4">
 
+                <p> Mannen fiets</p>
+
+            </div>
 
             <div class="col-2 col-sm-2  col-lg-1 colWinkelwagenStyleInlineBlock" >
                 <p class="colWinkelwagenStyle aantalStyle" > Aantal</p>
@@ -131,8 +144,8 @@
             </div>
         </div>
 
-
-
+        </div>
+    </div>
 </div>
 </body>
 </html>

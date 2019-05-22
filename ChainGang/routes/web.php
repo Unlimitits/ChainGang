@@ -11,15 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+
+//Route::get('/', function () {
+//    return view('welcome');
+//})->name('welcome');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
+//
+//Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('fiets', 'FietsController');
+
+Route::resource('review', 'ReviewController');
 
 Route::get('/categoriepagina', 'FietsController@index')->name('categoriepagina');
 
