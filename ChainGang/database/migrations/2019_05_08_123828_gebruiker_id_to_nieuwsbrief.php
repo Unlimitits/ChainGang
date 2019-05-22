@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class GebruikerIdToMedewerker extends Migration
+class GebruikerIdToNieuwsbrief extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class GebruikerIdToMedewerker extends Migration
      */
     public function up()
     {
-        Schema::table('medewerker', function (Blueprint $table) {
+        Schema::table('nieuwsbrief', function (Blueprint $table) {
             //
             $table->foreign('gebruiker_id')->references('gebruiker_id')->on('gebruiker');
         });
@@ -26,7 +26,7 @@ class GebruikerIdToMedewerker extends Migration
      */
     public function down()
     {
-        Schema::table('medewerker', function (Blueprint $table) {
+        Schema::table('nieuwsbrief', function (Blueprint $table) {
             //
         });
     }

@@ -20,6 +20,7 @@ class CreateReviewTable extends Migration
             $table->string('review_titel');
             $table->string('review_omschrijving');
             $table->integer('review_waardering');
+            $table->boolean('review_isApproved');
 
 
 

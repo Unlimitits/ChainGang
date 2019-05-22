@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMedewerkerTable extends Migration
+class CreateAanbiedingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateMedewerkerTable extends Migration
      */
     public function up()
     {
-        Schema::create('medewerker', function (Blueprint $table) {
-            $table->increments('medewerker_id');
-            $table->unsignedInteger('gebruiker_id');
-            $table->boolean('medewerker_isAdmin');
+        Schema::create('aanbieding', function (Blueprint $table) {
+            $table->increments('aanbieding_id');
+            $table->string('aanbieding_naam');
+            $table->integer('aanbieding_kortingpct');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateMedewerkerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('medewerker');
+        Schema::dropIfExists('aanbieding');
     }
 }

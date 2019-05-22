@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFietsFactuurTable extends Migration
+class CreateBestellingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateFietsFactuurTable extends Migration
      */
     public function up()
     {
-        Schema::create('fiets_factuur', function (Blueprint $table) {
-            $table->increments('fiets_factuur_id');
+        Schema::create('bestelling', function (Blueprint $table) {
+            $table->increments('bestelling_id');
+            $table->unsignedInteger('klant_id');
             $table->unsignedInteger('fiets_id');
-            $table->unsignedInteger('factuur_id');
-            $table->integer('fiets_factuur_aantal');
+            $table->integer('bestelling_aantal');
+            $table->dateTime('bestelling_datum');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateFietsFactuurTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fiets_factuur');
+        Schema::dropIfExists('bestelling');
     }
 }

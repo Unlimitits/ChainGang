@@ -15,10 +15,17 @@ class CreateKlantTable extends Migration
     {
         Schema::create('klant', function (Blueprint $table) {
             $table->increments('klant_id');
-            $table->unsignedInteger('gebruiker_id');
+            $table->string('klant_gebruikersnaam');
+            $table->string('klant_wachtwoord');
+            $table->string('klant_voornaam');
+            $table->string('klant_achternaam');
+            $table->string('klant_emailadres');
+            $table->string('klant_telefoonnummer');
             $table->string('klant_straat');
             $table->string('klant_postcode');
             $table->string('klant_plaats');
+            $table->string('klant_foto');
+            $table->boolean('klant_wilNieuwsbrief');
             $table->timestamps();
         });
     }

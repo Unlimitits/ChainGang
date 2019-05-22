@@ -131,6 +131,7 @@
             </div>
         </div>
     </div>
+    @include('Common templates.footer')
 </div>
 
 </body>

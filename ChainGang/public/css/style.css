@@ -1,3 +1,4 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 /* Common css*/
 
 .container-fluid{
@@ -218,6 +219,7 @@ body {
 
 .LogincardStyleContainer{
     margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 .loginTextFieldsStyle{
@@ -394,6 +396,599 @@ tr {
 }
 /*End detailpagina css*/
 
+
+/* contact CSS */
+.contactCardStyle{
+    /*width: 25%;*/
+    height: 350px;
+    margin: 5% !important;
+}
+
+
+.contactStyleH1{
+    font-size: 60px;
+    color: #2f3c7e;
+    font-weight: bold;
+    margin-left: 15%;
+    margin-top: 20%;
+}
+
+.contactOveronsStyle{
+    color: #fbeaeb;
+    font-size: 60px;
+    font-weight: bold;
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
+}
+
+.contactStyle{
+    font-size: 25px;
+    color: #2f3c7e;
+    margin-left: 15%;
+    line-height: 0.8;
+}
+
+.contactOverOnsGoogleMaps{
+    margin-left: 5%;
+    /*width: 100%;*/
+}
+
+.contactStyleP{
+    font-size: 25px;
+    color: #fbeaeb;
+    /*margin: 5%;*/
+    line-height: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .contactOverOnsGoogleMaps{
+        width: 435px;
+    }
+
+    .contactOveronsStyle{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .contactStyleP{
+        font-size: 25px;
+        color: #fbeaeb;
+        line-height: 1;
+        margin: 5%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 600px) {
+    .contactOveronsStyle{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .contactOverOnsGoogleMaps{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    .contactStyleP{
+        font-size: 25px;
+        color: #fbeaeb;
+        line-height: 1;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .contactstyleCol{
+        width: 100%;
+    }
+
+    .contactStyleH1{
+        margin-top: 7.5%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .contactOverOnsGoogleMaps{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 200px;
+    }
+
+    .contactOverOnsGoogleMaps{
+        margin-left: 5%;
+        /*margin-right: 5%;*/
+        width: 90%;
+    }
+
+    .contactStyleH1{
+        margin-top: 7.5%;
+
+    }
+
+    .contactOveronsStyle{
+        margin-left: 5%;
+    }
+
+    .contactStyleP{
+        font-size: 16px;
+        color: #fbeaeb;
+        line-height: 1;
+        margin-left: 5%;
+        margin-right: 2.5%;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 960px) {
+    .contactStyleH1{
+        margin-top: 7.5%;
+        font-size: 35px;;
+    }
+
+    .contactStyle{
+        font-size: 19px;
+        color: #2f3c7e;
+        margin-left: 15%;
+        line-height: 0.8;
+    }
+
+}
+
+
+
+
+
+
+/* end contact CSS
+
+
+
+/* Detailpagina css*/
+
+.img-fiets-size {
+    width: 60%;
+    margin-left: 20%;
+}
+
+#fiets-title {
+    color: #fbeaeb;
+    margin-left: 20%;
+    margin-top: 10px;
+}
+
+.btn-block {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #fbeaeb;
+    border-color: transparent;
+    color: #2f3c7e;
+}
+
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #2f3c7e;
+    background-color: #fbeaeb;
+    border-color: transparent;
+}
+
+.btn-primary:hover {
+    color: #2f3c7e;
+    background-color: #fbeaeb;
+    border-color: transparent;
+}
+
+td{
+    color: #fbeaeb;
+}
+
+table {
+    border-collapse: collapse;
+    border: solid #fbeaeb 1px;
+    margin: 0 auto;
+    width: 60%;
+}
+
+tr {
+    border-bottom: solid #fbeaeb 1px;
+}
+
+.ster{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.ster-col {
+    max-width: 30px;
+    max-height: 30px;
+
+}
+
+.eerste-ster-col {
+    margin-left: 20%;
+}
+
+.review {
+    width: 100%;
+    height: 200px;
+}
+
+.review-button {
+    float: right;
+    margin-left: -50%;
+    background-color: #fbeaeb;
+    color: #2f3c7e;
+}
+
+.schrijf-review {
+    padding: 3%;
+}
+
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+@media only screen and (max-width: 768px) {
+    .review-table {
+        display: none;
+    }
+
+    .review-title {
+        display: none;
+    }
+
+}
+/*End detailpagina css*/
+
+/* winkelwagen CSS */
+
+.winkelwagenH1Style{
+    font-size: 25px;
+    font-weight: bold;
+    color: #fbeaeb;
+    margin-left: 2%;
+}
+
+.winkelwagenMargin{
+    margin-left: 17.5% ;
+
+
+}
+
+.winkelwagenColorStyle{
+    color: #fbeaeb;
+}
+
+.colWinkelwagenMarginStyle{
+    margin-left: 16.5%;
+
+
+}
+
+.colwinkelWagenMarginBedragStyle{
+    margin-left: 21%;
+}
+
+.winkelwagenHr{
+    color: #fbeaeb;
+    border-color: white;
+    width: 65%;
+    margin: auto;
+}
+
+.winkelwagenHrSecond{
+    width: 95%;
+    color: #fbeaeb;
+    border-color: #fbeaeb;
+    margin: auto;
+}
+
+.winkelwagenStyleRow{
+    margin-bottom: 20px;
+}
+
+.totaalArtikelenStyle{
+    margin-left: 4%;
+    color: #fbeaeb;
+    margin-top: 15px;
+}
+
+.colwinkelWagenMarginBedragStyle{
+    margin-left: 4%;
+    color: #fbeaeb;
+    /*margin-top: 15px;*/
+    /*font-weight: bold;*/
+}
+
+.bedragNaastTitel{
+    margin-top: 26px;
+    font-weight: bold;
+}
+
+.verzendkostenStyle{
+    margin-top: -15px;
+    color: #fbeaeb;
+}
+
+.gratisStyle{
+    margin-top: -15px;
+    color: #fbeaeb;
+}
+
+.totaalBedragStyle{
+    color: #fbeaeb;
+    margin-top: 10px;
+}
+
+
+.verwijderenAStyle{
+    color: #fbeaeb;
+}
+
+.verwijderenAStyle:hover{
+    color: #fbeaeb;
+    text-decoration: none;
+}
+
+
+.bestellenAStyle{
+    color: #2f3c7e;
+    background-color: #fbeaeb;
+    margin: auto;
+    float: right;
+    clear: both;
+    margin-right: 2.5%;
+    padding: 1% 32.5% 1% 32.5%;
+    margin-bottom: 20px;
+
+}
+
+.bestellenAStyle:hover{
+    color: #2f3c7e;;
+    text-decoration: none;
+
+}
+
+
+.verderWinkelenStyleCol{
+    margin-top: 5%;
+}
+
+.verderWinkelenStyle{
+    margin-left: 2%;
+    color: #2f3c7e;;
+    text-decoration: none;
+    background-color: #fbeaeb;
+    padding: 1% 5% 1% 5%;
+
+}
+
+.verderWinkelenStyle:hover{
+    margin-left: 2%;
+    color: #2f3c7e;;
+    text-decoration: none;
+    background-color: #fbeaeb;
+    padding: 1% 5% 1% 5%;
+
+}
+
+.colWinkelwagenStyle{
+    /*line-height: 0.1px;*/
+    color: #fbeaeb;
+    /*margin-top: 30px;*/
+
+}
+
+.colWinkelwagenStyleInlineBlock{
+    display: inline-block;
+    /*float: left;*/
+    /*clear: both;*/
+}
+
+.aantalStyle{
+    /*margin-left: 5%;*/
+    margin-top: 1px;
+}
+
+
+
+.aantalStyleRow{
+    margin-left: 16.5%;
+}
+
+.winkelWagenStyleP{
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 40px;
+
+}
+
+.winkelwagenImageStyle{
+    width: 100%;
+    margin-top: 8px;
+}
+
+.selectStyle{
+    width: 43px;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: -10px;
+}
+
+.besteldStyle{
+    margin-left: 31%;
+}
+
+
+@media only screen and (min-width: 580px) {
+    .bedragNaastTitel {
+        font-weight: bold;
+        margin-top: 49px;
+    }
+
+    .besteldStyle {
+        margin-left: 31%;
+        margin-top: 48px;
+    }
+
+    .aantalStyle {
+        margin-top: 48px;
+    }
+
+    .verwijderenAStyle {
+        color: #fbeaeb;
+        margin-top: 48px;
+    }
+
+    .winkelwagenImageStyle{
+        width: 40px;
+    }
+
+
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .winkelwagenImageStyle{
+        width: 100%;
+    }
+
+    /*.winkelWagenStyleP{*/
+        /*margin-left: 2%;*/
+    /*}*/
+
+
+    .besteldStyle{
+        margin-top: 50px;
+    }
+
+    .bedragNaastTitel{
+        margin-top: 52px;
+    }
+    .aantalStyle{
+        margin-top: 52px;
+    }
+
+    .verwijderenAStyle {
+        color: #fbeaeb;
+        margin-top: 51px;
+    }
+
+    .winkelwagenImageStyle {
+        margin-left: 17px;
+    }
+
+
+    .bestellenAStyle {
+        padding: 0.5% 1% 0.5% 1%;
+
+    }
+
+    .verderWinkelenStyle{
+        padding: 0.5% 1% 0.5% 1%;
+    }
+
+
+    .verderWinkelenStyle:hover{
+        padding: 0.5% 1% 0.5% 1%;
+    }
+
+    .verderWinkelenStyleCol{
+        margin-top: 2%;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .bestellenAStyle {
+        padding: 0.5% 1% 0.5% 1%;
+
+    }
+
+    .verderWinkelenStyle{
+        padding: 0.5% 1% 0.5% 1%;
+    }
+
+    .verderWinkelenStyleCol{
+        margin-top: 2%;
+    }
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+    .bestellenAStyle {
+        padding: 0.5% 1% 0.5% 1%;
+
+    }
+
+    .verderWinkelenStyle{
+        padding: 0.5% 1% 0.5% 1%;
+    }
+
+    .verderWinkelenStyle:hover{
+        padding: 0.5% 1% 0.5% 1%;
+    }
+
+
+    .verderWinkelenStyleCol{
+        margin-top: 2%;
+    }
+
+    .winkelwagenImageStyle {
+        margin-left: 40px;
+    }
+
+    .winkelWagenStyleP {
+        margin-left: 30px;
+    }
+
+    .besteldStyle, .aantalStyle {
+        margin-top: 50px;
+    }
+}
+/* end winkelwagen CSS
+
+
+
+
 /*Profiel css*/
 
 
@@ -432,7 +1027,13 @@ tr {
 .table-profiel {
     margin-bottom: 2%;
 }
-/*End profiel css*/
+/*End profiel.blade.php css*/
+
+
+
+
+
+
 
 
 
