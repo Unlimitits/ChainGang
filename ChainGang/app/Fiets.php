@@ -12,4 +12,9 @@ class Fiets extends Model
     public function aanbieding(){
         return $this->hasOne(Aanbieding::class);
     }
+
+
+
+
+
 }

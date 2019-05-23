@@ -72,8 +72,13 @@
 
         <div class="col-sm-12 col-md-12 col-lg-8">
 
-            <h1 class="contactOveronsStyle">over ons</h1>
-            <p class="contactStyleP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iusto necessitatibus tempora? Adipisci animi consequuntur, deleniti dolor doloremque eaque excepturi impedit inventore, magnam, minus pariatur perspiciatis rerum soluta velit voluptates?
+            <h1 class="contactOveronsStyle">Over ons</h1>
+            <p class="contactStyleP">
+
+
+                Onze fietsen bedrijf begon sinds 2018 met het verkopen van fietsen.
+                De reden waarom wij handelen in fietsen is, omdat we speciaal en een bezonder bedrijf willen worden en natuurlijk iets kunnen betekenen voor onze klanten.
+                Heeft u vragen? Bel ons, mail ons of kom langs voor een heerlijke kopje koffie!
 
             </p>
 

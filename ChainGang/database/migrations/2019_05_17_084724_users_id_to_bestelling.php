@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class FietsIdToReview extends Migration
+class UsersIdToBestelling extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class FietsIdToReview extends Migration
      */
     public function up()
     {
-        Schema::table('reviews', function (Blueprint $table) {
-            $table->foreign('fiets_id')->references('fiets_id')->on('fiets');
+        Schema::table('bestelling', function (Blueprint $table) {
+            $table->foreign('user_id')->references('user_id')->on('users');
         });
     }
 
@@ -25,7 +25,7 @@ class FietsIdToReview extends Migration
      */
     public function down()
     {
-        Schema::table('reviews', function (Blueprint $table) {
+        Schema::table('bestelling', function (Blueprint $table) {
             //
         });
     }

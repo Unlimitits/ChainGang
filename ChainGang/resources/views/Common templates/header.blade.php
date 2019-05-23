@@ -1,7 +1,9 @@
 
 <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-        <img class="navbar-brand" src="{{ asset('img/logo.png') }}">
+        <a href="{{ route('home') }}">
+            <img class="navbar-brand" src="{{ asset('img/Logo/Fietsenwinkel-logo1.png') }}">
+        </a>
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
@@ -11,7 +13,7 @@
 
             </li>
             <li class="nav-item padding-nav">
-                <a class="nav-link kleur-nav" href="#">Producten</a>
+                <a class="nav-link kleur-nav" href="{{route('categoriepagina')}}">Producten</a>
             </li>
             <li class="nav-item padding-nav">
                 <a class="nav-link kleur-nav" href="{{ route('contact') }}">Contact</a>

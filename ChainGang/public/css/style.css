@@ -26,6 +26,14 @@ body {
 
 }
 
+.colorWhite{
+    color: white;
+}
+
+.colorDonkerblauw{
+    color: #fbeaeb !important;
+}
+
 /* End Common css*/
 
 
@@ -98,6 +106,10 @@ body {
     text-align: center;
     background-color: #2f3c7e;
     color: #fbeaeb;
+}
+
+.footerStyle{
+    margin-top: 5%;
 }
 
 /* End footer CSS*/
@@ -394,7 +406,100 @@ tr {
     }
 
 }
+
 /*End detailpagina css*/
+
+
+
+
+
+/* categorie pagina CSS*/
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .dropdown {
+        display: block;
+    }
+
+    .list-group{
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .dropdown {
+        display: block;
+    }
+
+    .list-group{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .dropdown {
+        display: none;
+    }
+
+
+    .list-group {
+        display: block;
+    }
+}
+
+.categorie-h1{
+    color: #fbeaeb;
+    text-align: center;
+}
+
+.categoriepaginaA{
+    color: #fbeaeb;
+    text-decoration: none;
+}
+
+.categoriepaginaA:hover{
+    color: #fbeaeb;
+    text-decoration: none;
+}
+
+
+
+
+
+.pagination{
+    margin: auto;
+    width: 10%;
+
+}
+
+
+.categoriePaginaStyle{
+    width: 100%;
+}
+
+.catogoriePaginationStyle{
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .dropdown {
+        display: block;
+    }
+
+    .list-group{
+        display: none;
+    }
+}
+
+
+
+
+
+/* end categorie pagina CSS */
 
 
 /* contact CSS */
@@ -427,6 +532,18 @@ tr {
     margin-left: 15%;
     line-height: 0.8;
 }
+
+.contactStyleA{
+    color: #2f3c7e !important;
+    text-decoration: none;
+}
+
+
+.contactStyleA:hover{
+    color: #2f3c7e !important;
+    text-decoration: none;
+}
+
 
 .contactOverOnsGoogleMaps{
     margin-left: 5%;
@@ -677,6 +794,7 @@ tr {
 /*End detailpagina css*/
 
 /* winkelwagen CSS */
+/* winkelwagen CSS */
 
 .winkelwagenH1Style{
     font-size: 25px;
@@ -890,10 +1008,6 @@ tr {
     .winkelwagenImageStyle{
         width: 100%;
     }
-
-    /*.winkelWagenStyleP{*/
-        /*margin-left: 2%;*/
-    /*}*/
 
 
     .besteldStyle{

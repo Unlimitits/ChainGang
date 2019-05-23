@@ -15,11 +15,11 @@ class CreateFietsTable extends Migration
     {
         Schema::create('fiets', function (Blueprint $table) {
             $table->increments('fiets_id');
-            $table->unsignedInteger('aanbieding_id');
+            $table->unsignedInteger('aanbieding_id')->nullable();
             $table->string('fiets_naam');
             $table->string('fiets_serie');
-            $table->string('fiets_motortechniek');
-            $table->string('fiets_motorpositie');
+            $table->string('fiets_motortechniek')->nullable();
+            $table->string('fiets_motorpositie')->nullable();
             $table->string('fiets_versnellingen');
             $table->string('fiets_materiaal');
             $table->string('fiets_kleur');
