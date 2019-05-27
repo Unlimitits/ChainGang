@@ -74,7 +74,7 @@
 
 <div class="row card-row">
     <div class="col">
-        <a href="categoriepagina?type=dames">
+        <a class="welcomeLinkFiets" href="categoriepagina?type=dames">
             <div class="card" style="width: 20rem;">
                 <div class="card-img-caption">
                     <p class="card-text">Damesfietsen</p>
@@ -86,7 +86,7 @@
 
     <div class="col">
         <div class="card" style="width: 20rem;">
-            <a href="categoriepagina?type=mannen">
+            <a class="welcomeLinkFiets" href="categoriepagina?type=mannen">
             <div class="card-img-caption">
                 <p class="card-text">Herenfietsen</p>
                 <img class="card-img-top" src="{{ asset('img/Heren Fietsen/heren-fiets.jpg') }}" alt="Card image cap">
@@ -96,7 +96,7 @@
     </div>
 
     <div class="col">
-        <a href="/categoriepagina?type=kinderen">
+        <a class="welcomeLinkFiets" href="/categoriepagina?type=kinderen">
             <div class="card" style="width: 20rem;">
                 <div class="card-img-caption">
                     <p class="card-text">Kinderfietsen</p>
@@ -119,7 +119,7 @@
 <div class="row roze-kleur">
     @foreach($salefietsen as $salefiets)
         <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <a href="/fiets/{{$salefiets->fiets_id}}">
+            <a class="welcomeLinkFiets" href="fiets/{{$salefiets->fiets_id}}">
                 <div class="card sale_card" style="width: 18rem;">
                     <img src="data:image/png;base64,{{ chunk_split(base64_encode($salefiets->fiets_foto)) }}" height="200" width="286">
                     <div class="card-body">
@@ -141,7 +141,7 @@
 </div>
 
 
-<div class="row">
+<!-- <div class="row">
     <div class="col">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -165,7 +165,7 @@
             </a>
         </div>
     </div>
-</div>
+</div> -->
 
 
 {{--Spacer--}}
@@ -185,7 +185,7 @@
 
     @foreach ($fietsen as $fiets)
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <a href="/fiets/{{$salefiets->fiets_id}}">
+            <a class="welcomeLinkFiets" href="fiets/{{$salefiets->fiets_id}}">
                 <div class="card" style="width: 18rem;">
                     <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
                     <div class="card-body">
@@ -207,7 +207,7 @@
     </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -231,7 +231,7 @@
             </a>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <div class="row">

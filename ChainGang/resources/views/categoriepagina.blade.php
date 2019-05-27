@@ -86,9 +86,9 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Frame type
                 <span class="caret"></span></button>
             <ul class="dropdown-menu">
-                <li><a class="kleur-nav" href="/categoriepagina?type=dames">Damesfietsen</a></li>
-                <li><a class="kleur-nav" href="/categoriepagina?type=mannen">Herenfietsen</a></li>
-                <li><a class="kleur-nav" href=/categoriepagina?type=kinderen>Kinderfietsen</a></li>
+                <li><a class="kleur-nav" href="categoriepagina?type=dames">Damesfietsen</a></li>
+                <li><a class="kleur-nav" href="categoriepagina?type=mannen">Herenfietsen</a></li>
+                <li><a class="kleur-nav" href="categoriepagina?type=kinderen">Kinderfietsen</a></li>
             </ul>
         </div>
     </div>
@@ -113,9 +113,9 @@
 <div class="row">
     <div class=" col-xl-3">
         <ul class="list-group">
-            <li><a class="kleur-nav" name="link1" href="/categoriepagina?type=dames">Damesfietsen</a></li>
-            <li><a class="kleur-nav" href="/categoriepagina?type=mannen">Herenfietsen</a></li>
-            <li><a class="kleur-nav" href="/categoriepagina?type=kinderen">Kinderfietsen</a></li>
+            <li><a class="kleur-nav" name="link1" href="categoriepagina?type=dames">Damesfietsen</a></li>
+            <li><a class="kleur-nav" href="categoriepagina?type=mannen">Herenfietsen</a></li>
+            <li><a class="kleur-nav" href="categoriepagina?type=kinderen">Kinderfietsen</a></li>
         </ul>
     </div>
 
@@ -140,7 +140,7 @@
         @if($link == 'dames')
             @foreach ($damesfietsen as $damesfiets)
                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                    <a class="categoriepaginaA" href="/fiets/{{$damesfiets->fiets_id}}">
+                    <a class="welcomeLinkFiets" href="fiets/{{$damesfiets->fiets_id}}">
                         <div class="card" style="width: 18rem;">
                             <img src="data:image/png;base64,{{ chunk_split(base64_encode($damesfiets->fiets_foto)) }}" height="200" width="288">
                             <div class="card-body">
@@ -154,7 +154,7 @@
         @elseif($link == 'mannen')
             @foreach ($herenfietsen as $mannenfiets)
                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                    <a class="categoriepaginaA" href="/fiets/{{$mannenfiets->fiets_id}}">
+                    <a class="welcomeLinkFiets" href="fiets/{{$mannenfiets->fiets_id}}">
                         <div class="card" style="width: 18rem;">
                             <img src="data:image/png;base64,{{ chunk_split(base64_encode($mannenfiets->fiets_foto)) }}" height="200" width="288">
                             <div class="card-body">
@@ -168,7 +168,7 @@
         @elseif($link == 'kinderen')
             @foreach ($kinderfietsen as $kinderfiets)
                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                    <a class="categoriepaginaA" href="/fiets/{{$kinderfiets->fiets_id}}">
+                    <a class="welcomeLinkFiets" href="fiets/{{$kinderfiets->fiets_id}}">
                         <div class="card" style="width: 18rem;">
                             <img src="data:image/png;base64,{{ chunk_split(base64_encode($kinderfiets->fiets_foto)) }}" height="200" width="288">
                             <div class="card-body">
@@ -181,7 +181,7 @@
             @endforeach
         @elseif($link == 'default')
             @foreach ($fietsen as $fiets)
-                <a href="/fiets/{{$fiets->fiets_id}}">
+                <a  class="welcomeLinkFiets" href="fiets/{{$fiets->fiets_id}}">
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         <div class="card" style="width: 18rem;">
                             <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">

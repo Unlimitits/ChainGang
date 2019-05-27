@@ -47,15 +47,23 @@
         </div>
     </div>
 
+    {{$fiets->getAverage($fiets->fiets_id)}}
+
     <div class="row">
         <div class="col ster-col eerste-ster-col">
-            <img class="ster" src="{{ asset('img/ster.png') }}" alt="">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
         </div>
         <div class="col ster-col">
-            <img class="ster" src="{{ asset('img/ster.png') }}" alt="">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
         </div>
         <div class="col ster-col">
-            <img class="ster" src="{{ asset('img/ster.png') }}" alt="">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
+        </div>
+        <div class="col ster-col">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
+        </div>
+        <div class="col ster-col">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
         </div>
     </div>
 

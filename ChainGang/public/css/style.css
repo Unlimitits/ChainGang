@@ -34,6 +34,16 @@ body {
     color: #fbeaeb !important;
 }
 
+a.welcomeLinkFiets{
+    color: #2f3c7e !important;
+    text-decoration: none;
+}
+
+a.welcomeLinkFiets:hover{
+    color: #2f3c7e !important;
+    text-decoration: none;
+}
+
 /* End Common css*/
 
 
@@ -169,7 +179,7 @@ body {
 }
 
 .sale_card {
-    border: 1px solid black;
+    border: none !important;
 }
 
 @media only screen and (min-width: 768px) {
