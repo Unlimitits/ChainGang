@@ -84,6 +84,21 @@ a.welcomeLinkFiets:hover{
     color: #fbeaeb !important;
 }
 
+.dropdownButtonMargin{
+    margin-left: 4%;
+}
+
+
+
+/* dropdown */
+.dropdownMargin{
+    margin-left: 4%;
+}
+
+.dropdownStyle{
+    position: absolute !important;
+}
+
 /* End header CSS*/
 
 
@@ -305,6 +320,15 @@ a.welcomeLinkFiets:hover{
 /*Registratie CSS */
 
 
+/*.test{*/
+    /*margin-left: 10%;*/
+/*}*/
+
+
+
+
+
+
 .btnRegisterStyle{
     /*padding-left: 18.5px !important;*/
     background-color: #2f3c7e !important;
@@ -322,6 +346,14 @@ a.welcomeLinkFiets:hover{
 .loginStyleMarinPersoonlijk{
     margin-top: 30px;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .test{
+        margin-left: 50% !important;
+    }
+}
+
 
 /* end registratie CSS */
 

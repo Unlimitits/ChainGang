@@ -48,5 +48,6 @@ class HomeController extends Controller
 
 
         return view('welcome', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen]);
+//                return view('home', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen]);
     }
 }

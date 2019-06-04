@@ -1,3 +1,5 @@
+@extends('Common templates.headertest')
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -5,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-    {{--<link href="{{ asset('style.css') }}" rel="stylesheet" type="text/css" >--}}
+    <link href="{{ asset('style.css') }}" rel="stylesheet" type="text/css" >
     @include('Layout.layout')
 
 </head>
+
+
 <body style="overflow-x: hidden;">
 <div class="container-fluid">
 
     <div class="row header-web">
         <div class="col">
             @include('Common templates.header')
+
         </div>
     </div>
 
@@ -168,7 +173,7 @@
 </div> -->
 
 
-{{--Spacer--}}
+Spacer
 <div class="row">
     <div class="col spacer-height">
         <div class="spacer"></div>
@@ -200,7 +205,7 @@
     @endforeach
 </div>
 
-{{--Spacer--}}
+Spacer
 <div class="row">
     <div class="col spacer-height">
         <div class="spacer"></div>
@@ -256,8 +261,7 @@
 </div>
 
 
-</div>
-
 
 </body>
+
 </html>

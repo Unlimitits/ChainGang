@@ -25,35 +25,64 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('contact') }}">Contact</a>
             </li>
-            {{--<li class="nav-item">--}}
-                {{--<a class="nav-link" href="#">Inloggen</a>--}}
-            {{--</li>--}}
 
 
+            <li class="nav-item padding-nav">
+                <a class="nav-link kleur-nav" href="{{ route('winkelwagen') }}"><i class="fas fa-shopping-cart"></i></a>
+            </li>
 
-            @if (Route::has('login'))
-                <div class="top-right links">
+        @if (Route::has('login'))
+                <div class="top-right links dropdownMargin">
                     @auth
                         {{--<a href="{{ url('/home') }}">Home</a>--}}
+
+
+                        <div class="btn-group">
+                            <button type="button" class="btn nav-link kleur-nav dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ Auth::user()->user_gebruikersnaam }} <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu dropdownStyle">
+
+
+                                {{--Moet nog gelinkt worden naar de profiel pagina--}}
+                                <a class="dropdown-item" href="{{route('profiel')}}">
+                                    Profiel pagina
+                                </a>
+
+
+
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
                     @else
                         <a class="nav-link kleur-nav" href="{{ route('login') }}">Inloggen</a>
-
-                        {{--@if (Route::has('register'))--}}
-                        {{--<a href="{{ route('register') }}">Register</a>--}}
-                        {{--@endif--}}
                     @endauth
                 </div>
             @endif
 
 
 
-
-
-
-
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('winkelwagen') }}">Winkelwagen <i class="fas fa-shopping-cart"></i></a>
-            </li>
 
         </ul>
         <!-- Links -->
