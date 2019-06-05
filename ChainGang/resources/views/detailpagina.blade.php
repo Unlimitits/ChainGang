@@ -47,27 +47,29 @@
         </div>
     </div>
 
+    {{$fiets->getAverage($fiets->fiets_id)}}
+
     <div class="row">
         <div class="col ster-col eerste-ster-col">
-            <img class="ster" src="{{ asset('img/ster.png') }}" alt="">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
         </div>
         <div class="col ster-col">
-            <img class="ster" src="{{ asset('img/ster.png') }}" alt="">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
         </div>
         <div class="col ster-col">
-            <img class="ster" src="{{ asset('img/ster.png') }}" alt="">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
+        </div>
+        <div class="col ster-col">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
+        </div>
+        <div class="col ster-col">
+            <img class="ster" src="{{ $fiets->drawImage() }}" alt="">
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Plan een gratis proefrit</button>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Klik en bestelen</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Klik en bestel</button>
         </div>
     </div>
 

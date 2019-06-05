@@ -1,3 +1,4 @@
+@include('Layout.layout')
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -6,7 +7,7 @@
 
     <title>Laravel</title>
     {{--<link href="{{ asset('style.css') }}" rel="stylesheet" type="text/css" >--}}
-    @include('Layout.layout')
+
 
 </head>
 <body style="overflow-x: hidden;">
@@ -37,24 +38,22 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('img/Banners/banner.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/Banner_Actie.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/Banners/lukassen_home.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/Banner_Fiets.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h5 class="colorWhite">Nieuw!</h5>
+                                <p class="colorWhite">Klik hier voor onze nieuwe fietsen!</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/Banners/slider-alexander1.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/Banner_Actie2.png') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                <h5 class="colorWhite">Actie!</h5>
+                                <p class="colorWhite">Klik hier voor onze huidige acties!</p>
                             </div>
                         </div>
                     </div>
@@ -70,34 +69,40 @@
             </div>
         </div>
     </div>
-</div>
+
 
 <div class="row card-row">
     <div class="col">
-        <div class="card" style="width: 20rem;">
-            <div class="card-img-caption">
-                <p class="card-text">Damesfietsen</p>
-                <img class="card-img-top img-fluid" src="{{ asset('img/Dames Fietsen/dames-fiets 10.38.32.png') }}" alt="Card image cap">
+        <a class="welcomeLinkFiets" href="categoriepagina?type=dames">
+            <div class="card" style="width: 20rem;">
+                <div class="card-img-caption">
+                    <p class="card-text">Damesfietsen</p>
+                    <img class="card-img-top img-fluid" src="{{ asset('img/Dames Fietsen/dames-fiets 10.38.32.png') }}" alt="Card image cap">
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
     <div class="col">
         <div class="card" style="width: 20rem;">
+            <a class="welcomeLinkFiets" href="categoriepagina?type=mannen">
             <div class="card-img-caption">
                 <p class="card-text">Herenfietsen</p>
-                <img class="card-img-top" src="{{ asset('img/Heren Fietsen/heren-fiets.jpg') }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ asset('img/Heren Fietsen/heren-fiets.png') }}" alt="Card image cap">
             </div>
+            </a>
         </div>
     </div>
 
     <div class="col">
-        <div class="card" style="width: 20rem;">
-            <div class="card-img-caption">
-                <p class="card-text">Kinderfietsen</p>
-                <img class="card-img-top" src="{{ asset('img/Kinder Fietsen/kinder-fiets.jpg') }}" alt="Card image cap">
+        <a class="welcomeLinkFiets" href="/categoriepagina?type=kinderen">
+            <div class="card" style="width: 20rem;">
+                <div class="card-img-caption">
+                    <p class="card-text">Kinderfietsen</p>
+                    <img class="card-img-top" src="{{ asset('img/Kinder Fietsen/kinder-fiets.png') }}" alt="Card image cap">
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>
 
@@ -108,58 +113,29 @@
 
 </div>
 
+
+
 <div class="row roze-kleur">
-    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <div class="card sale_card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
+    @foreach($salefietsen as $salefiets)
+        <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <a class="welcomeLinkFiets" href="fiets/{{$salefiets->fiets_id}}">
+                <div class="card sale_card" style="width: 18rem;">
+                    <img src="data:image/png;base64,{{ chunk_split(base64_encode($salefiets->fiets_foto)) }}" height="200" width="286">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$salefiets->fiets_naam}}</h5>
+                        <p class="card-text">S{{$salefiets->fiets_omschrijving}}</p>
+                    </div>
+                </div>
+            </a>
         </div>
-    </div>
-    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <div class="card sale_card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <div class="card sale_card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <div class="card sale_card" style="width: 18rem;">
-            <img src="{{ asset('img/dames-fiets-card.png') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-{{--Spacer--}}
-<div class="row">
-    <div class="col spacer-height">
-        <div class="spacer">
-        </div>
-    </div>
+    @endforeach
 </div>
 
 
-<div class="row">
+
+
+
+<!-- <div class="row">
     <div class="col">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -183,15 +159,11 @@
             </a>
         </div>
     </div>
-</div>
+</div> -->
 
 
 {{--Spacer--}}
-<div class="row">
-    <div class="col spacer-height">
-        <div class="spacer"></div>
-    </div>
-</div>
+
 
 <div class="row roze-kleur">
     <div class="col">
@@ -203,27 +175,25 @@
 
     @foreach ($fietsen as $fiets)
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card" style="width: 18rem;">
-                <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
-                <div class="card-body">
-                    <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
-                    <p class="card-text">S{{$fiets->fiets_omschrijving}}</p>
+            <a class="welcomeLinkFiets" href="fiets/{{$salefiets->fiets_id}}">
+                <div class="card" style="width: 18rem;">
+                    <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
+                        <p class="card-text">S{{$fiets->fiets_omschrijving}}</p>
 
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
     @endforeach
 </div>
 
 {{--Spacer--}}
-<div class="row">
-    <div class="col spacer-height">
-        <div class="spacer"></div>
-    </div>
-</div>
 
-<div class="row">
+
+<!-- <div class="row">
     <div class="col">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -247,7 +217,7 @@
             </a>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <div class="row">
@@ -255,7 +225,7 @@
         <div id="nieuwsbrief" class="my-auto">
             <form id="nieuwsbrief-form" >
                 <div class="form-group">
-                    <p>Abonneer op onze nieuwsbrief!</p>
+                    <h1>Abonneer op onze nieuwsbrief!</h1>
                     <input type="email" class="form-control" placeholder="Email" id="email_form">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
