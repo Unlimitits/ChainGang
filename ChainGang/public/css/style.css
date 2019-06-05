@@ -10,18 +10,26 @@
     display: none;
 }
 
+h1 {
+    margin-top: 0;
+}
+
+p{
+    margin: 0;
+}
+
 body {
-    max-width: 100%;
-    background-color: #2f3c7e;
-    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #f8f9fa;
 }
 
 .roze-kleur{
-    background-color: #fbeaeb;
+    /*background-color: #fbeaeb;*/
 }
 
 .roze-kleur-belangrijk{
-    background-color: #fbeaeb !important;
+    /*background-color: #fbeaeb !important;*/
     width: 80% !important;
 
 }
@@ -30,9 +38,11 @@ body {
     color: white;
 }
 
-.colorDonkerblauw{
-    color: #2f3c7e !important;
-}
+
+/*.colorDonkerblauw{*/
+    /*color: #fbeaeb !important;*/
+/*}*/
+
 
 a.welcomeLinkFiets{
     color: #2f3c7e !important;
@@ -57,23 +67,22 @@ a.welcomeLinkFiets:hover{
 
 .fa-1x {
     font-size: 1.5rem;
-    color: #fbeaeb;
+    /*color: #2f3c7e;*/
 }
 .navbar-toggler.toggler-example {
     cursor: pointer;
 }
 
 .navbar {
-    background-color: #2f3c7e !important;
 
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #fbeaeb;
+    /*color: #2f3c7e;*/
 }
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: #fbeaeb;
+    /*color: #2f3c7e;*/
 }
 
 .nav-link {
@@ -81,7 +90,7 @@ a.welcomeLinkFiets:hover{
 }
 
 .kleur-nav {
-    color: #fbeaeb !important;
+    /*color: #2f3c7e !important;*/
 }
 
 .dropdownButtonMargin{
@@ -106,13 +115,15 @@ a.welcomeLinkFiets:hover{
 
 #nieuwsbrief {
     min-height: 200px;
-    background-color: #2f3c7e;
+    /* background-color: #e23b5096; */
     width: 100%;
-    color: #fbeaeb;
+    color: #3550ff91;
+    text-align: center;
 }
 
 #nieuwsbrief-form {
     /*width: 50%;*/
+    width: 59%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -120,7 +131,9 @@ a.welcomeLinkFiets:hover{
 }
 
 #email_form {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
+    margin: 0 auto;
+    width: 54%;
 }
 
 /* End Nieuwsbrief CSS*/
@@ -129,8 +142,16 @@ a.welcomeLinkFiets:hover{
 /* Footer CSS*/
 #footer{
     text-align: center;
-    background-color: #2f3c7e;
-    color: #fbeaeb;
+    /*background-color: #2f3c7e;*/
+    color: #e23b5096;
+}
+
+.footerStyle{
+    /*margin-top: 5%;*/
+}
+
+p{
+    margin-top: 15px !important;
 }
 
 .footerStyle{
@@ -141,6 +162,11 @@ a.welcomeLinkFiets:hover{
 
 
 /* Home CSS*/
+
+.fiets-card {
+    margin-top: 10% !important;
+}
+
 .bd-example {
     display: none;
 }
@@ -158,6 +184,10 @@ a.welcomeLinkFiets:hover{
     z-index: 0;
 }
 
+.card-img-top {
+    /*background-color: skyblue;*/
+}
+
 .card-img-caption .card-text {
     text-align: center;
     width: 100%;
@@ -165,22 +195,29 @@ a.welcomeLinkFiets:hover{
     position: absolute;
     z-index: 1;
     font-size: 50px;
+    margin-top: 75% !important;
+}
+
+.card-title {
+    color: #e23b5096;
 }
 
 .card{
     border: none;
     margin: 0 auto !important;
     margin-bottom: 20px !important;
-    background-color: #fbeaeb;
+    margin-top: 10% !important;
+    /*background-color: #fbeaeb;*/
 }
 
 .card-text {
-    color: #2f3c7e;
+    color: #3550ff91;
 }
 
 .card-row {
-    background-color: #2f3c7e;
-    padding-top: 75px;
+    /*background-color: #2f3c7e;*/
+    /*background-color: lightgrey;*/
+    /*padding-top: 75px;*/
     padding-bottom: 75px;
 }
 
@@ -189,14 +226,22 @@ a.welcomeLinkFiets:hover{
 }
 
 .h1-margin {
-    margin-left: 5%;
-    color: #2f3c7e;
+    /*margin-left: 5%;*/
+    font-size: 585%;
+    text-align: center;
+    color: #3550ff91;
 }
 
 .sale_card {
     border: none !important;
 }
 
+
+.btn-primary {
+    color: white;
+    border-color: #3550ff91 !important;
+    background-color: #3550ff91;
+}
 @media only screen and (min-width: 768px) {
     .header-mobile {
         display: none;
@@ -236,6 +281,7 @@ a.welcomeLinkFiets:hover{
 
     .spacer-height {
         min-height: 100px;
+        background-color: #2f3c7e;
     }
 
     .spacer {
@@ -365,7 +411,7 @@ a.welcomeLinkFiets:hover{
 }
 
 #fiets-title {
-    color: #fbeaeb;
+    color: #3550ff91;
     margin-left: 20%;
     margin-top: 10px;
 }
@@ -381,14 +427,14 @@ a.welcomeLinkFiets:hover{
 
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-    color: #2f3c7e;
-    background-color: #fbeaeb;
+    color: white !important;
+    background-color: #3550ff91 !important;
     border-color: transparent;
 }
 
 .btn-primary:hover {
-    color: #2f3c7e;
-    background-color: #fbeaeb;
+    color: white;
+    background-color: #3550ff91 !important;
     border-color: transparent;
 }
 
@@ -458,7 +504,38 @@ tr {
 /* categorie pagina CSS*/
 
 
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #3550ff91;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
 
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #3550ff91;
+    border-color: #3550ff91;
+}
+
+.list-group-item {
+    margin-bottom: -1px !important;
+    color: #3550ff91;
+}
+
+.list-group-item:hover {
+    margin-bottom: -1px !important;
+    color: #e23b5096;
+}
+
+.list-group {
+    margin-left: 7%;
+    list-style-type: none;
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -512,10 +589,12 @@ tr {
 
 
 
-.pagination{
-    margin: auto;
-    width: 10%;
 
+.pagination {
+    /* margin: 0 auto; */
+    /* width: 14%; */
+    margin-left: 46%;
+    /* text-align: center; */
 }
 
 
@@ -549,19 +628,21 @@ tr {
     /*width: 25%;*/
     height: 350px;
     margin: 5% !important;
+    border: 1px solid #e23b5096 !important;
 }
+
 
 
 .contactStyleH1{
-    font-size: 60px;
-    color: #2f3c7e;
+    font-size: 63px;
+    color: #3550ff91;
     font-weight: bold;
-    margin-left: 15%;
     margin-top: 20%;
+    text-align: center;
 }
 
 .contactOveronsStyle{
-    color: #fbeaeb;
+    color: #3550ff91;
     font-size: 60px;
     font-weight: bold;
     /*margin-left: 5%;*/
@@ -570,13 +651,14 @@ tr {
 
 .contactStyle{
     font-size: 25px;
-    color: #2f3c7e;
-    margin-left: 15%;
+    color: #3550ff91;
+    /* margin-left: 15%; */
     line-height: 0.8;
+    text-align: center;
 }
 
 .contactStyleA{
-    color: #2f3c7e !important;
+    color: #3550ff91 !important;
     text-decoration: none;
 }
 
@@ -593,10 +675,11 @@ tr {
 }
 
 .contactStyleP{
-    font-size: 25px;
-    color: #fbeaeb;
+    font-size: 20px !important;
+    color: #3550ff91 !important;
     /*margin: 5%;*/
-    line-height: 1;
+    line-height: 1.25 !important;
+    margin-right: 13.5% !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -690,7 +773,7 @@ tr {
 
     .contactStyle{
         font-size: 19px;
-        color: #2f3c7e;
+        color: #3550ff91 !important;
         margin-left: 15%;
         line-height: 0.8;
     }
@@ -708,16 +791,17 @@ tr {
 
 /* Detailpagina css*/
 
+.review-table {
+    border-left: 0px solid;
+    border-right: 0px solid;
+}
+
 .img-fiets-size {
     width: 60%;
     margin-left: 20%;
 }
 
-#fiets-title {
-    color: #fbeaeb;
-    margin-left: 20%;
-    margin-top: 10px;
-}
+
 
 .btn-block {
     width: 60%;
@@ -725,35 +809,35 @@ tr {
     margin-top: 10px;
     background-color: #fbeaeb;
     border-color: transparent;
-    color: #2f3c7e;
+    color: #3550ff91;
 }
 
 
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-    color: #2f3c7e;
-    background-color: #fbeaeb;
-    border-color: transparent;
-}
+/*.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {*/
+    /*color: #2f3c7e;*/
+    /*background-color: #fbeaeb;*/
+    /*border-color: transparent;*/
+/*}*/
 
-.btn-primary:hover {
-    color: #2f3c7e;
-    background-color: #fbeaeb;
-    border-color: transparent;
-}
+/*.btn-primary:hover {*/
+    /*color: #2f3c7e;*/
+    /*background-color: #fbeaeb;*/
+    /*border-color: transparent;*/
+/*}*/
 
 td{
-    color: #fbeaeb;
+    color: #3550ff91;
 }
 
 table {
     border-collapse: collapse;
-    border: solid #fbeaeb 1px;
+    border: solid #3550ff91 1px;
     margin: 0 auto;
     width: 60%;
 }
 
 tr {
-    border-bottom: solid #fbeaeb 1px;
+    border-bottom: solid #3550ff91 1px;
 }
 
 .ster{
@@ -779,8 +863,8 @@ tr {
 .review-button {
     float: right;
     margin-left: -50%;
-    background-color: #fbeaeb;
-    color: #2f3c7e;
+    background-color: #3550ff91;
+    color: #fbeaeb;
 }
 
 .schrijf-review {
@@ -841,7 +925,7 @@ tr {
 .winkelwagenH1Style{
     font-size: 25px;
     font-weight: bold;
-    color: #fbeaeb;
+    color: #3550ff91;
     margin-left: 2%;
 }
 
@@ -852,7 +936,7 @@ tr {
 }
 
 .winkelwagenColorStyle{
-    color: #fbeaeb;
+    color: #3550ff91;
 }
 
 .colWinkelwagenMarginStyle{
@@ -866,16 +950,16 @@ tr {
 }
 
 .winkelwagenHr{
-    color: #fbeaeb;
-    border-color: white;
+    color: #3550ff91;
+    border-color: 3550ff91;
     width: 65%;
     margin: auto;
 }
 
 .winkelwagenHrSecond{
     width: 95%;
-    color: #fbeaeb;
-    border-color: #fbeaeb;
+    color: #3550ff91;
+    border-color: #3550ff91;
     margin: auto;
 }
 
@@ -885,13 +969,13 @@ tr {
 
 .totaalArtikelenStyle{
     margin-left: 4%;
-    color: #fbeaeb;
+    color: #3550ff91;
     margin-top: 15px;
 }
 
 .colwinkelWagenMarginBedragStyle{
     margin-left: 4%;
-    color: #fbeaeb;
+    color: #3550ff91;
     /*margin-top: 15px;*/
     /*font-weight: bold;*/
 }
@@ -903,32 +987,32 @@ tr {
 
 .verzendkostenStyle{
     margin-top: -15px;
-    color: #fbeaeb;
+    color: #3550ff91;
 }
 
 .gratisStyle{
     margin-top: -15px;
-    color: #fbeaeb;
+    color: #3550ff91;
 }
 
 .totaalBedragStyle{
-    color: #fbeaeb;
+    color: #3550ff91;
     margin-top: 10px;
 }
 
 
 .verwijderenAStyle{
-    color: #fbeaeb;
+    color: #3550ff91;
 }
 
 .verwijderenAStyle:hover{
-    color: #fbeaeb;
+    color: #3550ff91;
     text-decoration: none;
 }
 
 
 .bestellenAStyle{
-    color: #2f3c7e;
+    color: #3550ff91;
     background-color: #fbeaeb;
     margin: auto;
     float: right;
@@ -940,7 +1024,7 @@ tr {
 }
 
 .bestellenAStyle:hover{
-    color: #2f3c7e;;
+    color: #3550ff91;
     text-decoration: none;
 
 }
@@ -952,7 +1036,7 @@ tr {
 
 .verderWinkelenStyle{
     margin-left: 2%;
-    color: #2f3c7e;;
+    color: #3550ff91;
     text-decoration: none;
     background-color: #fbeaeb;
     padding: 1% 5% 1% 5%;
@@ -961,7 +1045,7 @@ tr {
 
 .verderWinkelenStyle:hover{
     margin-left: 2%;
-    color: #2f3c7e;;
+    color: #3550ff91;
     text-decoration: none;
     background-color: #fbeaeb;
     padding: 1% 5% 1% 5%;

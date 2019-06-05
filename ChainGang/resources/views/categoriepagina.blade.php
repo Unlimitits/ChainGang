@@ -9,7 +9,7 @@
     @include('Layout.layout')
 </head>
 
-<body>
+
 <div class="container-fluid">
 
     <div class="row header-web">
@@ -37,24 +37,22 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('img/Banners/banner.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/Banner_Actie.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="colorWhite">Test deze fiets</h5>
-                                <p class="colorWhite">Maak een proefrit op onze nieuwe fietsen</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/Banners/lukassen_home.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/Banner_Fiets.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="colorWhite">Kom nu naar onze winkel</h5>
-                                <p class="colorWhite">Ons team staat met een kopje koffie klaar</p>
+                                <h5 class="colorWhite">Nieuw!</h5>
+                                <p class="colorWhite">Klik hier voor onze nieuwe fietsen!</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/Banners/slider-alexander1.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/Banner_Actie2.png') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="colorWhite">Nieuw binnen</h5>
-                                <p class="colorWhite">Er zijn nieuwe cortina fietsen binnen gekomen!</p>
+                                <h5 class="colorWhite">Actie!</h5>
+                                <p class="colorWhite">Klik hier voor onze huidige acties!</p>
                             </div>
                         </div>
                     </div>
@@ -70,26 +68,22 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col spacer-height">
-        <div class="spacer">
-        </div>
-    </div>
-</div>
+
+
 
 <div class="row">
     <div class="col-1"></div>
     <div class="col-1">
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Frame type
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a class="kleur-nav" href="categoriepagina?type=dames">Damesfietsen</a></li>
-                <li><a class="kleur-nav" href="categoriepagina?type=mannen">Herenfietsen</a></li>
-                <li><a class="kleur-nav" href="categoriepagina?type=kinderen">Kinderfietsen</a></li>
-            </ul>
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                Frame type
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="list-group-item" href="categoriepagina?type=dames">Damesfietsen</a>
+                <a class="list-group-item" href="categoriepagina?type=mannen">Herenfietsen</a>
+                <a class="list-group-item" href="categoriepagina?type=kinderen">Kinderfietsen</a>
+            </div>
         </div>
     </div>
 </div>
@@ -99,23 +93,18 @@
 
 <div class="row">
     <div class="col">
-        <h1 class="categorie-h1">fietsen</h1>
+        <h1 class="h1-margin">fietsen</h1>
     </div>
 </div>
 
-<div class="row">
-    <div class="col spacer-height">
-        <div class="spacer">
-        </div>
-    </div>
-</div>
+
 
 <div class="row">
     <div class=" col-xl-3">
         <ul class="list-group">
-            <li><a class="kleur-nav" name="link1" href="categoriepagina?type=dames">Damesfietsen</a></li>
-            <li><a class="kleur-nav" href="categoriepagina?type=mannen">Herenfietsen</a></li>
-            <li><a class="kleur-nav" href="categoriepagina?type=kinderen">Kinderfietsen</a></li>
+            <li><a class="list-group-item" name="link1" href="categoriepagina?type=dames">Damesfietsen</a></li>
+            <li><a class="list-group-item" href="categoriepagina?type=mannen">Herenfietsen</a></li>
+            <li><a class="list-group-item" href="categoriepagina?type=kinderen">Kinderfietsen</a></li>
         </ul>
     </div>
 
@@ -196,46 +185,6 @@
         @endif
     @endif
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Vanaf hier komen database fietsen -->
     {{--@foreach ($fietsen as $fiets)--}}
     {{--<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">--}}
@@ -269,12 +218,7 @@
             @include('Common templates.footer')
         </div>
     </div>
-
-
-
-
-
-
+</div>
 </div>
 
 </body>

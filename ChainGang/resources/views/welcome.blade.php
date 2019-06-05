@@ -1,5 +1,4 @@
-@extends('Common templates.headertest')
-
+@include('Layout.layout')
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -7,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-    <link href="{{ asset('style.css') }}" rel="stylesheet" type="text/css" >
-    @include('Layout.layout')
+    {{--<link href="{{ asset('style.css') }}" rel="stylesheet" type="text/css" >--}}
+
 
 </head>
 
@@ -30,7 +29,7 @@
     </div>
 
 
-    <div class="row">
+   <div class="row">
         <div class="col">
 
             <div class="bd-example">
@@ -42,24 +41,22 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('img/Banners/banner.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/Banner_Actie.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="colorWhite">Test deze fiets</h5>
-                                <p class="colorWhite">Maak een proefrit op onze nieuwe fietsen</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/Banners/lukassen_home.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/Banner_Fiets.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="colorWhite">Kom nu naar onze winkel</h5>
-                                <p class="colorWhite">Ons team staat met een kopje koffie klaar</p>
-                            </div>>
+                                <h5 class="colorWhite">Nieuw!</h5>
+                                <p class="colorWhite">Klik hier voor onze nieuwe fietsen!</p>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/Banners/slider-alexander1.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/Banners/Banner_Actie2.png') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="colorWhite">Nieuw binnen</h5>
-                                <p class="colorWhite">Er zijn nieuwe cortina fietsen binnen gekomen!</p>
+                                <h5 class="colorWhite">Actie!</h5>
+                                <p class="colorWhite">Klik hier voor onze huidige acties!</p>
                             </div>
                         </div>
                     </div>
@@ -75,7 +72,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 <div class="row card-row">
     <div class="col">
@@ -94,7 +91,7 @@
             <a class="welcomeLinkFiets" href="categoriepagina?type=mannen">
             <div class="card-img-caption">
                 <p class="card-text">Herenfietsen</p>
-                <img class="card-img-top" src="{{ asset('img/Heren Fietsen/heren-fiets.jpg') }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ asset('img/Heren Fietsen/heren-fiets.png') }}" alt="Card image cap">
             </div>
             </a>
         </div>
@@ -105,7 +102,8 @@
             <div class="card" style="width: 20rem;">
                 <div class="card-img-caption">
                     <p class="card-text">Kinderfietsen</p>
-                    <img class="card-img-top" src="{{ asset('img/Kinder Fietsen/kinder-fiets.jpg') }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('img/Kinder Fietsen/kinder-fiets.png') }}" alt="Card image cap">
+
                 </div>
             </div>
         </a>
@@ -137,15 +135,6 @@
     @endforeach
 </div>
 
-
-<div class="row">
-    <div class="col spacer-height">
-        <div class="spacer">
-        </div>
-    </div>
-</div>
-
-
 <!-- <div class="row">
     <div class="col">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -172,14 +161,6 @@
     </div>
 </div> -->
 
-
-Spacer
-<div class="row">
-    <div class="col spacer-height">
-        <div class="spacer"></div>
-    </div>
-</div>
-
 <div class="row roze-kleur">
     <div class="col">
         <h1 class="h1-margin">Nieuw</h1>
@@ -203,13 +184,6 @@ Spacer
         </div>
 
     @endforeach
-</div>
-
-Spacer
-<div class="row">
-    <div class="col spacer-height">
-        <div class="spacer"></div>
-    </div>
 </div>
 
 <!-- <div class="row">
@@ -244,7 +218,7 @@ Spacer
         <div id="nieuwsbrief" class="my-auto">
             <form id="nieuwsbrief-form" >
                 <div class="form-group">
-                    <p>Abonneer op onze nieuwsbrief!</p>
+                    <h1>Abonneer op onze nieuwsbrief!</h1>
                     <input type="email" class="form-control" placeholder="Email" id="email_form">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
