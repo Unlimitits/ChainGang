@@ -46,9 +46,10 @@ body {
     color: #e23b5096;
 }
 
-.colorDonkerblauw{
-    color: #3550ff91; !important;
-}
+
+/*.colorDonkerblauw{*/
+    /*color: #fbeaeb !important;*/
+/*}*/
 
 
 a.welcomeLinkFiets{
@@ -180,12 +181,6 @@ p{
 
 
 /* Home CSS*/
-
-
-.homeContainerReview{
-    width: 100%;
-    display: block;
-}
 
 .fiets-card {
     margin-top: 10% !important;
@@ -975,7 +970,7 @@ tr {
 
 .winkelwagenHr{
     color: #3550ff91;
-    border-color: 3550ff91;
+    border-color: #3550ff91;
     width: 65%;
     margin: auto;
 }
@@ -1077,17 +1072,21 @@ tr {
 }
 
 .colWinkelwagenStyle{
+    /*line-height: 0.1px;*/
     color: #e23b5096;
+    /*margin-top: 30px;*/
 
 }
 
 .colWinkelwagenStyleInlineBlock{
     display: inline-block;
+    /*float: left;*/
+    /*clear: both;*/
 }
 
 .aantalStyle{
     /*margin-left: 5%;*/
-    margin-top: 1px;
+    margin-bottom: 10px;
 }
 
 
@@ -1112,7 +1111,7 @@ tr {
     width: 43px;
     display: block;
     margin-bottom: 15px;
-    /*margin-top: -10px;*/
+    margin-top: -10px;
 }
 
 .besteldStyle{
@@ -1132,14 +1131,11 @@ tr {
     }
 
     .aantalStyle {
-        /*margin-top: 0px;*/
-        margin-bottom: 10px;
-        color: #e23b5096;
-
+        margin-top: 48px;
     }
 
     .verwijderenAStyle {
-        color: #fbeaeb;
+        color: #e23b5096;
         margin-top: 48px;
     }
 
@@ -1168,8 +1164,6 @@ tr {
     }
     .aantalStyle{
         margin-top: 52px;
-        margin-bottom: 20px;
-
     }
 
     .verwijderenAStyle {
@@ -1203,14 +1197,6 @@ tr {
 }
 
 @media only screen and (min-width: 992px) {
-
-    .aantalStyle{
-        margin-bottom: 5px;
-
-    }
-
-
-
     .bestellenAStyle {
         padding: 0.5% 1% 0.5% 1%;
 
