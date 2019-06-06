@@ -24,9 +24,21 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('fiets', 'FietsController');
 
+Route::get('/categoriepaginaFrameType/{frametype}', 'FietsController@filterFrameType')->name('filterFrameType');
+
+Route::get('/categoriepaginaPriceMin/{priceMin}', 'FietsController@filterPrice')->name('filterPrice');
+
+Route::get('/categoriepaginaBrand/{brand}', 'FietsController@filterBrand')->name('filterBrand');
+
 Route::resource('review', 'ReviewController');
 
 Route::get('/categoriepagina', 'FietsController@index')->name('categoriepagina');
+
+Route::get('/categoriepaginaFrameType', 'FietsController@index')->name('categoriepagina');
+
+Route::get('/categoriepaginaPriceMin', 'FietsController@index')->name('categoriepagina');
+
+Route::get('/categoriepaginaBrand', 'FietsController@index')->name('categoriepagina');
 
 Route::get('/detailpagina', function (){
     return view('detailpagina');
