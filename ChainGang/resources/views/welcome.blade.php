@@ -161,6 +161,15 @@
     </div>
 </div> -->
 
+    <div class="row">
+        <div class="col-12"><h3 class="colorWhite">Laatste Reviews</h3></div>
+        @foreach ($reviews as $review)
+            <div class="col-4"><h5 class="colorWhite">{{$review->review_id}}</h5>
+                <p class="colorWhite">{{$review->review_omschrijving}}</p>
+            </div>
+        @endforeach
+    </div>
+
 <div class="row roze-kleur">
     <div class="col">
         <h1 class="h1-margin">Nieuw</h1>
