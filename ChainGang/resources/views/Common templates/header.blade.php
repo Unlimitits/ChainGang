@@ -1,4 +1,5 @@
 
+
 {{--<nav class="navbar navbar-expand-md navbar-light bg-light">--}}
     {{--<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">--}}
         {{--<a href="{{ route('home') }}">--}}
@@ -85,12 +86,48 @@
                 <div class="top-right links">
                     @auth
                         {{--<a href="{{ url('/home') }}">Home</a>--}}
+
+
+                        <div class="btn-group">
+                            <button type="button" class="btn nav-link kleur-nav dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ Auth::user()->user_gebruikersnaam }} <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+
+
+                                {{--Moet nog gelinkt worden naar de profiel pagina--}}
+                                <a class="dropdown-item" href="{{route('profiel')}}">
+                                    Profiel pagina
+                                </a>
+
+
+
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
                     @else
                         <a class="nav-link kleur-nav" href="{{ route('login') }}">Inloggen</a>
-
-                        {{--@if (Route::has('register'))--}}
-                        {{--<a href="{{ route('register') }}">Register</a>--}}
-                        {{--@endif--}}
                     @endauth
                 </div>
             @endif

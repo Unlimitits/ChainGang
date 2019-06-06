@@ -10,12 +10,15 @@
 
 
 </head>
+
+
 <body style="overflow-x: hidden;">
 <div class="container-fluid">
 
     <div class="row header-web">
         <div class="col">
             @include('Common templates.header')
+
         </div>
     </div>
 
@@ -26,7 +29,7 @@
     </div>
 
 
-    <div class="row">
+   <div class="row">
         <div class="col">
 
             <div class="bd-example">
@@ -38,19 +41,25 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
+                            <a class="welcomeLinkFiets" href="/categoriepagina">
                             <img src="{{ asset('img/Banners/Banner_Actie.jpg') }}" class="d-block w-100" alt="...">
+                            </a>
                             <div class="carousel-caption d-none d-md-block">
                             </div>
                         </div>
                         <div class="carousel-item">
+                            <a class="welcomeLinkFiets" href="/categoriepagina">
                             <img src="{{ asset('img/Banners/Banner_Fiets.jpg') }}" class="d-block w-100" alt="...">
+                            </a>
                             <div class="carousel-caption d-none d-md-block">
                                 <h5 class="colorWhite">Nieuw!</h5>
                                 <p class="colorWhite">Klik hier voor onze nieuwe fietsen!</p>
                             </div>
                         </div>
                         <div class="carousel-item">
+                            <a class="welcomeLinkFiets" href="/categoriepagina">
                             <img src="{{ asset('img/Banners/Banner_Actie2.png') }}" class="d-block w-100" alt="...">
+                            </a>
                             <div class="carousel-caption d-none d-md-block">
                                 <h5 class="colorWhite">Actie!</h5>
                                 <p class="colorWhite">Klik hier voor onze huidige acties!</p>
@@ -73,7 +82,7 @@
 
 <div class="row card-row">
     <div class="col">
-        <a class="welcomeLinkFiets" href="categoriepagina?type=dames">
+        <a class="welcomeLinkFiets" href="{{route('filterFrameType', ['frametype'=>'Vrouwen'])}}">
             <div class="card" style="width: 20rem;">
                 <div class="card-img-caption">
                     <p class="card-text">Damesfietsen</p>
@@ -85,7 +94,7 @@
 
     <div class="col">
         <div class="card" style="width: 20rem;">
-            <a class="welcomeLinkFiets" href="categoriepagina?type=mannen">
+            <a class="welcomeLinkFiets" href="{{route('filterFrameType', ['frametype'=>'Mannen'])}}">
             <div class="card-img-caption">
                 <p class="card-text">Herenfietsen</p>
                 <img class="card-img-top" src="{{ asset('img/Heren Fietsen/heren-fiets.png') }}" alt="Card image cap">
@@ -95,17 +104,18 @@
     </div>
 
     <div class="col">
-        <a class="welcomeLinkFiets" href="/categoriepagina?type=kinderen">
+        <a class="welcomeLinkFiets" href="{{route('filterFrameType', ['frametype'=>'Kinderen'])}}">
             <div class="card" style="width: 20rem;">
                 <div class="card-img-caption">
                     <p class="card-text">Kinderfietsen</p>
                     <img class="card-img-top" src="{{ asset('img/Kinder Fietsen/kinder-fiets.png') }}" alt="Card image cap">
+
                 </div>
             </div>
         </a>
     </div>
 </div>
-
+    @if($salefietsen->count() > 0)
 <div class="row roze-kleur">
     <div class="col">
         <h1 class="h1-margin">Sale</h1>
@@ -116,6 +126,7 @@
 
 
 <div class="row roze-kleur">
+
     @foreach($salefietsen as $salefiets)
         <div class=".col-xs-3 col-sm-3 col-md-3 col-lg-3">
             <a class="welcomeLinkFiets" href="fiets/{{$salefiets->fiets_id}}">
@@ -129,12 +140,9 @@
             </a>
         </div>
     @endforeach
+
 </div>
-
-
-
-
-
+@endif
 <!-- <div class="row">
     <div class="col">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -161,10 +169,6 @@
     </div>
 </div> -->
 
-
-{{--Spacer--}}
-
-
 <div class="row roze-kleur">
     <div class="col">
         <h1 class="h1-margin">Nieuw</h1>
@@ -175,12 +179,12 @@
 
     @foreach ($fietsen as $fiets)
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <a class="welcomeLinkFiets" href="fiets/{{$salefiets->fiets_id}}">
+            <a class="welcomeLinkFiets" href="fiets/{{$fiets->fiets_id}}">
                 <div class="card" style="width: 18rem;">
                     <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
                     <div class="card-body">
                         <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
-                        <p class="card-text">S{{$fiets->fiets_omschrijving}}</p>
+                        <p class="card-text">{{$fiets->fiets_omschrijving}}</p>
 
                     </div>
                 </div>
@@ -189,9 +193,6 @@
 
     @endforeach
 </div>
-
-{{--Spacer--}}
-
 
 <!-- <div class="row">
     <div class="col">
@@ -242,8 +243,7 @@
 </div>
 
 
-</div>
-
 
 </body>
+
 </html>
