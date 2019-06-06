@@ -168,13 +168,20 @@
     </div>
 </div> -->
 
-    <div class="row">
-        <div class="col-12"><h3 class="colorWhite">Laatste Reviews</h3></div>
-        @foreach ($reviews as $review)
-            <div class="col-4"><h5 class="colorWhite">{{$review->review_id}}</h5>
-                <p class="colorWhite">{{$review->review_omschrijving}}</p>
-            </div>
-        @endforeach
+
+    <div class="homeContainerReview">
+        <div class="row">
+            <div class="col-12"><h3 class="colorBlauw">Laatste Reviews</h3></div>
+        </div>
+
+        <div class="row">
+            @foreach ($reviews as $review)
+                <div class="col-sm-12 col-md-3"><h5 class="colorPink">{{$review->review_id}}</h5>
+                    <p class="colorPink">{{$review->review_omschrijving}}</p>
+                    <p class="colorPink">Waardering: {{$review->review_waardering}} sterren</p>
+                </div>
+            @endforeach
+        </div>
     </div>
 <div class="row roze-kleur">
     <div class="col">
