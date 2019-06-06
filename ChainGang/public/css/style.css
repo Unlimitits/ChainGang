@@ -102,6 +102,15 @@ a.welcomeLinkFiets:hover{
 /* dropdown */
 .dropdownMargin{
     margin-left: 4%;
+
+}
+
+.dropdownMarginStyle{
+    margin-left: 3.6%;
+}
+
+.dropdownColor{
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .dropdownStyle{
