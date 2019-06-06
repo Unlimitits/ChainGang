@@ -26,7 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $fietsen = Fiets::take(4)->orderBy('created_at')->get();
+        $fietsen = Fiets::take(4)->orderBy('created_at', 'desc')->get();
+
+//        dd($fietsen);
 
 
 
@@ -45,10 +47,12 @@ class HomeController extends Controller
             ->where('aanbieding_id', '=', $test)
             ->limit(4)
             ->get();
+//        dd($salefietsen);
 
 
         $reviews = db::table('reviews')->limit(3)->orderBy('created_at' ,'desc')->get();
         return view('welcome', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen , 'reviews' => $reviews]);
+
 
 //      return view('home', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen]);
 
