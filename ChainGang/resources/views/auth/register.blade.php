@@ -118,7 +118,6 @@
 
 
                             <div class="form-group row">
-                              }
 
                                 <div class="col-md-10 loginStyleMargin">
                                     <input id="user_telefoonnummer" placeholder="Telefoonnummer" type="text" class="Loginform-controlStyle form-control{{ $errors->has('user_telefoonnummer') ? ' is-invalid' : '' }}" name="user_telefoonnummer" value="{{ old('user_telefoonnummer') }}" required autofocus>

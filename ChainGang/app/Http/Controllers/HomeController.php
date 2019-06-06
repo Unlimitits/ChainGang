@@ -47,7 +47,10 @@ class HomeController extends Controller
             ->get();
 
 
-        return view('welcome', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen]);
-//                return view('home', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen]);
+        $reviews = db::table('reviews')->limit(3)->orderBy('created_at' ,'desc')->get();
+        return view('welcome', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen , 'reviews' => $reviews]);
+
+//      return view('home', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen]);
+
     }
 }
