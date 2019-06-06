@@ -38,6 +38,14 @@ body {
     color: white;
 }
 
+.colorBlauw{
+    color: #3550ff91;
+}
+
+.colorPink{
+    color: #e23b5096;
+}
+
 
 /*.colorDonkerblauw{*/
     /*color: #fbeaeb !important;*/
@@ -962,7 +970,7 @@ tr {
 
 .winkelwagenHr{
     color: #3550ff91;
-    border-color: 3550ff91;
+    border-color: #3550ff91;
     width: 65%;
     margin: auto;
 }
@@ -1065,7 +1073,7 @@ tr {
 
 .colWinkelwagenStyle{
     /*line-height: 0.1px;*/
-    color: #fbeaeb;
+    color: #e23b5096;
     /*margin-top: 30px;*/
 
 }
@@ -1078,7 +1086,7 @@ tr {
 
 .aantalStyle{
     /*margin-left: 5%;*/
-    margin-top: 1px;
+    margin-bottom: 10px;
 }
 
 
@@ -1127,7 +1135,7 @@ tr {
     }
 
     .verwijderenAStyle {
-        color: #fbeaeb;
+        color: #e23b5096;
         margin-top: 48px;
     }
 
@@ -1159,7 +1167,7 @@ tr {
     }
 
     .verwijderenAStyle {
-        color: #fbeaeb;
+        color: #e23b5096;
         margin-top: 51px;
     }
 
@@ -1265,7 +1273,7 @@ tr {
     margin: 0 auto;
     display: block;
     text-align: center;
-    color: #fbeaeb;
+    color: #e23b5096;
     margin-bottom: 5%;
 }
 
