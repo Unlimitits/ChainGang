@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class KlantIdToReview extends Migration
+class CreateEmailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class KlantIdToReview extends Migration
      */
     public function up()
     {
-        Schema::table('review', function (Blueprint $table) {
-            $table->foreign('klant_id')->references('klant_id')->on('klant');
+        Schema::create('emails', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('email');
         });
     }
 
@@ -25,8 +26,6 @@ class KlantIdToReview extends Migration
      */
     public function down()
     {
-        Schema::table('review', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('emails');
     }
 }

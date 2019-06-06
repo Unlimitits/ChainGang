@@ -253,6 +253,25 @@
 </div>
 
 
+
+{{--De nieuwsbrief is nog niet werkend--}}
+
+{{--<div class="row">--}}
+    {{--<div class="col">--}}
+        {{--<div id="nieuwsbrief" class="my-auto">--}}
+            {{--<form  method="post" id="nieuwsbrief-form" >--}}
+                {{--{{csrf_field()}}--}}
+                {{--<div class="form-group">--}}
+                    {{--<h1>Abonneer op onze nieuwsbrief!</h1>--}}
+                    {{--<input name="email" type="email" class="form-control" placeholder="Email" id="email_form">--}}
+                    {{--<button type="submit" class="btn btn-primary">Submit</button>--}}
+                {{--</div>--}}
+            {{--</form>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</div>    --}}
+
+
 <div class="row">
     <div class="col">
         @include('Common templates.footer')
