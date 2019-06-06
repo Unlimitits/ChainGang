@@ -57,4 +57,14 @@ class HomeController extends Controller
 //      return view('home', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen]);
 
     }
+
+    public function store()
+    {
+        //var_dump(\request('email'));
+        $email = \request('email');
+        DB::table('emails')->insert(
+            ['email' => $email]
+        );
+        return redirect()->back();
+    }
 }

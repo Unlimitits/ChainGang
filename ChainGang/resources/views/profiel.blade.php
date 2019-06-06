@@ -35,31 +35,31 @@
             <table class="table-profiel">
                 <tr>
                     <td>Voornaam </td>
-                    <td>John</td>
+                    <td>{{Auth::user()->user_voornaam}}</td>
                 </tr>
                 <tr>
                     <td>Achternaam </td>
-                    <td>Doe</td>
+                    <td>{{Auth::user()->user_achternaam}}</td>
                 </tr>
                 <tr>
-                    <td>Email-Adres </td>
-                    <td>totallylegit@email.com</td>
+                    <td>Emailadres </td>
+                    <td>{{Auth::user()->email}}</td>
                 </tr>
                 <tr>
                     <td>Telefoon </td>
-                    <td>1234-567890</td>
+                    <td>{{Auth::user()->user_telefoonnummer}}</td>
                 </tr>
                 <tr>
                     <td>Straat </td>
-                    <td>Straatnaam 8c</td>
+                    <td>{{Auth::user()->user_straat}}</td>
                 </tr>
                 <tr>
                     <td>Postcode </td>
-                    <td>4242 GG</td>
+                    <td>{{Auth::user()->user_postcode}}</td>
                 </tr>
                 <tr>
                     <td>Plaats </td>
-                    <td>Stad</td>
+                    <td>{{Auth::user()->user_plaats}}</td>
                 </tr>
             </table>
         </div>

@@ -86,9 +86,9 @@
                 Frame type
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="list-group-item" href="categoriepagina?type=dames">Damesfietsen</a>
-                <a class="list-group-item" href="categoriepagina?type=mannen">Herenfietsen</a>
-                <a class="list-group-item" href="categoriepagina?type=kinderen">Kinderfietsen</a>
+                @foreach($arrayFrameTypeUnique as $fietsFrameType)
+                    <li><a class="list-group-item" name="link1" href="{{route('filterFrameType', ['frametype'=>$fietsFrameType])}}">{{$fietsFrameType}}</a></li>
+                @endforeach
             </div>
         </div>
     </div>
