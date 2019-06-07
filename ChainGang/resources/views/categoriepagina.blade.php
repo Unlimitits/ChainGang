@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-    </div>>
+    </div>
 
 
 
@@ -139,19 +139,19 @@
         </ul>
     </div>
 
-            @foreach ($fietsen as $fiets)
-                <a  class="welcomeLinkFiets" href="fiets/{{$fiets->fiets_id}}">
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
-                                <p class="card-text">{{$fiets->fiets_omschrijving}}</p>
-                            </div>
-                        </div>
+    @foreach ($fietsen as $fiets)
+        <a  class="welcomeLinkFiets" href="{{route('fiets.show', [$fiets->fiets_id])}}">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
+                        <p class="card-text">{{$fiets->fiets_omschrijving}}</p>
                     </div>
-                </a>
-            @endforeach
+                </div>
+            </div>
+        </a>
+    @endforeach
 
 
 <!-- Vanaf hier komen database fietsen -->

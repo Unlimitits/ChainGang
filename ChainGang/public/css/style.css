@@ -55,6 +55,7 @@ body {
 a.welcomeLinkFiets{
     color: #2f3c7e !important;
     text-decoration: none;
+    height: 100%;
 }
 
 a.welcomeLinkFiets:hover{
@@ -259,7 +260,7 @@ p{
 .btn-primary {
     color: white;
     border-color: #3550ff91 !important;
-    background-color: #3550ff91;
+    background-color: #e23b5096 !important;
 }
 @media only screen and (min-width: 768px) {
     .header-mobile {
@@ -452,7 +453,7 @@ p{
 }
 
 .btn-primary:hover {
-    color: white;
+    color: #e23b5096;
     background-color: #3550ff91 !important;
     border-color: transparent;
 }
@@ -495,8 +496,13 @@ tr {
 .review-button {
     float: right;
     margin-left: -50%;
-    background-color: #fbeaeb;
-    color: #2f3c7e;
+    background-color: #3550ff91;
+    color: #e23b5096;
+}
+
+.review-button:hover{
+    background-color: #e23b5096;
+    color: #3550ff91;
 }
 
 .schrijf-review {
@@ -793,7 +799,6 @@ tr {
     .contactStyle{
         font-size: 19px;
         color: #3550ff91 !important;
-        margin-left: 15%;
         line-height: 0.8;
     }
 
@@ -1167,7 +1172,7 @@ tr {
     }
 
     .verwijderenAStyle {
-        color: #e23b5096;
+        color: #fbeaeb;
         margin-top: 51px;
     }
 

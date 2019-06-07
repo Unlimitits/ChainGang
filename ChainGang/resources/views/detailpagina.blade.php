@@ -83,48 +83,42 @@
         <div class="col">
             <table class="review-table">
                 <tr>
-                    {{--@foreach($review as $reviews)--}}
+                    @foreach($review as $reviews)
                     <td class="schrijf-review">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nobis repellendus tenetur! Aperiam deleniti facilis fugit illum modi nam neque, nulla odio odit quidem rerum sapiente, similique sit vero voluptates.
-                        <br><br> geplaatst door: henk
-                    </td>
-                </tr>
-                <tr>
-                    <td class="schrijf-review">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nobis repellendus tenetur! Aperiam deleniti facilis fugit illum modi nam neque, nulla odio odit quidem rerum sapiente, similique sit vero voluptates.
-                        <br><br> geplaatst door: henk
-                    </td>
-                </tr>
-                <tr>
-                    <td class="schrijf-review">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nobis repellendus tenetur! Aperiam deleniti facilis fugit illum modi nam neque, nulla odio odit quidem rerum sapiente, similique sit vero voluptates.
-                        <br><br> geplaatst door: henk
-                    </td>
-                </tr>
-                {{--@endforeach--}}
 
-                <tr>
-                    <td class="schrijf-review">
-                        <form action="{{ route('review.store') }}" method="post" >
-                            @csrf
-                        <h3>Plaats review</h3>
-                        <input type="hidden" name="fietsData" value="{{$fiets->fiets_id}}">
-                        <textarea class="review" name="review_omschrijving"></textarea>
 
-                        <button type="submit" class="btn review-button">Verzenden</button>
-
-                            <fieldset class="rating">
-                                <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5"></label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
-                                <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
-                                <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
-
-                            </fieldset>
-                        </form>
+                        <p class="DetailReviewP"> {{$reviews->	review_omschrijving}}</p>
+                        <p> Waardering: {{$reviews->review_waardering}} sterren</p>
+                        <p>Geplaats door: {{$reviews->user->user_gebruikersnaam}}</p>
 
                     </td>
                 </tr>
+                @endforeach
+
+                @if($user = Auth::user())
+                    <tr>
+                        <td class="schrijf-review">
+                            <form action="{{ route('review.store') }}" method="post" >
+                                @csrf
+                            <h3>Plaats review</h3>
+                            <input type="hidden" name="fietsData" value="{{$fiets->fiets_id}}">
+                            <textarea class="review" name="review_omschrijving"></textarea>
+
+                            <button type="submit" class="btn review-button">Verzenden</button>
+
+                                <fieldset class="rating">
+                                    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5"></label>
+                                    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+                                    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+                                    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+                                    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+
+                                </fieldset>
+                            </form>
+
+                        </td>
+                    </tr>
+                @endif
             </table>
         </div>
     </div>

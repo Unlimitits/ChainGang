@@ -30,6 +30,9 @@ Route::get('/categoriepaginaPriceMin/{priceMin}', 'FietsController@filterPrice')
 
 Route::get('/categoriepaginaBrand/{brand}', 'FietsController@filterBrand')->name('filterBrand');
 
+Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
+
+
 Route::resource('review', 'ReviewController');
 
 Route::get('/categoriepagina', 'FietsController@index')->name('categoriepagina');
