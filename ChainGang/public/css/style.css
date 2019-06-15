@@ -22,6 +22,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #f8f9fa;
+    overflow-x: hidden;
 }
 
 .roze-kleur{
@@ -55,6 +56,7 @@ body {
 a.welcomeLinkFiets{
     color: #2f3c7e !important;
     text-decoration: none;
+    height: 100%;
 }
 
 a.welcomeLinkFiets:hover{
@@ -259,7 +261,7 @@ p{
 .btn-primary {
     color: white;
     border-color: #3550ff91 !important;
-    background-color: #3550ff91;
+    background-color: #e23b5096 !important;
 }
 @media only screen and (min-width: 768px) {
     .header-mobile {
@@ -414,7 +416,7 @@ p{
 
 
 @media only screen and (max-width: 600px) {
-    .test{
+    .registerStyle{
         margin-left: 50% !important;
     }
 }
@@ -423,6 +425,11 @@ p{
 /* end registratie CSS */
 
 /* Detailpagina css*/
+
+.alertStyleDetail{
+    margin-left: 19.2%;
+    margin-right: 19.2%;
+}
 
 .img-fiets-size {
     width: 60%;
@@ -452,7 +459,7 @@ p{
 }
 
 .btn-primary:hover {
-    color: white;
+    color: #e23b5096;
     background-color: #3550ff91 !important;
     border-color: transparent;
 }
@@ -460,6 +467,8 @@ p{
 td{
     color: #fbeaeb;
 }
+
+
 
 table {
     border-collapse: collapse;
@@ -471,6 +480,11 @@ table {
 tr {
     border-bottom: solid #fbeaeb 1px;
 }
+
+.tdStyle{
+    border-bottom: 2px solid #dee2e6;
+}
+
 
 .ster{
     max-width: 30px;
@@ -495,8 +509,13 @@ tr {
 .review-button {
     float: right;
     margin-left: -50%;
-    background-color: #fbeaeb;
-    color: #2f3c7e;
+    background-color: #3550ff91;
+    color: #e23b5096;
+}
+
+.review-button:hover{
+    background-color: #e23b5096;
+    color: #3550ff91;
 }
 
 .schrijf-review {
@@ -793,7 +812,6 @@ tr {
     .contactStyle{
         font-size: 19px;
         color: #3550ff91 !important;
-        margin-left: 15%;
         line-height: 0.8;
     }
 
@@ -941,6 +959,24 @@ tr {
 /* winkelwagen CSS */
 /* winkelwagen CSS */
 
+
+.tableStyle{
+    margin-top: 3%;
+}
+
+.alertStyleWinkelwagen{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 3%;
+    margin-bottom: -2%;
+}
+
+
+.winkelwagenWidthHeightStyle{
+    width: 125px;
+    height: auto;
+}
+
 .winkelwagenH1Style{
     font-size: 25px;
     font-weight: bold;
@@ -952,6 +988,11 @@ tr {
     margin-left: 17.5% ;
 
 
+}
+
+.winkelwagenP{
+    margin-top: 0 !important;
+    margin-left: 4%;
 }
 
 .winkelwagenColorStyle{
@@ -1036,7 +1077,7 @@ tr {
     margin: auto;
     float: right;
     clear: both;
-    margin-right: 2.5%;
+    margin-left: 2.5%;
     padding: 1% 32.5% 1% 32.5%;
     margin-bottom: 20px;
 
@@ -1119,6 +1160,31 @@ tr {
 }
 
 
+/*input[type=number]::-webkit-inner-spin-button,*/
+/*input[type=number]::-webkit-outer-spin-button {*/
+    /*-webkit-appearance: none;*/
+    /*margin: 0;*/
+/*}*/
+
+
+@media only screen and (max-width: 580px) {
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .quantityStyle{
+        width: 55px;
+    }
+
+    .winkelwagenNameStyle{
+        margin-left: 3%;
+    }
+
+}
+
 @media only screen and (min-width: 580px) {
     .bedragNaastTitel {
         font-weight: bold;
@@ -1141,6 +1207,20 @@ tr {
 
     .winkelwagenImageStyle{
         width: 40px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .quantityStyle{
+        width: 55px;
+    }
+
+    .winkelwagenNameStyle{
+        margin-left: 5%;
     }
 
 
@@ -1167,7 +1247,7 @@ tr {
     }
 
     .verwijderenAStyle {
-        color: #e23b5096;
+        color: #fbeaeb;
         margin-top: 51px;
     }
 
@@ -1194,6 +1274,16 @@ tr {
         margin-top: 2%;
     }
 
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .quantityStyle{
+        width: 55px;
+    }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -1209,6 +1299,16 @@ tr {
     .verderWinkelenStyleCol{
         margin-top: 2%;
     }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: inner-spin-button;
+        margin: 0;
+    }
+
+    .quantityStyle{
+        width: 80px;
+    }
 }
 
 
@@ -1219,16 +1319,16 @@ tr {
 
     }
 
-    .verderWinkelenStyle{
+    .verderWinkelenStyle {
         padding: 0.5% 1% 0.5% 1%;
     }
 
-    .verderWinkelenStyle:hover{
+    .verderWinkelenStyle:hover {
         padding: 0.5% 1% 0.5% 1%;
     }
 
 
-    .verderWinkelenStyleCol{
+    .verderWinkelenStyleCol {
         margin-top: 2%;
     }
 
@@ -1243,6 +1343,21 @@ tr {
     .besteldStyle, .aantalStyle {
         margin-top: 50px;
     }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: inner-spin-button;
+
+
+    }
+
+    .quantityStyle{
+        width: 80px;
+    }
+
+    /*.winkelwagenNameStyle{*/
+        /*margin-left: -100%;*/
+    /*}*/
 }
 /* end winkelwagen CSS
 
@@ -1291,7 +1406,28 @@ tr {
 
 
 
+/* email.blade.php CSS*/
 
+.emailAlertStyle{
+    margin-left: 3%;
+}
+
+.btnEmailPasswordStyle{
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .emailAlertStyle{
+        margin-left: 6.5%;
+    }
+
+    .btnEmailPasswordStyle{
+        margin-left: 18%;
+    }
+}
+
+/*End Email.blase.php CSS */
 
 
 

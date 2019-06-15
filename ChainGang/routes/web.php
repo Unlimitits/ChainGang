@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +17,7 @@
 
 Auth::routes();
 
+
 Route::get('/', 'HomeController@index')->name('home');
 //
 //Route::get('/', 'HomeController@index')->name('home');
@@ -29,6 +29,9 @@ Route::get('/categoriepaginaFrameType/{frametype}', 'FietsController@filterFrame
 Route::get('/categoriepaginaPriceMin/{priceMin}', 'FietsController@filterPrice')->name('filterPrice');
 
 Route::get('/categoriepaginaBrand/{brand}', 'FietsController@filterBrand')->name('filterBrand');
+
+Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
+
 
 Route::resource('review', 'ReviewController');
 
@@ -55,3 +58,27 @@ Route::get('/winkelwagen', function (){
 Route::get('/profiel', function (){
     return view('profiel');
 })->name('profiel');
+
+
+
+
+//Winkelwagen routes
+
+Route::group(['middleware' => ['auth']], function () {
+    // Authorized routs
+
+//    Route::get('/winkelwagen', 'CartController@index')->name('winkelwagen');
+
+    Route::get('add-to-winkelwagen/{id}', 'CartController@addToCart');
+
+    Route::patch('update-winkelwagen', 'CartController@update')->name('update-winkelwagen');
+
+    Route::delete('remove-from-winkelwagen', 'CartController@remove')->name('remove-from-winkelwagen');
+});
+
+
+
+
+
+
+

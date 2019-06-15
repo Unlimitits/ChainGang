@@ -176,16 +176,13 @@
 
         <div class="row">
             @foreach ($reviews as $review)
-                <div class="col-sm-12 col-md-3"><h5 class="colorPink">{{$review->review_id}}</h5>
+                <div class="col-sm-12 col-md-3">
                     <p class="colorPink">{{$review->review_omschrijving}}</p>
                     <p class="colorPink">Waardering: {{$review->review_waardering}} sterren</p>
                 </div>
             @endforeach
         </div>
     </div>
-
-
-
 <div class="row roze-kleur">
     <div class="col">
         <h1 class="h1-margin">Nieuw</h1>
