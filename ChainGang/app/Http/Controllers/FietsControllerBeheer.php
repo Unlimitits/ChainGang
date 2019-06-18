@@ -55,7 +55,7 @@ class FietsControllerBeheer extends Controller
         $fiets->fiets_omschrijving = $request->fiets_omschrijving;
 
         if ($request->input('aanbieding_id') == null){
-            $fiets->aanbieding_id = null;
+            $fiets->aanbieding_id = 0;
         } else {
             $fiets->aanbieding_id = $request->input('aanbieding_id');
         }
