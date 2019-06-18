@@ -55,26 +55,3 @@
         </tbody>
     </table>
 </div>
-
-
-
-
-
-
-
-
-
-<table style="width:100%" border="1">
-<tr>
-<th>Id</th>
-<th>First name</th>
-<th>Prefix</th>
-<th>Last name</th>
-<th>Email</th>
-<th>Department</th>
-<th>Edit</th>
-<th>Delete</th>
-</tr>
-
-</table>
-

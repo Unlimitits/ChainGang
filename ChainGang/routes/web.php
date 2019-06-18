@@ -29,6 +29,8 @@ Route::resource('/medewerker', 'MedewerkerController');
 
 Route::resource('/aanbieding', 'AanbiedingController');
 
+Route::resource('/nieuwsbrief', 'NieuwsbriefController');
+
 Route::resource('/fiets-beheer', 'FietsControllerBeheer');
 
 Route::resource('review', 'ReviewController');

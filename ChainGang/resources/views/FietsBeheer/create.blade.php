@@ -92,9 +92,9 @@
                 </div>
 
                 <div class="form-group col-md-4">
-                    <label for="work_hours">{{__('user.Selectarole')}}</label>
+                    <label for="aanbieding_id">{{__('user.Selectarole')}}</label>
                     <select name="aanbieding_id" class="custom-select" id="inputGroupSelect01">
-                        <option>{{__('user.Selectarole')}}</option>
+                        <option value="null">Kies een optie</option>
                         @foreach(\App\Aanbieding::orderBy('aanbieding_naam')->get() as $aanbieding)
                             <option value="{{$aanbieding->aanbieding_id}}">{{$aanbieding->aanbieding_naam}}</option>
                         @endforeach

@@ -53,7 +53,13 @@ class FietsControllerBeheer extends Controller
         $fiets->fiets_type = $request->fiets_type;
         $fiets->fiets_prijs = $request->fiets_prijs;
         $fiets->fiets_omschrijving = $request->fiets_omschrijving;
-        $fiets->aanbieding_id = $request->input('aanbieding_id');
+
+        if ($request->input('aanbieding_id') == null){
+            $fiets->aanbieding_id = null;
+        } else {
+            $fiets->aanbieding_id = $request->input('aanbieding_id');
+        }
+
 
         $imageName = $request->file('file')->getRealPath();
         $fiets->fiets_foto = file_get_contents($imageName);
@@ -116,6 +122,8 @@ class FietsControllerBeheer extends Controller
         $fiets->fiets_prijs = $request->fiets_prijs;
         $fiets->fiets_omschrijving = $request->fiets_omschrijving;
         $fiets->aanbieding_id = $request->input('aanbieding_id');
+
+        dd($fiets);
 
         $fiets->save();
 
