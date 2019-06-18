@@ -83,16 +83,20 @@ class FietsController extends Controller
         $user = User::all();
 
 
+        if ($review->count() > 1){
+            foreach ($review as $reviews)
+            {
+                $users = User::all()->where('id', '=', $reviews->user_id);
 
-
-        foreach ($review as $reviews)
-        {
-            $users = User::all()->where('id', '=', $reviews->user_id);
-
-            foreach ($users as $user){
-                $user->user_gebruikersnaam;
+                foreach ($users as $user){
+                    $user->user_gebruikersnaam;
+                }
             }
+        } else {
+            $users = null;
         }
+
+
 
 
 
