@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -14,7 +15,8 @@ class KlantController extends Controller
      */
     public function index()
     {
-
+        $klant = User::all();
+        return view('UserBeheer.index', compact('klant'));
     }
 
     /**
@@ -46,9 +48,8 @@ class KlantController extends Controller
      */
     public function show($id)
     {
-        $klant = DB::table('klant');
-
-        return view('profiel', ['klant' => $klant]);
+        $klant = User::findOrFail($id);
+        return view('UserBeheer.show', compact('klant', 'id'));
     }
 
     /**
@@ -82,6 +83,8 @@ class KlantController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $klant = User::findOrFail($id);
+        $klant->delete();
+        return redirect()->route('klant.index');
     }
 }
