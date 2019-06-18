@@ -10,17 +10,10 @@
 |
 */
 
-
-//Route::get('/', function () {
-//    return view('welcome');
-//})->name('welcome');
-
 Auth::routes();
 
 
 Route::get('/', 'HomeController@index')->name('home');
-//
-//Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('fiets', 'FietsController');
 
@@ -32,6 +25,7 @@ Route::get('/categoriepaginaBrand/{brand}', 'FietsController@filterBrand')->name
 
 Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
 
+Route::resource('/medewerker', 'MedewerkerController');
 
 Route::resource('review', 'ReviewController');
 

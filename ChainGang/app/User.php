@@ -48,10 +48,8 @@ class User extends Authenticatable
     }
 
 
+
     public function bestellingen(){
         return $this->hasMany('App\Bestelling');
     }
-
-
-
 }

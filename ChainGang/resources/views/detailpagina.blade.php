@@ -99,7 +99,9 @@
 
                         <p class="DetailReviewP"> {{$reviews->	review_omschrijving}}</p>
                         <p> Waardering: {{$reviews->review_waardering}} sterren</p>
+
                         <p>Geplaatst door: {{$reviews->user->user_gebruikersnaam}}</p>
+
 
                     </td>
                 </tr>
