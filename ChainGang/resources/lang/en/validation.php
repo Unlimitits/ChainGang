@@ -86,7 +86,7 @@ return [
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
         'file' => 'The :attribute must be at least :min kilobytes.',
-        'string' => 'The :attribute must be at least :min characters.',
+        'string' => 'De :attribute moet minstens :min characters lang zijn.',
         'array' => 'The :attribute must have at least :min items.',
     ],
     'not_in' => 'The selected :attribute is invalid.',
@@ -94,7 +94,7 @@ return [
     'numeric' => 'The :attribute must be a number.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => 'De :attribute veld is verplicht.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -111,7 +111,7 @@ return [
     'starts_with' => 'The :attribute must start with one of the following: :values',
     'string' => 'The :attribute must be a string.',
     'timezone' => 'The :attribute must be a valid zone.',
-    'unique' => 'The :attribute has already been taken.',
+    'unique' => 'De :attribute is al in gebruik.',
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
@@ -144,6 +144,15 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'user_gebruikersnaam' => 'gebruikersnaam',
+        'password' => 'wachtwoord',
+        'user_voornaam' => 'voornaam',
+        'user_achternaam' => 'achternaam',
+        'user_telefoonnummer' => 'telefoonnummer',
+        'user_straat' => 'straat',
+        'user_postcode' => 'postcode',
+        'user_plaats' => 'plaats'
+    ],
 
 ];

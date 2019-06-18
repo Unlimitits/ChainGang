@@ -16,10 +16,21 @@ class CreateBestellingTable extends Migration
         Schema::create('bestelling', function (Blueprint $table) {
             $table->increments('bestelling_id');
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('fiets_id');
-            $table->integer('bestelling_aantal');
-            $table->dateTime('bestelling_datum');
+//            $table->unsignedInteger('fiets_id');
+            $table->string('voornaam');
+            $table->string('achternaam');
+            $table->string('rekeningnummer');
+            $table->string('adres');
+            $table->text('cart');
             $table->timestamps();
+
+
+
+
+
+
+
+
         });
     }
 

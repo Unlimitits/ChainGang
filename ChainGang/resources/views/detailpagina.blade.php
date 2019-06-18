@@ -23,6 +23,16 @@
         </div>
     </div>
 
+
+
+    @if(session('success'))
+
+        <div class="alert alert-success alertStyleDetail">
+            {{ session('success') }}
+        </div>
+
+    @endif
+
     <div class="row">
         <div class="col">
             <img class="img-fiets-size" src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" >
@@ -69,7 +79,7 @@
 
     <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Klik en bestel</button>
+            <a class="btn btn-primary btn-lg btn-block" href="{{url('add-to-winkelwagen/'.$fiets->fiets_id)}}"> Klik en bestel</a>
         </div>
     </div>
 
@@ -89,7 +99,9 @@
 
                         <p class="DetailReviewP"> {{$reviews->	review_omschrijving}}</p>
                         <p> Waardering: {{$reviews->review_waardering}} sterren</p>
-                        <p>Geplaats door: {{$reviews->user->user_gebruikersnaam}}</p>
+
+                        <p>Geplaatst door: {{$reviews->user->user_gebruikersnaam}}</p>
+
 
                     </td>
                 </tr>

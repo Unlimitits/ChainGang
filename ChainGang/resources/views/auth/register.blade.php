@@ -175,7 +175,7 @@
                             </div>
 
 
-                            <div class="form-group row test">
+                            <div class="form-group row registerStyle">
                                     <div class="col-md-12 text-center">
                                     <button type="submit" class="btn btn-primary loginBtnStyle loginRegisterenBtnStyle ">
                                         {{ __('Registreren') }}
@@ -187,6 +187,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col">
+                @include('Common templates.footer')
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
