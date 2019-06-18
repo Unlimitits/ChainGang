@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Nieuwsbrief;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class KlantController extends Controller
+class NieuwsbriefController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class KlantController extends Controller
      */
     public function index()
     {
-
+        $nieuwsbrief = Nieuwsbrief::all();
+        return view('NieuwsbriefBeheer.index', compact('nieuwsbrief'));
     }
 
     /**
@@ -24,7 +26,8 @@ class KlantController extends Controller
      */
     public function create()
     {
-        //
+        $nieuwsbrief = new Nieuwsbrief();
+        return view('NieuwsbriefBeheer.create', compact('nieuwsbrief'));
     }
 
     /**
@@ -35,7 +38,17 @@ class KlantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nieuwsbrief = new Nieuwsbrief();
+
+        $nieuwsbrief->nieuwsbrief_titel = $request->nieuwsbrief_titel;
+        $nieuwsbrief->nieuwsbrief_datum = now();
+        $nieuwsbrief->nieuwsbrief_text = $request->nieuwsbrief_text;
+
+//        dd($nieuwsbrief);
+
+        $nieuwsbrief->save();
+
+        return redirect()->route('nieuwsbrief.index');
     }
 
     /**
@@ -46,9 +59,8 @@ class KlantController extends Controller
      */
     public function show($id)
     {
-        $klant = DB::table('klant');
-
-        return view('profiel', ['klant' => $klant]);
+        $nieuwsbrief = Nieuwsbrief::findOrFail($id);
+        return view('NieuwsbriefBeheer.show', compact('nieuwsbrief', 'id'));
     }
 
     /**
