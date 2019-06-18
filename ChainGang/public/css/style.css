@@ -1283,6 +1283,7 @@ tr {
     .quantityStyle{
         width: 55px;
     }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -1360,6 +1361,21 @@ tr {
 }
 /* end winkelwagen CSS
 
+
+
+/* checkout CSS*/
+
+
+.checkoutBlauw{
+    color: #3550ff91;
+}
+
+.checkoutMargin{
+    margin-left: 5%;
+}
+
+
+/* end checkout CSS*/
 
 
 

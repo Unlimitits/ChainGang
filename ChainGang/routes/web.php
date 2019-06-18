@@ -61,6 +61,14 @@ Route::get('/profiel', function (){
 
 
 
+// login routes
+
+
+
+
+
+
+
 
 //Winkelwagen routes
 
@@ -74,6 +82,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::patch('update-winkelwagen', 'CartController@update')->name('update-winkelwagen');
 
     Route::delete('remove-from-winkelwagen', 'CartController@remove')->name('remove-from-winkelwagen');
+
+    Route::get('/checkout', 'CartController@getCheckout')->name('checkout-from-winkelwagen');
+
+    Route::post('/checkout', 'CartController@postCheckout')->name('checkout-from-winkelwagen');
 });
 
 
