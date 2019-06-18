@@ -32,6 +32,11 @@
         </div>
         <div class="col-12 col-lg-4 center-align">
             <h1 class="p-profiel"> Uw gegevens</h1>
+
+
+
+
+
             <table class="table-profiel">
                 <tr>
                     <td>Voornaam </td>
