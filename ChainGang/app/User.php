@@ -5,8 +5,6 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Contracts\Auth\CanResetPassword;
-
 
 class User extends Authenticatable
 {
@@ -46,12 +44,4 @@ class User extends Authenticatable
     public function Review(){
         return $this->hasMany('App\Review');
     }
-
-
-    public function bestellingen(){
-        return $this->hasMany('App\Bestelling');
-    }
-
-
-
 }

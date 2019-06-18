@@ -22,7 +22,6 @@ body {
     padding: 0;
     margin: 0;
     background-color: #f8f9fa;
-    overflow-x: hidden;
 }
 
 .roze-kleur{
@@ -416,7 +415,7 @@ p{
 
 
 @media only screen and (max-width: 600px) {
-    .registerStyle{
+    .test{
         margin-left: 50% !important;
     }
 }
@@ -425,11 +424,6 @@ p{
 /* end registratie CSS */
 
 /* Detailpagina css*/
-
-.alertStyleDetail{
-    margin-left: 19.2%;
-    margin-right: 19.2%;
-}
 
 .img-fiets-size {
     width: 60%;
@@ -468,8 +462,6 @@ td{
     color: #fbeaeb;
 }
 
-
-
 table {
     border-collapse: collapse;
     border: solid #fbeaeb 1px;
@@ -480,11 +472,6 @@ table {
 tr {
     border-bottom: solid #fbeaeb 1px;
 }
-
-.tdStyle{
-    border-bottom: 2px solid #dee2e6;
-}
-
 
 .ster{
     max-width: 30px;
@@ -959,24 +946,6 @@ tr {
 /* winkelwagen CSS */
 /* winkelwagen CSS */
 
-
-.tableStyle{
-    margin-top: 3%;
-}
-
-.alertStyleWinkelwagen{
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 3%;
-    margin-bottom: -2%;
-}
-
-
-.winkelwagenWidthHeightStyle{
-    width: 125px;
-    height: auto;
-}
-
 .winkelwagenH1Style{
     font-size: 25px;
     font-weight: bold;
@@ -988,11 +957,6 @@ tr {
     margin-left: 17.5% ;
 
 
-}
-
-.winkelwagenP{
-    margin-top: 0 !important;
-    margin-left: 4%;
 }
 
 .winkelwagenColorStyle{
@@ -1077,7 +1041,7 @@ tr {
     margin: auto;
     float: right;
     clear: both;
-    margin-left: 2.5%;
+    margin-right: 2.5%;
     padding: 1% 32.5% 1% 32.5%;
     margin-bottom: 20px;
 
@@ -1160,31 +1124,6 @@ tr {
 }
 
 
-/*input[type=number]::-webkit-inner-spin-button,*/
-/*input[type=number]::-webkit-outer-spin-button {*/
-    /*-webkit-appearance: none;*/
-    /*margin: 0;*/
-/*}*/
-
-
-@media only screen and (max-width: 580px) {
-
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    .quantityStyle{
-        width: 55px;
-    }
-
-    .winkelwagenNameStyle{
-        margin-left: 3%;
-    }
-
-}
-
 @media only screen and (min-width: 580px) {
     .bedragNaastTitel {
         font-weight: bold;
@@ -1207,20 +1146,6 @@ tr {
 
     .winkelwagenImageStyle{
         width: 40px;
-    }
-
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    .quantityStyle{
-        width: 55px;
-    }
-
-    .winkelwagenNameStyle{
-        margin-left: 5%;
     }
 
 
@@ -1274,16 +1199,6 @@ tr {
         margin-top: 2%;
     }
 
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    .quantityStyle{
-        width: 55px;
-    }
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -1299,16 +1214,6 @@ tr {
     .verderWinkelenStyleCol{
         margin-top: 2%;
     }
-
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: inner-spin-button;
-        margin: 0;
-    }
-
-    .quantityStyle{
-        width: 80px;
-    }
 }
 
 
@@ -1319,16 +1224,16 @@ tr {
 
     }
 
-    .verderWinkelenStyle {
+    .verderWinkelenStyle{
         padding: 0.5% 1% 0.5% 1%;
     }
 
-    .verderWinkelenStyle:hover {
+    .verderWinkelenStyle:hover{
         padding: 0.5% 1% 0.5% 1%;
     }
 
 
-    .verderWinkelenStyleCol {
+    .verderWinkelenStyleCol{
         margin-top: 2%;
     }
 
@@ -1343,39 +1248,9 @@ tr {
     .besteldStyle, .aantalStyle {
         margin-top: 50px;
     }
-
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: inner-spin-button;
-
-
-    }
-
-    .quantityStyle{
-        width: 80px;
-    }
-
-    /*.winkelwagenNameStyle{*/
-        /*margin-left: -100%;*/
-    /*}*/
 }
 /* end winkelwagen CSS
 
-
-
-/* checkout CSS*/
-
-
-.checkoutBlauw{
-    color: #3550ff91;
-}
-
-.checkoutMargin{
-    margin-left: 5%;
-}
-
-
-/* end checkout CSS*/
 
 
 
@@ -1421,28 +1296,7 @@ tr {
 
 
 
-/* email.blade.php CSS*/
 
-.emailAlertStyle{
-    margin-left: 3%;
-}
-
-.btnEmailPasswordStyle{
-    margin: 0 auto;
-}
-
-
-@media only screen and (max-width: 600px) {
-    .emailAlertStyle{
-        margin-left: 6.5%;
-    }
-
-    .btnEmailPasswordStyle{
-        margin-left: 18%;
-    }
-}
-
-/*End Email.blase.php CSS */
 
 
 

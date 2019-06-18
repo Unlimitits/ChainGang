@@ -21,7 +21,7 @@ class CreateGebruikerTable extends Migration
             $table->string('gebruiker_telefoonnummer');
             $table->string('gebruiker_gebruikersnaam');
             $table->string('gebruiker_wachtwoord');
-            $table->binary('gebruiker_foto');
+//            $table->binary('gebruiker_foto');
             $table->timestamps();
         });
     }
