@@ -49,9 +49,22 @@ class HomeController extends Controller
             ->get();
 //        dd($salefietsen);
 
-        return view('welcome', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen]);
+
+        $reviews = db::table('reviews')->limit(3)->orderBy('created_at' ,'desc')->get();
+        return view('welcome', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen , 'reviews' => $reviews]);
+
 
 //      return view('home', ['fietsen' => $fietsen, 'salefietsen' => $salefietsen]);
 
+    }
+
+    public function store()
+    {
+        //var_dump(\request('email'));
+        $email = \request('email');
+        DB::table('emails')->insert(
+            ['email' => $email]
+        );
+        return redirect()->back();
     }
 }

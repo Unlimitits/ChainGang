@@ -38,6 +38,14 @@ body {
     color: white;
 }
 
+.colorBlauw{
+    color: #3550ff91;
+}
+
+.colorPink{
+    color: #e23b5096;
+}
+
 
 /*.colorDonkerblauw{*/
     /*color: #fbeaeb !important;*/
@@ -47,6 +55,7 @@ body {
 a.welcomeLinkFiets{
     color: #2f3c7e !important;
     text-decoration: none;
+    height: 100%;
 }
 
 a.welcomeLinkFiets:hover{
@@ -102,6 +111,17 @@ a.welcomeLinkFiets:hover{
 /* dropdown */
 .dropdownMargin{
     margin-left: 4%;
+
+
+}
+
+.dropdownMarginStyle{
+    margin-left: 3.6%;
+}
+
+.dropdownColor{
+    color: rgba(0, 0, 0, 0.5);
+
 }
 
 .dropdownStyle{
@@ -240,7 +260,7 @@ p{
 .btn-primary {
     color: white;
     border-color: #3550ff91 !important;
-    background-color: #3550ff91;
+    background-color: #e23b5096 !important;
 }
 @media only screen and (min-width: 768px) {
     .header-mobile {
@@ -433,7 +453,7 @@ p{
 }
 
 .btn-primary:hover {
-    color: white;
+    color: #e23b5096;
     background-color: #3550ff91 !important;
     border-color: transparent;
 }
@@ -476,8 +496,13 @@ tr {
 .review-button {
     float: right;
     margin-left: -50%;
-    background-color: #fbeaeb;
-    color: #2f3c7e;
+    background-color: #3550ff91;
+    color: #e23b5096;
+}
+
+.review-button:hover{
+    background-color: #e23b5096;
+    color: #3550ff91;
 }
 
 .schrijf-review {
@@ -774,7 +799,6 @@ tr {
     .contactStyle{
         font-size: 19px;
         color: #3550ff91 !important;
-        margin-left: 15%;
         line-height: 0.8;
     }
 
@@ -951,7 +975,7 @@ tr {
 
 .winkelwagenHr{
     color: #3550ff91;
-    border-color: 3550ff91;
+    border-color: #3550ff91;
     width: 65%;
     margin: auto;
 }
@@ -1054,7 +1078,7 @@ tr {
 
 .colWinkelwagenStyle{
     /*line-height: 0.1px;*/
-    color: #fbeaeb;
+    color: #e23b5096;
     /*margin-top: 30px;*/
 
 }
@@ -1067,7 +1091,7 @@ tr {
 
 .aantalStyle{
     /*margin-left: 5%;*/
-    margin-top: 1px;
+    margin-bottom: 10px;
 }
 
 
@@ -1116,7 +1140,7 @@ tr {
     }
 
     .verwijderenAStyle {
-        color: #fbeaeb;
+        color: #e23b5096;
         margin-top: 48px;
     }
 
@@ -1254,7 +1278,7 @@ tr {
     margin: 0 auto;
     display: block;
     text-align: center;
-    color: #fbeaeb;
+    color: #e23b5096;
     margin-bottom: 5%;
 }
 

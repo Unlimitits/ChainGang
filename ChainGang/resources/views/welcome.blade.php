@@ -140,7 +140,6 @@
             </a>
         </div>
     @endforeach
-
 </div>
 @endif
 <!-- <div class="row">
@@ -169,6 +168,21 @@
     </div>
 </div> -->
 
+
+    <div class="homeContainerReview">
+        <div class="row">
+            <div class="col-12"><h3 class="colorBlauw">Laatste Reviews</h3></div>
+        </div>
+
+        <div class="row">
+            @foreach ($reviews as $review)
+                <div class="col-sm-12 col-md-3">
+                    <p class="colorPink">{{$review->review_omschrijving}}</p>
+                    <p class="colorPink">Waardering: {{$review->review_waardering}} sterren</p>
+                </div>
+            @endforeach
+        </div>
+    </div>
 <div class="row roze-kleur">
     <div class="col">
         <h1 class="h1-margin">Nieuw</h1>
@@ -234,6 +248,25 @@
         </div>
     </div>
 </div>
+
+
+
+{{--De nieuwsbrief is nog niet werkend--}}
+
+{{--<div class="row">--}}
+    {{--<div class="col">--}}
+        {{--<div id="nieuwsbrief" class="my-auto">--}}
+            {{--<form  method="post" id="nieuwsbrief-form" >--}}
+                {{--{{csrf_field()}}--}}
+                {{--<div class="form-group">--}}
+                    {{--<h1>Abonneer op onze nieuwsbrief!</h1>--}}
+                    {{--<input name="email" type="email" class="form-control" placeholder="Email" id="email_form">--}}
+                    {{--<button type="submit" class="btn btn-primary">Submit</button>--}}
+                {{--</div>--}}
+            {{--</form>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</div>    --}}
 
 
 <div class="row">

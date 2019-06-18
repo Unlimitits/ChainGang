@@ -83,13 +83,14 @@
 
 
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right links ">
                     @auth
                         {{--<a href="{{ url('/home') }}">Home</a>--}}
 
 
-                        <div class="btn-group">
-                            <button type="button" class="btn nav-link kleur-nav dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="btn-group dropdownMarginStyle">
+                            <button type="button" class="btn kleur-nav dropdown-toggle dropdownColor dropdownMargin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
                                 {{ Auth::user()->user_gebruikersnaam }} <span class="caret"></span>
                             </button>
                             <div class="dropdown-menu">

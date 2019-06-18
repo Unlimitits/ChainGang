@@ -52,6 +52,13 @@ class RegisterController extends Controller
             'user_gebruikersnaam' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'user_voornaam' => ['required', 'string', 'min:2'],
+            'user_achternaam' => ['required', 'string', 'min:2'],
+            'user_telefoonnummer' => ['required', 'string', 'min:7'],
+            'user_straat' => ['required', 'string', 'min:2'],
+            'user_postcode' => ['required', 'string', 'min:2'],
+            'user_plaats' => ['required', 'string', 'min:2'],
+
         ]);
     }
 

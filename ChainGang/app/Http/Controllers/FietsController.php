@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Fiets;
+use App\Review;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class FietsController extends Controller
@@ -34,6 +36,9 @@ class FietsController extends Controller
             $arrayBrand[] = $frametype->fiets_merk;
         }
         $arrayBrandUnique = array_unique($arrayBrand);
+
+
+
 
 //        dd($unique_data);
 
@@ -72,7 +77,26 @@ class FietsController extends Controller
     {
         $fiets = Fiets::find($id);
 
-        return View('detailpagina', compact('fiets', 'id'));
+
+        $review = Review::all()->where('fiets_id', '==', $id);
+
+        $user = User::all();
+
+
+
+
+        foreach ($review as $reviews)
+        {
+            $users = User::all()->where('id', '=', $reviews->user_id);
+
+            foreach ($users as $user){
+                $user->user_gebruikersnaam;
+            }
+        }
+
+
+
+        return View('detailpagina', compact('fiets', 'id', 'review', 'user', 'users'));
     }
 
     /**
@@ -85,6 +109,7 @@ class FietsController extends Controller
     {
         //
     }
+
 
     /**
      * Update the specified resource in storage.

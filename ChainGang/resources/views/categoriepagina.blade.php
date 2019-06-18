@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-    </div>>
+    </div>
 
 
 
@@ -86,9 +86,9 @@
                 Frame type
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="list-group-item" href="categoriepagina?type=dames">Damesfietsen</a>
-                <a class="list-group-item" href="categoriepagina?type=mannen">Herenfietsen</a>
-                <a class="list-group-item" href="categoriepagina?type=kinderen">Kinderfietsen</a>
+                @foreach($arrayFrameTypeUnique as $fietsFrameType)
+                    <li><a class="list-group-item" name="link1" href="{{route('filterFrameType', ['frametype'=>$fietsFrameType])}}">{{$fietsFrameType}}</a></li>
+                @endforeach
             </div>
         </div>
     </div>
@@ -139,19 +139,20 @@
         </ul>
     </div>
 
-            @foreach ($fietsen as $fiets)
-                <a  class="welcomeLinkFiets" href="fiets/{{$fiets->fiets_id}}">
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
-                                <p class="card-text">{{$fiets->fiets_omschrijving}}</p>
-                            </div>
-                        </div>
+    @foreach ($fietsen as $fiets)
+        <a  class="welcomeLinkFiets" href="{{route('fiets.show', [$fiets->fiets_id])}}">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" height="200" width="288">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$fiets->fiets_naam}}</h5>
+                        <p class="card-text">{{$fiets->fiets_omschrijving}}</p>
                     </div>
-                </a>
-            @endforeach
+                </div>
+            </div>
+        </a>
+    @endforeach
+
 
 <!-- Vanaf hier komen database fietsen -->
     {{--@foreach ($fietsen as $fiets)--}}
