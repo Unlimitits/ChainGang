@@ -27,6 +27,8 @@ Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
 
 Route::resource('/medewerker', 'MedewerkerController');
 
+Route::resource('/klant', 'KlantController');
+
 Route::resource('/aanbieding', 'AanbiedingController');
 
 Route::resource('/nieuwsbrief', 'NieuwsbriefController');
