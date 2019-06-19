@@ -19,6 +19,7 @@ Auth::routes();
 
 
 Route::get('/', 'HomeController@index')->name('home');
+//Route::get('/', 'HomeController@index');
 //
 //Route::get('/', 'HomeController@index')->name('home');
 
@@ -59,6 +60,13 @@ Route::get('/profiel', function (){
     return view('profiel');
 })->name('profiel');
 
+// login admin routes
+
+Route::prefix('admin')->group(function () {
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
 
 
 
@@ -74,11 +82,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::patch('update-winkelwagen', 'CartController@update')->name('update-winkelwagen');
 
     Route::delete('remove-from-winkelwagen', 'CartController@remove')->name('remove-from-winkelwagen');
+
+    Route::get('/checkout', 'CartController@getCheckout')->name('checkout-from-winkelwagen');
+
+    Route::post('/checkout', 'CartController@postCheckout')->name('checkout-from-winkelwagen');
 });
 
 
 
-
+//https://www.youtube.com/watch?v=Ir2nAD9UDGg 16:30
 
 
 

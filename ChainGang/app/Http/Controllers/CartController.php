@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Fiets;
+use App\Bestelling;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Auth;
 
 
 class CartController extends Controller
@@ -35,6 +39,7 @@ class CartController extends Controller
 
         $cart = session()->get('cart');
 
+
         // if cart is empty then this the first product
         if(!$cart) {
 
@@ -43,9 +48,10 @@ class CartController extends Controller
                     "name" => $fiets->fiets_naam,
                     "quantity" => 1,
                     "fiets_prijs" => $fiets->fiets_prijs,
-                    "fiets_foto" => $fiets->fiets_foto
+//                    "fiets_foto" => utf8_encode($fiets->fiets_foto)
                 ]
             ];
+
 
             session()->put('cart', $cart);
 
@@ -68,13 +74,11 @@ class CartController extends Controller
             "name" => $fiets->fiets_naam,
             "quantity" => 1,
             "fiets_prijs" => $fiets->fiets_prijs,
-            "fiets_foto" => $fiets->fiets_foto
+//            "fiets_foto" => utf8_encode($fiets->fiets_foto)
         ];
 
-//        dd($cart);
 
         session()->put('cart', $cart);
-
         return redirect()->back()->with('success', 'Het product is succesvol toegevoegd aan de winkelwagen!');
 
     }
@@ -103,10 +107,44 @@ class CartController extends Controller
 
                 unset($cart[$request->id]);
 
-                session()->put('cart', $cart);
-            }
 
+                session()->put('cart', $cart);
+
+            }
             session()->flash('success', 'Het product is succesvol verwijderd');
         }
+    }
+
+    public function getCheckout(){
+
+        $cart = session()->get('cart');
+
+        if (!$cart){
+                return view('winkelwagen');
+        }
+        return view('checkout');
+
+
+    }
+
+    public function postCheckout(Request $request){
+        $cart = session()->get('cart');
+
+        if (!$cart){
+            return view('winkelwagen');
+        }
+
+
+        $bestelling = new Bestelling();
+        $bestelling->voornaam = $request->input('user_voornaam');
+        $bestelling->achternaam = $request->input('user_achternaam');
+        $bestelling->rekeningnummer = $request->input('rekeningnummer');
+        $bestelling->adres = $request->input('user_straat');
+
+        $bestelling->cart = serialize($cart);
+
+        Auth::user()->bestellingen()->save($bestelling);
+        Session::forget('cart');
+        return redirect()->route('home')->with('success', 'De producten in de winkelwagen zijn succesvol gekocht');
     }
 }

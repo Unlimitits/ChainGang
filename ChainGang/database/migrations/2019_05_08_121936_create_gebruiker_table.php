@@ -17,12 +17,13 @@ class CreateGebruikerTable extends Migration
             $table->increments('gebruiker_id');
             $table->string('gebruiker_voornaam');
             $table->string('gebruiker_achternaam');
-            $table->string('gebruiker_emailadres');
+            $table->string('email')->unique();
             $table->string('gebruiker_telefoonnummer');
-            $table->string('gebruiker_gebruikersnaam');
-            $table->string('gebruiker_wachtwoord');
-            $table->binary('gebruiker_foto');
+            $table->string('password');
+//            $table->binary('gebruiker_foto');
+            $table->rememberToken();
             $table->timestamps();
+
         });
     }
 

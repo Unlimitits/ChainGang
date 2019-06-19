@@ -33,9 +33,8 @@
 
     @endif
 
-    <div class="row" >
 
-
+    <div class="row"  >
         <table id="cart" class="table table-hover table-condensed tableStyle">
             <thead>
             <tr>
@@ -62,7 +61,7 @@
 
                                 {{--<div class="col-2 col-sm-1 col-lg-3 winkelwagenP"><img src="data:image/png;base64,{{ chunk_split(base64_encode($fietsen->fiets_foto)) }}" width="100" height="100"/></div>--}}
                                 {{--<div class="col-2 col-sm-1 col-lg-3 winkelwagenP"><img src="{{ $details['fiets_foto'] }}" width="100" height="100"/></div>--}}
-                                <div class="col-2 col-sm-1 col-lg-3 winkelwagenP"><img class="winkelwagenWidthHeightStyle" src="data:image/png;base64,{{ chunk_split(base64_encode($details['fiets_foto'])) }}"/></div>
+                                {{--<div class="col-2 col-sm-1 col-lg-3 winkelwagenP"><img class="winkelwagenWidthHeightStyle" src="data:image/png;base64,{{ chunk_split(base64_encode($details['fiets_foto'])) }}"/></div>--}}
 
 
                                 <div class="col-sm-12 col-md-12 col-lg-8">
@@ -72,7 +71,7 @@
                         </td>
                         <td data-th="Price">€{{ $details['fiets_prijs'] }}</td>
                         <td data-th="Quantity">
-                            <input type="number" min="1" max="100" value="{{ $details['quantity'] }}" oninput="validity.valid||(value='');" class="form-control quantity quantityStyle" />
+                            <input type="number" min="1" max="100" value="{{ $details['quantity'] }}" oninput="validity.valid||(value='1');" class="form-control quantity quantityStyle" />
                         </td>
                         <td data-th="Subtotal" class="text-center">€{{ $details['fiets_prijs'] * $details['quantity'] }}</td>
                         <td class="actions" data-th="">
@@ -82,126 +81,18 @@
                     </tr>
                 @endforeach
             @endif
-
             </tbody>
             <tfoot>
             <tr>
                 <td class="tdStyle"><a href="{{ url('/') }}" class="btn verderWinkelenStyle"><i class="fa fa-angle-left"></i> Verder winkelen</a></td>
                 <td colspan="2" class="hidden-xs tdStyle"></td>
-                <td class="hidden-xs text-center tdStyle"><strong>Totaal €{{ $total }}</strong></td>
-                <td colspan="2" class="hidden-xs tdStyle"></td>
+                <td class="hidden-xs text-center tdStyle"><strong>Totaal €{{ $total}}</strong></td>
+                <td colspan="2" class="hidden-xs tdStyle"><a href="{{route('checkout-from-winkelwagen')}}" class="btn verderWinkelenStyle">Bestel nu <i class="fa fa-angle-right"></i></a></td>
+
             </tr>
             </tfoot>
         </table>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-                {{--<div class="col-7 col-sm-2 col-lg-2">--}}
-                    {{--<p class="winkelwagenColorStyle winkelWagenStyleP"> Popal - Damesfiets - 28 inch - 57 cm</p>--}}
-                {{--</div>--}}
-
-                {{--<div class="col-3 col-sm-2 col-lg-2">--}}
-                    {{--<p class="colWinkelwagenStyle colwinkelWagenMarginBedragStyle bedragNaastTitel"> € 178.80</p>--}}
-                {{--</div>--}}
-
-                {{--<div class="col-7 col-sm-2  col-lg-3" >--}}
-                    {{--<p class="winkelwagenColorStyle winkelwagenMargin besteldStyle">Nu besteld, morgen in huis </p>--}}
-
-                {{--</div>--}}
-
-
-
-                {{--<div class="col-2 col-sm-2  col-lg-1 colWinkelwagenStyleInlineBlock" >--}}
-                    {{--<p class="colWinkelwagenStyle aantalStyle" > Aantal</p>--}}
-                    {{--<select class="selectStyle" >--}}
-                        {{--<option>1</option>--}}
-                        {{--<option>2</option>--}}
-                        {{--<option>3</option>--}}
-                        {{--<option>4</option>--}}
-                        {{--<option>5</option>--}}
-                        {{--<option>6</option>--}}
-                        {{--<option>7</option>--}}
-                        {{--<option>8</option>--}}
-                        {{--<option>9</option>--}}
-                        {{--<option>10</option>--}}
-                        {{--<option>15</option>--}}
-                        {{--<option>20</option>--}}
-                        {{--<option>25</option>--}}
-
-                    {{--</select>--}}
-
-                {{--</div>--}}
-
-
-
-
-
-        {{--<div class="col-3 col-sm-2">--}}
-            {{--<a class="verwijderenAStyle colWinkelwagenStyleInlineBlock" href="#">verwijderen</a>--}}
-        {{--</div>--}}
-
-        {{--<div class="col-12">--}}
-            {{--<hr class="winkelwagenHrSecond">--}}
-        {{--</div>--}}
-
-    {{--</div>--}}
-
-    {{--<div class="row">--}}
-
-
-        {{--<div class="col-9"><p class="totaalArtikelenStyle">Totaal artikelen (3)</p> </div>--}}
-
-        {{--<div class="col-3">--}}
-            {{--<p class="colWinkelwagenStyle totaalArtikelenStyle"> € 178.80</p>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-    {{--<div class="row">--}}
-        {{--<div class="col-9">--}}
-            {{--<p class="verzendkostenStyle totaalArtikelenStyle">Verzendkosten</p>--}}
-        {{--</div>--}}
-
-        {{--<div class="col-3 ">--}}
-            {{--<p class="gratisStyle colwinkelWagenMarginBedragStyle">Gratis</p>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-
-    {{--<hr class="winkelwagenHrSecond">--}}
-
-    {{--<div class="row">--}}
-        {{--<div class="col-9 ">--}}
-            {{--<p class="totaalBedragStyle totaalBedragTekst totaalArtikelenStyle" >Totaal</p>--}}
-        {{--</div>--}}
-
-        {{--<div class="col-3 ">--}}
-            {{--<p class="totaalBedragStyle colwinkelWagenMarginBedragStyle">€ 178.80</p>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-    {{--<div class="row bestellenRowStyle">--}}
-        {{--<div class="col-12 ">--}}
-            {{--<a class="bestellenAStyle" href="#">Verder naar bestellen</a>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-    {{--<hr class="winkelwagenHrSecond">--}}
-
-    {{--<div class="row verderWinkelenStyleCol">--}}
-        {{--<div class="col-12">--}}
-            {{--<a class="verderWinkelenStyle" href="#">Verder winkelen</a>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
 
 
 
@@ -224,7 +115,6 @@
 
 
     <script type="text/javascript">
-
         $(".update-cart").click(function (e) {
             e.preventDefault();
             console.log('update');
