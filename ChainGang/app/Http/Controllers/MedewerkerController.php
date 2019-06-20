@@ -13,6 +13,12 @@ class MedewerkerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('medewerkerLogin');
+    }
+
     public function index()
     {
         $medewerker = Medewerker::all();
@@ -43,10 +49,10 @@ class MedewerkerController extends Controller
 
         $medewerker->gebruiker_voornaam = $request->Voornaam;
         $medewerker->gebruiker_achternaam = $request->Achternaam;
-        $medewerker->gebruiker_emailadres = $request->Email;
+        $medewerker->email = $request->Email;
         $medewerker->gebruiker_telefoonnummer = $request->Telefoonnummer;
-        $medewerker->gebruiker_gebruikersnaam = $request->Gebruikersnaam;
-        $medewerker->gebruiker_wachtwoord = Hash::make($request->Wachtwoord);
+//        $medewerker->gebruiker_gebruikersnaam = $request->Gebruikersnaam;
+        $medewerker->password = Hash::make($request->Wachtwoord);
 
         $medewerker->save();
 

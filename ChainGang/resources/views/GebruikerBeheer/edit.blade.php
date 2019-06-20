@@ -32,7 +32,7 @@
 
             <div class="form-group col-md-4">
                 <label for="Email">Email</label>
-                <input type="email" class="form-control" name="Email" placeholder="Email" required value="{{$medewerker->gebruiker_emailadres}}">
+                <input type="email" class="form-control" name="Email" placeholder="Email" required value="{{$medewerker->email}}">
             </div>
         </div>
 

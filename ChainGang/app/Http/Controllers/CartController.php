@@ -139,7 +139,9 @@ class CartController extends Controller
         $bestelling->voornaam = $request->input('user_voornaam');
         $bestelling->achternaam = $request->input('user_achternaam');
         $bestelling->rekeningnummer = $request->input('rekeningnummer');
-        $bestelling->adres = $request->input('user_straat');
+        $bestelling->straat = $request->input('user_straat');
+        $bestelling->postcode = $request->input('user_postcode');
+        $bestelling->plaats = $request->input('user_plaats');
 
         $bestelling->cart = serialize($cart);
 

@@ -17,10 +17,24 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+        switch ($guard) {
+            case 'admin':
+                if (Auth::guard('admin')->check()) {
+                    //I am an admin
+                    //return redirect()->route('cg-admin.products');
+                }
+                break;
+            case 'web':
+                if (Auth::guard('web')->check()) {
+                    //I am an user
+                }
+                break;
+            //default:
+            //if (Auth::guard($guard)->check()) {
+            //return redirect('/chain-gang/public');
+            //}
+            //break;
         }
-
         return $next($request);
     }
 }

@@ -33,6 +33,17 @@
 
     @endif
 
+
+    @if (count($errors) > 0)
+        <div class = "alert alert-danger">
+            <ul class=" navbar-nav mr-auto">
+                @foreach ($errors->all() as $error)
+                    <li class="nav-item">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <div class="row">
         <div class="col">
             <img class="img-fiets-size" src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" >

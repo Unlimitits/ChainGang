@@ -184,14 +184,14 @@
 
     <div class="homeContainerReview">
         <div class="row">
-            <div class="col-12"><h3 class="colorBlauw">Laatste Reviews</h3></div>
+            <div class="col-12"><h3 class="colorBlauw h1StyleReview">Laatste Reviews</h3></div>
         </div>
 
         <div class="row">
             @foreach ($reviews as $review)
-                <div class="col-sm-12 col-md-3">
-                    <p class="colorPink">{{$review->review_omschrijving}}</p>
-                    <p class="colorPink">Waardering: {{$review->review_waardering}} sterren</p>
+                <div class="col-sm-12 col-md-3 rowStyleReview">
+                    <p class="reviewP colorPink">{{$review->review_omschrijving}}</p>
+                    <p class="reviewP colorPink">Waardering: {{$review->review_waardering}} sterren</p>
                 </div>
             @endforeach
         </div>

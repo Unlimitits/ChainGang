@@ -24,21 +24,21 @@ Route::get('/categoriepaginaBrand/{brand}', 'FietsController@filterBrand')->name
 
 Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
 
-Route::resource('/medewerker', 'MedewerkerController');
-
-Route::resource('/klant', 'KlantController');
-
-Route::resource('/review-beheer', 'ReviewControllerBeheer');
-
-Route::resource('/dashboard', 'DashboardController');
-
-Route::resource('/aanbieding', 'AanbiedingController');
-
-Route::resource('/nieuwsbrief', 'NieuwsbriefController');
-
-Route::resource('/fiets-beheer', 'FietsControllerBeheer');
-
-Route::resource('review', 'ReviewController');
+//Route::resource('/medewerker', 'MedewerkerController');
+//
+//Route::resource('/klant', 'KlantController');
+//
+//Route::resource('/review-beheer', 'ReviewControllerBeheer');
+//
+//Route::resource('/dashboard', 'DashboardController');
+//
+//Route::resource('/aanbieding', 'AanbiedingController');
+//
+//Route::resource('/nieuwsbrief', 'NieuwsbriefController');
+//
+//Route::resource('/fiets-beheer', 'FietsControllerBeheer');
+//
+//Route::resource('review', 'ReviewController');
 
 Route::get('/categoriepagina', 'FietsController@index')->name('categoriepagina');
 
@@ -67,9 +67,35 @@ Route::get('/profiel', function (){
 // login admin routes
 
 Route::prefix('admin')->group(function () {
-    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
-    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+
+
+//
+   Route::group( ['middleware' => 'medewerkerLogin'], function()
+   {
+
+        Route::resource('/medewerker', 'MedewerkerController');
+
+        Route::resource('/klant', 'KlantController');
+
+        Route::resource('/review-beheer', 'ReviewControllerBeheer');
+
+        Route::resource('/dashboard', 'DashboardController');
+
+        Route::resource('/aanbieding', 'AanbiedingController');
+
+        Route::resource('/nieuwsbrief', 'NieuwsbriefController');
+
+        Route::resource('/fiets-beheer', 'FietsControllerBeheer');
+
+        Route::resource('review', 'ReviewController');
+
+   });
+
+    Route::get('/login', 'Auth\AdminLoginBackendController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginBackendController@login')->name('admin.login.submit');
+
+
+
 });
 
 

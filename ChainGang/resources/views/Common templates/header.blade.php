@@ -83,55 +83,115 @@
 
 
             @if (Route::has('login'))
-                <div class="top-right links ">
+                <div class="top-right links dropdownMargin">
                     @auth
                         {{--<a href="{{ url('/home') }}">Home</a>--}}
 
 
-                        <div class="btn-group dropdownMarginStyle">
-                            <button type="button" class="btn kleur-nav dropdown-toggle dropdownColor dropdownMargin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
+
+                        {{--<div class="dropdown-menu dropdownStyle">--}}
+
+
+                        {{--Moet nog gelinkt worden naar de profiel pagina--}}
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('profiel')}}">
                                 {{ Auth::user()->user_gebruikersnaam }} <span class="caret"></span>
-                            </button>
-                            <div class="dropdown-menu">
+                            </a>
+
+                        </li>
 
 
-                                {{--Moet nog gelinkt worden naar de profiel pagina--}}
-                                <a class="dropdown-item" href="{{route('profiel')}}">
-                                    Profiel pagina
-                                </a>
+                        <li>
+                            <a class="nav-link" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
-
-
-                                <a class="dropdown-item" href="{{ route('logout') }}"
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="nav-link" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-
-
-
-
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </div>
-                        </div>
-
+                        </li>
                     @else
                         <a class="nav-link kleur-nav" href="{{ route('login') }}">Inloggen</a>
                     @endauth
                 </div>
             @endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {{--@if (Route::has('login'))--}}
+                {{--<div class="top-right links ">--}}
+                    {{--@auth--}}
+                        {{--<a href="{{ url('/home') }}">Home</a>--}}
+
+
+                        {{--<div class="btn-group ">--}}
+                            {{--<button type="button" class="btn kleur-nav dropdown-toggle dropdownColor dropdownMargin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+
+                                {{--{{ Auth::user()->user_gebruikersnaam }} <span class="caret"></span>--}}
+                            {{--</button>--}}
+                            {{--<div class="dropdown-menu">--}}
+
+                                {{--Moet nog gelinkt worden naar de profiel pagina--}}
+                                {{--<a class="dropdown-item" href="{{route('profiel')}}">--}}
+                                    {{--Profiel pagina--}}
+                                {{--</a>--}}
+
+
+
+                                {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
+                                   {{--onclick="event.preventDefault();--}}
+                                                     {{--document.getElementById('logout-form').submit();">--}}
+                                    {{--{{ __('Logout') }}--}}
+                                {{--</a>--}}
+
+                                {{--<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
+                                    {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
+                                       {{--onclick="event.preventDefault();--}}
+                                                     {{--document.getElementById('logout-form').submit();">--}}
+                                        {{--{{ __('Logout') }}--}}
+                                    {{--</a>--}}
+
+                                    {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+                                        {{--@csrf--}}
+                                    {{--</form>--}}
+                                {{--</div>--}}
+
+
+
+
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                    {{--@else--}}
+                        {{--<a class="nav-link kleur-nav" href="{{ route('login') }}">Inloggen</a>--}}
+                    {{--@endauth--}}
+                {{--</div>--}}
+            {{--@endif--}}
 
 
 

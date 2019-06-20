@@ -109,7 +109,7 @@
                         <div class="form-group row">
 
                             <div class="col-md-10 loginStyleMargin">
-                                <input id="user_straat" type="text" placeholder="Straat" class="Loginform-controlStyle form-control{{ $errors->has('user_straat') ? ' is-invalid' : '' }}" name="user_straat" value="{{Auth::user()->user_straat}}" required autofocus>
+                                <input id="user_straat" type="text" placeholder="Straat & huisnummer" class="Loginform-controlStyle form-control{{ $errors->has('user_straat') ? ' is-invalid' : '' }}" name="user_straat" value="{{Auth::user()->user_straat}}" required autofocus>
 
                                 @if ($errors->has('user_straat'))
                                     <span class="invalid-feedback" role="alert">
@@ -121,8 +121,6 @@
 
 
                         <div class="form-group row">
-
-
                             <div class="col-md-10 loginStyleMargin">
                                 <input id="user_postcode" type="text" placeholder="Postcode" class="Loginform-controlStyle  form-control{{ $errors->has('user_postcode') ? ' is-invalid' : '' }}" name="user_postcode" value="{{Auth::user()->user_postcode}}" required autofocus>
 
