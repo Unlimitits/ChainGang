@@ -87,6 +87,8 @@ class ReviewControllerBeheer extends Controller
      */
     public function destroy($id)
     {
-        //
+        $review = Review::findOrFail($id);
+        $review->delete();
+        return redirect()->route('review-beheer.index');
     }
 }

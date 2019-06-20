@@ -1,7 +1,7 @@
 {{--@extends('layouts.app')--}}
 @include('Layout.layout')
 <div class="container">
-    <h1>Create medewerker</h1>
+    <h1>Edit medewerker</h1>
     <form action="{{ route('medewerker.update', $id) }}" method="post" >
 
         @csrf
@@ -22,7 +22,7 @@
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="Voornaam">Voornaam</label>
-                <input type="text" class="form-control" name="Voornaam" placeholder="Voornaam" required value="{{$medewerker->gebruiker_voornaam}}">
+                <input type="text" class="form-control" name="Voornaam" placeholder="Voornaam"  value="{{$medewerker->gebruiker_voornaam}}">
             </div>
 
             <div class="form-group col-md-4">

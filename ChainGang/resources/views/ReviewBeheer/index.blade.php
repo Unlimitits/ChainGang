@@ -20,9 +20,9 @@
                 <td>{{$data->review_waardering}}</td>
 
                 <td>
-                    <form method="post" action="{{route('review-beheer.destroy', [$data->id])}}">
-                        {{ csrf_field() }}
+                    <form method="post" action="{{route('review-beheer.destroy', [$data->review_id])}}">
                         @method('DELETE')
+                        @csrf
                         <button type="submit" value="Delete"
                                 class="btn btn-outline-dark">{{__('user.Delete')}}</button>
                     </form>

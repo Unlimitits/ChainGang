@@ -6,9 +6,10 @@
 <div class="container">
     <table class="table">
         {{--<thead class="thead-dark">--}}
+        <h1>Nieuwste review</h1>
         <tr style="background-color: #000000">
-            <th style="color: #ffffff" scope="col">{{__('user.Firstname')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Prefix')}}</th>
+            <th style="color: #ffffff" scope="col">Review</th>
+            <th style="color: #ffffff" scope="col">Waardering</th>
         </tr>
         {{--</thead>--}}
         <tbody>
@@ -23,15 +24,16 @@
 
     <table class="table">
         {{--<thead class="thead-dark">--}}
+        <h1>Nieuwste klant</h1>
         <tr style="background-color: #000000">
-            <th style="color: #ffffff" scope="col">{{__('user.Firstname')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Prefix')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Firstname')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Prefix')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Firstname')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Prefix')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Firstname')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Prefix')}}</th>
+            <th style="color: #ffffff" scope="col">Gebruikersnaam</th>
+            <th style="color: #ffffff" scope="col">Email</th>
+            <th style="color: #ffffff" scope="col">Voornaam</th>
+            <th style="color: #ffffff" scope="col">Achternaam</th>
+            <th style="color: #ffffff" scope="col">Telefoonnummer</th>
+            <th style="color: #ffffff" scope="col">Straat</th>
+            <th style="color: #ffffff" scope="col">Postcode</th>
+            <th style="color: #ffffff" scope="col">Plaats</th>
         </tr>
         {{--</thead>--}}
         <tbody>
@@ -53,10 +55,10 @@
     <table class="table">
         {{--<thead class="thead-dark">--}}
         <tr style="background-color: #000000">
-            <th style="color: #ffffff" scope="col">{{__('user.Firstname')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Prefix')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Firstname')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Prefix')}}</th>
+            <th style="color: #ffffff" scope="col">Voornaam klant</th>
+            <th style="color: #ffffff" scope="col">Achternaam klant</th>
+            <th style="color: #ffffff" scope="col">Rekeningnummer</th>
+            <th style="color: #ffffff" scope="col">Straat</th>
         </tr>
         {{--</thead>--}}
         <tbody>

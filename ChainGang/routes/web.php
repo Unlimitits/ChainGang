@@ -12,6 +12,7 @@
 
 Auth::routes();
 
+
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('fiets', 'FietsController');
@@ -24,21 +25,24 @@ Route::get('/categoriepaginaBrand/{brand}', 'FietsController@filterBrand')->name
 
 Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
 
-//Route::resource('/medewerker', 'MedewerkerController');
-//
-//Route::resource('/klant', 'KlantController');
-//
-//Route::resource('/review-beheer', 'ReviewControllerBeheer');
-//
-//Route::resource('/dashboard', 'DashboardController');
-//
-//Route::resource('/aanbieding', 'AanbiedingController');
-//
-//Route::resource('/nieuwsbrief', 'NieuwsbriefController');
-//
-//Route::resource('/fiets-beheer', 'FietsControllerBeheer');
-//
-//Route::resource('review', 'ReviewController');
+
+Route::resource('/medewerker', 'MedewerkerController');
+
+Route::resource('/nieuwsbrief-inschrijven', 'InschrijvenNieuwsbriefController');
+
+Route::resource('/klant', 'KlantController');
+
+Route::resource('/review-beheer', 'ReviewControllerBeheer');
+
+Route::resource('/dashboard', 'DashboardController');
+
+Route::resource('/aanbieding', 'AanbiedingController');
+
+Route::resource('/nieuwsbrief', 'NieuwsbriefController');
+
+Route::resource('/fiets-beheer', 'FietsControllerBeheer');
+
+Route::resource('/review', 'ReviewController');
 
 Route::get('/categoriepagina', 'FietsController@index')->name('categoriepagina');
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Medewerker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Validator;
 
 class MedewerkerController extends Controller
 {
@@ -37,26 +38,40 @@ class MedewerkerController extends Controller
         return view('GebruikerBeheer.create', compact('medewerker'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+//    /**
+//     * Store a newly created resource in storage.
+//     *
+//     * @param  \Illuminate\Http\Request  $request
+//     * @return \Illuminate\Http\Response
+//     */
     public function store(Request $request)
     {
+
+
         $medewerker = new Medewerker();
 
-        $medewerker->gebruiker_voornaam = $request->Voornaam;
-        $medewerker->gebruiker_achternaam = $request->Achternaam;
-        $medewerker->email = $request->Email;
-        $medewerker->gebruiker_telefoonnummer = $request->Telefoonnummer;
-//        $medewerker->gebruiker_gebruikersnaam = $request->Gebruikersnaam;
-        $medewerker->password = Hash::make($request->Wachtwoord);
+        $validator = Validator::make($request->all(), [
+            'Voornaam' => 'required|max:255',
+            'Achternaam' => 'required|max:255',
+            'Email' => 'unique:gebruiker,gebruiker_emailadres',
+        ]);
 
-        $medewerker->save();
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
 
-        return redirect()->route('medewerker.index');
+            $medewerker->gebruiker_voornaam = $request->Voornaam;
+            $medewerker->gebruiker_achternaam = $request->Achternaam;
+            $medewerker->gebruiker_emailadres = $request->Email;
+            $medewerker->gebruiker_telefoonnummer = $request->Telefoonnummer;
+            $medewerker->gebruiker_gebruikersnaam = $request->Gebruikersnaam;
+            $medewerker->gebruiker_wachtwoord = Hash::make($request->Wachtwoord);
+
+            $medewerker->save();
+
+            return redirect()->route('medewerker.index');
     }
 
     /**
@@ -94,6 +109,18 @@ class MedewerkerController extends Controller
     public function update(Request $request, $id)
     {
         $medewerker = Medewerker::findOrFail($id);
+
+        $validator = Validator::make($request->all(), [
+            'Voornaam' => 'required|max:255',
+            'Achternaam' => 'required|max:255',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
         $medewerker->gebruiker_voornaam = $request->Voornaam;
         $medewerker->gebruiker_achternaam = $request->Achternaam;
         $medewerker->gebruiker_emailadres = $request->Email;

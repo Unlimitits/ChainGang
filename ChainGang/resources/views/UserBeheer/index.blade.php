@@ -17,8 +17,6 @@
             <th style="color: #ffffff" scope="col">{{__('user.Department')}}</th>
             <th style="color: #ffffff" scope="col">{{__('user.Role')}}</th>
             <th style="color: #ffffff" scope="col"></th>
-            <th style="color: #ffffff" scope="col"></th>
-            <th style="color: #ffffff" scope="col"></th>
         </tr>
         {{--</thead>--}}
         <tbody>
@@ -32,16 +30,6 @@
                 <td>{{$data->user_straat}}</td>
                 <td>{{$data->user_postcode}}</td>
                 <td>{{$data->user_plaats}}</td>
-
-
-                <td>
-                    <form method="post" action="{{route('klant.show', [$data->id])}}">
-                        {{ csrf_field() }}
-                        @method('GET')
-                        <button type="submit" value="View" class="btn btn-outline-dark">{{__('user.View')}}</button>
-                    </form>
-
-                </td>
 
 
                 <td>
