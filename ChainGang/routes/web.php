@@ -12,6 +12,9 @@
 
 Auth::routes();
 
+//Route::get('/mail', function (){
+//    return view('Email.nieuwsbrief');
+//});
 
 Route::get('/', 'HomeController@index')->name('home');
 
@@ -27,6 +30,8 @@ Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
 
 Route::resource('/medewerker', 'MedewerkerController');
 
+Route::resource('/nieuwsbrief-inschrijven', 'InschrijvenNieuwsbriefController');
+
 Route::resource('/klant', 'KlantController');
 
 Route::resource('/review-beheer', 'ReviewControllerBeheer');
@@ -39,7 +44,7 @@ Route::resource('/nieuwsbrief', 'NieuwsbriefController');
 
 Route::resource('/fiets-beheer', 'FietsControllerBeheer');
 
-Route::resource('review', 'ReviewController');
+Route::resource('/review', 'ReviewController');
 
 Route::get('/categoriepagina', 'FietsController@index')->name('categoriepagina');
 

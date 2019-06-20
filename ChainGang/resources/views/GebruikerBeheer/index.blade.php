@@ -7,12 +7,11 @@
     <table class="table">
         {{--<thead class="thead-dark">--}}
         <tr style="background-color: #000000">
-            <th style="color: #ffffff" scope="col">{{__('user.Firstname')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Prefix')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Lastname')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Email')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Department')}}</th>
-            <th style="color: #ffffff" scope="col">{{__('user.Role')}}</th>
+            <th style="color: #ffffff" scope="col">Voornaam</th>
+            <th style="color: #ffffff" scope="col">Achternaam</th>
+            <th style="color: #ffffff" scope="col">Email</th>
+            <th style="color: #ffffff" scope="col">Telefoonnummer</th>
+            <th style="color: #ffffff" scope="col">Gebruikersnaam</th>
             <th style="color: #ffffff" scope="col"></th>
             <th style="color: #ffffff" scope="col"></th>
             <th style="color: #ffffff" scope="col"></th>
@@ -26,7 +25,6 @@
                 <td>{{$data->gebruiker_emailadres}}</td>
                 <td>{{$data->gebruiker_telefoonnummer}}</td>
                 <td>{{$data->gebruiker_gebruikersnaam}}</td>
-                <td>{{$data->gebruiker_wachtwoord}}</td>
 
 
                 <td>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Review;
+use App\InschrijvenNieuwsbrief;
 use Illuminate\Http\Request;
 
-class ReviewControllerBeheer extends Controller
+class InschrijvenNieuwsbriefController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class ReviewControllerBeheer extends Controller
      */
     public function index()
     {
-        $review = Review::all();
-        return view('ReviewBeheer.index', compact('review'));
+        //
     }
 
     /**
@@ -36,7 +35,13 @@ class ReviewControllerBeheer extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $inschrijvenNieuwsbrief = new InschrijvenNieuwsbrief();
+
+        $inschrijvenNieuwsbrief->email = $request->email;
+
+        $inschrijvenNieuwsbrief->save();
+
+        return redirect()->back()->with('success', 'Je bent ingeschreven voor onze nieuwsbrief!');
     }
 
     /**
@@ -81,8 +86,6 @@ class ReviewControllerBeheer extends Controller
      */
     public function destroy($id)
     {
-        $review = Review::findOrFail($id);
-        $review->delete();
-        return redirect()->route('review-beheer.index');
+        //
     }
 }
