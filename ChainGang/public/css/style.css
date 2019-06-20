@@ -96,7 +96,7 @@ a.welcomeLinkFiets:hover{
 }
 
 .nav-link {
-    margin-left: 5%;
+    /*margin-left: 5%;*/
 }
 
 .kleur-nav {
@@ -110,14 +110,14 @@ a.welcomeLinkFiets:hover{
 
 
 /* dropdown */
-.dropdownMargin{
-    margin-left: 4%;
+.dropdownPadding{
+    /*margin-left: 4%;*/
 
-
+    margin-left: 2%;
 }
 
-.dropdownMarginStyle{
-    margin-left: 3.6%;
+.dropdownStyle{
+    /*margin-left: 3.6%;*/
 }
 
 .dropdownColor{
@@ -424,6 +424,23 @@ p{
 
 /* end registratie CSS */
 
+
+
+
+/* Admin login CSS*/
+
+.AdminLoginStyle{
+    margin: 0px;
+    margin-left: 6.5%;
+    padding-top: 25px;
+    font-weight: bold;
+    font-size: 40px;
+    color: #2f3c7e;
+}
+
+
+/* admin login CSS end */
+
 /* Detailpagina css*/
 
 .alertStyleDetail{
@@ -522,6 +539,40 @@ tr {
     padding: 3%;
 }
 
+.homeContainerReview{
+    margin-left: 2%;
+    display: block;
+
+}
+
+.rowStyleReview{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.reviewP{
+    margin-top: 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .homeContainerReview{
+        margin-left: 2%;
+        display: block;
+        text-align: center;
+    }
+
+    .rowStyleReview{
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+
+    .h1StyleReview{
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+}
+
 @media only screen and (max-width: 768px) {
     .review-table {
         display: none;
@@ -531,7 +582,56 @@ tr {
         display: none;
     }
 
+    .homeContainerReview{
+        margin-left: 2%;
+        display: block;
+        text-align: center;
+    }
+
+    .rowStyleReview{
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+
+    .h1StyleReview{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+
 }
+
+@media only screen and (min-width: 768px) {
+
+    .homeContainerReview{
+        /*margin-left: 26%;*/
+        display: block;
+        text-align: center;
+    }
+
+    .h1StyleReview{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .rowStyleReview{
+        min-width: 33%;
+    }
+}
+
+
+
+@media only screen and (min-width: 992px) {
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+
 
 /*End detailpagina css*/
 

@@ -33,6 +33,17 @@
 
     @endif
 
+
+    @if (count($errors) > 0)
+        <div class = "alert alert-danger">
+            <ul class=" navbar-nav mr-auto">
+                @foreach ($errors->all() as $error)
+                    <li class="nav-item">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <div class="row">
         <div class="col">
             <img class="img-fiets-size" src="data:image/png;base64,{{ chunk_split(base64_encode($fiets->fiets_foto)) }}" >
@@ -99,7 +110,9 @@
 
                         <p class="DetailReviewP"> {{$reviews->	review_omschrijving}}</p>
                         <p> Waardering: {{$reviews->review_waardering}} sterren</p>
+
                         <p>Geplaatst door: {{$reviews->user->user_gebruikersnaam}}</p>
+
 
                     </td>
                 </tr>

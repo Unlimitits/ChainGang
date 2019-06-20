@@ -20,7 +20,9 @@ class CreateBestellingTable extends Migration
             $table->string('voornaam');
             $table->string('achternaam');
             $table->string('rekeningnummer');
-            $table->string('adres');
+            $table->string('straat');
+            $table->string('postcode');
+            $table->string('plaats');
             $table->text('cart');
             $table->timestamps();
 

@@ -20,7 +20,6 @@ class CreateGebruikerTable extends Migration
             $table->string('email')->unique();
             $table->string('gebruiker_telefoonnummer');
             $table->string('password');
-//            $table->binary('gebruiker_foto');
             $table->rememberToken();
             $table->timestamps();
 

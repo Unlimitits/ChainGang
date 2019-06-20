@@ -13,9 +13,9 @@ class FietsIdToBestelling extends Migration
      */
     public function up()
     {
-        Schema::table('bestelling', function (Blueprint $table) {
-            $table->foreign('fiets_id')->references('fiets_id')->on('fiets');
-        });
+//        Schema::table('bestelling', function (Blueprint $table) {
+//            $table->foreign('fiets_id')->references('fiets_id')->on('fiets');
+//        });
     }
 
     /**

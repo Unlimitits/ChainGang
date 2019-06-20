@@ -14,7 +14,7 @@ class AanbiedingIdToAanbiedingen extends Migration
     public function up()
     {
         Schema::table('fiets', function (Blueprint $table) {
-            $table->foreign('aanbieding_id')->references('aanbieding_id')->on('aanbieding');
+            $table->foreign('aanbieding_id')->references('aanbieding_id')->on('aanbieding')->nullable();
         });
     }
 

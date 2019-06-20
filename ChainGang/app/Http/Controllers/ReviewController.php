@@ -6,6 +6,7 @@ use App\Fiets;
 use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Validator;
 
 class ReviewController extends Controller
 {
@@ -38,6 +39,19 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
+
+
+        $validator = Validator::make($request->all(), [
+            'review_omschrijving' => 'required|max:100',
+            'rating' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
         $user = Auth::user();
 
 
