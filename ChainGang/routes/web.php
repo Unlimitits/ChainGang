@@ -52,6 +52,11 @@ Route::get('/categoriepaginaPriceMin', 'FietsController@index')->name('categorie
 
 Route::get('/categoriepaginaBrand', 'FietsController@index')->name('categoriepagina');
 
+Route::get('/profiel', 'ProfielController@display')->name('profiel');
+
+Route::get('/profiel/edit', 'ProfielController@update')->name('profielEdit');
+
+
 Route::get('/detailpagina', function (){
     return view('detailpagina');
 });
@@ -64,22 +69,27 @@ Route::get('/winkelwagen', function (){
     return view('winkelwagen');
 })->name('winkelwagen');
 
-Route::get('/profiel', 'ProfielController@display')->name('profiel');
+Route::get('/profiel', function (){
+    return view('profiel');
+})->name('profiel');
 
-Route::get('/profiel/edit', 'ProfielController@update')->name('profielEdit');
+
+
 
 // login admin routes
 
-Route::get('/beheerhome', function (){
-    return view('beheerhome');
-})->name('beheerhome');
+
 
 Route::prefix('admin')->group(function () {
 
 
 //
-   Route::group( ['middleware' => 'medewerkerLogin'], function()
-   {
+    Route::group( ['middleware' => 'medewerkerLogin'], function()
+    {
+
+        Route::get('/beheerhome', function (){
+            return view('beheerhome');
+        })->name('beheerhome');
 
         Route::resource('/medewerker', 'MedewerkerController');
 
@@ -97,7 +107,9 @@ Route::prefix('admin')->group(function () {
 
         Route::resource('review', 'ReviewController');
 
-   });
+        Route::resource('/bestelling', 'BestellingController');
+
+    });
 
     Route::get('/login', 'Auth\AdminLoginBackendController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginBackendController@login')->name('admin.login.submit');

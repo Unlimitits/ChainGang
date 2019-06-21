@@ -1,7 +1,7 @@
 {{--@extends('layouts.app')--}}
 @include('Layout.layout')
 <div class="container">
-    <h1>Create medewerker</h1>
+    <h1>Fiets aanpassen</h1>
     <form action="{{ route('fiets-beheer.update', $id) }}" method="post" >
 
         @csrf

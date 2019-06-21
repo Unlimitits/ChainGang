@@ -10,6 +10,8 @@ class Review extends Model
     protected $primaryKey = 'review_id';
   public function User(){
 
+
+
      return $this->belongsTo('App\User', 'user_id');
 
   }

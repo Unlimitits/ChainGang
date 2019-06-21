@@ -1,7 +1,7 @@
 {{--@extends('layouts.app')--}}
 @include('Layout.layout')
     <div class="container">
-        <h1>Create Aanbieding</h1>
+        <h1>Maak een nieuwe fiets aan</h1>
         <form action="{{ route('fiets-beheer.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 

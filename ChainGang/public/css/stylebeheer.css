@@ -1,0 +1,87 @@
+.dashboard-title
+{
+    margin-top: 15px;
+    margin-left: 40px;
+}
+.dashboard-search
+{
+    margin-left: 20px;
+}
+.dashboard-image
+{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.dashboard-h5klant
+{
+    margin-top: 10px;
+}
+.dashboard-footer
+{
+    font-size: 9px;
+    text-align: center;
+    width: 100%;
+}
+textarea
+{
+    width: 181.6px;
+    margin-top: 5px;
+}
+input
+{
+    margin-top: 5px;
+}
+
+li
+{
+    margin-left: 60px;
+    list-style-type: none;
+    width: 200px;
+    height: 50px;
+}
+ul
+{
+    width: 200px;
+    padding: 0;
+    background-color: lightgrey;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 10px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+td{
+    color:black;
+    width: 500px;
+    text-align: center;
+    border: solid black 1px;
+}
+table
+{
+    margin: 0;
+    border: solid black 1px;
+}
+tr{
+    border: solid black 1px;
+    border-collapse: collapse;
+    border-right: solid black 1px;
+}

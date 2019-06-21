@@ -1,7 +1,7 @@
 {{--@extends('layouts.app')--}}
 @include('Layout.layout')
 <div class="container">
-    <h1>Edit medewerker</h1>
+    <h1>Medewerker aanpassen</h1>
     <form action="{{ route('medewerker.update', $id) }}" method="post" >
 
         @csrf
@@ -43,12 +43,12 @@
             </div>
         </div>
 
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="Gebruikersnaam">Gebruikersnaam</label>
-                <input type="text" class="form-control" name="Gebruikersnaam" placeholder="Gebruikersnaam" required value="{{$medewerker->gebruiker_gebruikersnaam}}">
-            </div>
-        </div>
+        {{--<div class="form-row">--}}
+            {{--<div class="form-group col-md-12">--}}
+                {{--<label for="Gebruikersnaam">Gebruikersnaam</label>--}}
+                {{--<input type="text" class="form-control" name="Gebruikersnaam" placeholder="Gebruikersnaam" required value="{{$medewerker->gebruiker_gebruikersnaam}}">--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
         <div class="form-row">
             <div class="form-group col-md-12">

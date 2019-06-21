@@ -32,7 +32,7 @@
 
             <div class="form-group col-md-4">
                 <label for="Email">Email</label>
-                <input type="email" class="form-control" name="Email" placeholder="Email" required value="{{$medewerker->gebruiker_emailadres}}">
+                <input type="email" class="form-control" name="Email" placeholder="Email" required value="{{$medewerker->email}}">
             </div>
         </div>
 
@@ -53,7 +53,7 @@
         <div class="form-row">
             <div class="form-group col-md-12">
                 <label for="Wachtwoord">Wachtwoord</label>
-                <input type="password" class="form-control" name="Wachtwoord" placeholder="wachtwoord" required value="{{$medewerker->gebruiker_wachtwoord}}">
+                <input type="password" class="form-control" name="Wachtwoord" placeholder="wachtwoord" required value="{{$medewerker->password}}">
             </div>
         </div>
 
