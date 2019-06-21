@@ -1,7 +1,7 @@
 {{--@extends('layouts.app')--}}
 @include('Layout.layout')
 <div class="container">
-    <h1>Create Aanbieding</h1>
+    <h1>Maak een nieuwe nieuwsbrief</h1>
     <form action="{{ route('nieuwsbrief.store') }}" method="post" >
         @csrf
 

@@ -96,10 +96,10 @@ class MedewerkerController extends Controller
         $medewerker = Medewerker::findOrFail($id);
         $medewerker->gebruiker_voornaam = $request->Voornaam;
         $medewerker->gebruiker_achternaam = $request->Achternaam;
-        $medewerker->gebruiker_emailadres = $request->Email;
+        $medewerker->email = $request->Email;
         $medewerker->gebruiker_telefoonnummer = $request->Telefoonnummer;
-        $medewerker->gebruiker_gebruikersnaam = $request->Gebruikersnaam;
-        $medewerker->gebruiker_wachtwoord = $request->Wachtwoord;
+//        $medewerker->gebruiker_gebruikersnaam = $request->Gebruikersnaam;
+        $medewerker->password = $request->Wachtwoord;
 
         $medewerker->save();
 

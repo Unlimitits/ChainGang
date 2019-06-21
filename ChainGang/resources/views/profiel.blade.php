@@ -87,14 +87,16 @@
                 <tr>
                     <th><h1 class="p-profiel"> Uw Reviews</h1></th>
                 </tr>
-                @foreach ($reviews as $review)
-                    <tr>
-                        <td>
-                            <p class="reviewP colorPink">{{$review->review_omschrijving}}</p>
-                            <p class="reviewP colorPink">Waardering: {{$review->review_waardering}} sterren</p>
-                        </td>
-                    </tr>
-                @endforeach
+                @if(!is_null($reviews))
+                    @foreach ($reviews as $review)
+                        <tr>
+                            <td>
+                                <p class="reviewP colorPink">{{$review->review_omschrijving}}</p>
+                                <p class="reviewP colorPink">Waardering: {{$review->review_waardering}} sterren</p>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
             </table>
         </div>
         <div class="col-12 col-lg-3 center-align">
@@ -102,14 +104,16 @@
                 <tr>
                     <th><h1 class="p-profiel"> Uw Bestellingen</h1></th>
                 </tr>
-                @foreach ($bestellingen as $bestelling)
-                    <tr>
-                        <td>
-                            <p class="reviewP colorPink">{{$bestelling->cart}}</p>
-                            <p class="reviewP colorPink">{{$bestelling->created_at}}</p>
-                        </td>
-                    </tr>
-                @endforeach
+                @if(!is_null($bestellingen))
+                    @foreach ($bestellingen as $bestelling)
+                        <tr>
+                            <td>
+                                <p class="reviewP colorPink">{{$bestelling->cart}}</p>
+                                <p class="reviewP colorPink">{{$bestelling->created_at}}</p>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
             </table>
         </div>
     </div>

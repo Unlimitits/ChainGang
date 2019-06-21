@@ -23,10 +23,10 @@
             <tr>
                 <td><a>{{$medewerker->gebruiker_voornaam}}</a></td>
                 <td>{{$medewerker->gebruiker_achternaam}}</td>
-                <td>{{$medewerker->gebruiker_emailadres}}</td>
+                <td>{{$medewerker->email}}</td>
                 <td>{{$medewerker->gebruiker_telefoonnummer}}</td>
-                <td>{{$medewerker->gebruiker_gebruikersnaam}}</td>
-                <td>{{$medewerker->gebruiker_wachtwoord}}</td>
+                {{--<td>{{$medewerker->gebruiker_gebruikersnaam}}</td>--}}
+                {{--<td>{{$medewerker->gebruiker_wachtwoord}}</td>--}}
 
 
 
