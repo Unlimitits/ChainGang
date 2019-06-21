@@ -64,11 +64,15 @@ Route::get('/winkelwagen', function (){
     return view('winkelwagen');
 })->name('winkelwagen');
 
-Route::get('/profiel', function (){
-    return view('profiel');
-})->name('profiel');
+Route::get('/profiel', 'ProfielController@display')->name('profiel');
+
+Route::get('/profiel/edit', 'ProfielController@update')->name('profielEdit');
 
 // login admin routes
+
+Route::get('/beheerhome', function (){
+    return view('beheerhome');
+})->name('beheerhome');
 
 Route::prefix('admin')->group(function () {
 
