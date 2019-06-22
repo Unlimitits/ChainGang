@@ -42,14 +42,88 @@
         <div class="row col-12">
             <div class="row col-2">
                 <ul>
-                    <li>Dashboard</li>
-                    <li><a href="{{route('fiets-beheer.index')}}">Fietsen</a></li>
-                    <li><a href="{{route('medewerker.index')}}">Gebruikers</a></li>
-                    <li><a href="{{route('klant.index')}}">Klanten</a></li>
-                    <li>Bestellingen</li>
-                    <li><a href="{{route('review-beheer.index')}}">Reviews</a></li>
-                    <li><a href="{{route('aanbieding.index')}}">Aanbiedingen</a></li>
-                    <li><a href="{{route('nieuwsbrief.index')}}">Nieuwsbrieven</a></li>
+
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMarginFiets" src="{{ asset('img/Beheer/dashboard1.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('dashboard.index')}}">Dashboard</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMarginFiets" src="{{ asset('img/Beheer/Fiets.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('fiets-beheer.index')}}">Fietsen</a></li>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Gebruikers.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a  class="LineheightStyle" href="{{route('medewerker.index')}}">Gebruikers</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Klanten.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('klant.index')}}">Klanten</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Bestellingen.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('bestelling.index')}}">Bestellingen</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Reviews.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('review-beheer.index')}}">Reviews</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Aanbiedingen.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('aanbieding.index')}}">Aanbiedingen</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Nieuwsbrief.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('nieuwsbrief.index')}}">Nieuwsbrieven</a></li>
+                        </div>
+                    </div>
                 </ul>
             </div>
             <div class="col-10">
@@ -98,7 +172,7 @@
                         <form method="post" action="{{route('fiets-beheer.edit', [$data->fiets_id])}}">
                         {{ csrf_field() }}
                         @method('GET')
-                        <button type="submit" value="Edit" class="btn btn-outline-dark">{{__('user.Edit')}}</button>
+                        <button type="submit" value="Edit" class="btn btn-outline-dark">Aanpassen</button>
                         </form>
 
                         </td>
@@ -109,7 +183,7 @@
                         {{ csrf_field() }}
                         @method('DELETE')
                         <button type="submit" value="Delete"
-                        class="btn btn-outline-dark">{{__('user.Delete')}}</button>
+                        class="btn btn-outline-dark">Verwijderen</button>
                         </form>
 
                         </td>

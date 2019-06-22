@@ -26,13 +26,13 @@ class medewerkerLogin
                 if(Auth::guard('admin')->user()->exists === true) {
                     return $next($request);
                 } else {
-                    return redirect()->route('admin.login');
+//                    return redirect()->route('admin.login');
                 }
             } else {
-                return redirect()->route('admin.login');
+//                return redirect()->route('admin.login');
             }
         } catch (Exception $e) {
-            return redirect()->route('admin.login');
+//            return redirect()->route('admin.login');
         }
 //        if (Auth::guard('admin')->user() === null){
 //            return redirect('/admin/login');

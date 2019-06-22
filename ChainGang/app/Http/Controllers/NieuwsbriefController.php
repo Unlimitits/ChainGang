@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\InschrijvenNieuwsbrief;
 use App\Nieuwsbrief;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
 class NieuwsbriefController extends Controller
 {
@@ -15,6 +13,8 @@ class NieuwsbriefController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
         $nieuwsbrief = Nieuwsbrief::all();
@@ -42,19 +42,9 @@ class NieuwsbriefController extends Controller
     {
         $nieuwsbrief = new Nieuwsbrief();
 
-        $nieuwsbriefUser = InschrijvenNieuwsbrief::all();
-
         $nieuwsbrief->nieuwsbrief_titel = $request->nieuwsbrief_titel;
         $nieuwsbrief->nieuwsbrief_datum = now();
         $nieuwsbrief->nieuwsbrief_text = $request->nieuwsbrief_text;
-
-        foreach ($nieuwsbriefUser as $user){
-            Mail::to($user->email)->send(new \App\Mail\Nieuwsbrief($nieuwsbrief));
-            if(env('MAIL_HOST', false) == 'smtp.mailtrap.io'){
-//                dd("hoi");
-                sleep(5); //use usleep(500000) for half a second or less
-            }
-        }
 
 //        dd($nieuwsbrief);
 

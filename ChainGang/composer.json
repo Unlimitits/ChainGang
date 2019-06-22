@@ -14,7 +14,6 @@
         "kartik-v/bootstrap-star-rating": "dev-master",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "symfony/css-selector": "^4.3",
         "willvincent/laravel-rateable": "^1.07"
     },
     "require-dev": {
