@@ -25,19 +25,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
-            @if(session('success'))
-
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-
-            @endif
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12 col-lg-4 center-align">
+        <div class="col-12 col-lg-6 center-align">
             <h1 class="p-profiel"> Uw gegevens</h1>
 
 
@@ -46,56 +34,55 @@
                     <tr>
                         <td>Voornaam</td>
                         <td>
-                            <input class="profielPaginaInputStyle" type="text" name="user_voornaam" value="{{Auth::user()->user_voornaam}}">
+                            <input type="text" name="user_voornaam" value="{{Auth::user()->user_voornaam}}">
                         </td>
                     </tr>
                     <tr>
                         <td>Achternaam</td>
                         <td>
-                            <input class="profielPaginaInputStyle" type="text" name="user_achternaam" value="{{Auth::user()->user_achternaam}}">
+                            <input type="text" name="user_achternaam" value="{{Auth::user()->user_achternaam}}">
                         </td>
                     </tr>
                     <tr>
                         <td>Emailadres</td>
                         <td>
-                            <input class="profielPaginaInputStyle" type="text" name="email" value="{{Auth::user()->email}}">
+                            <input type="text" name="email" value="{{Auth::user()->email}}">
                         </td>
                     </tr>
                     <tr>
                         <td>Telefoon</td>
                         <td>
-                            <input class="profielPaginaInputStyle" type="text" name="user_telefoonnummer" value="{{Auth::user()->user_telefoonnummer}}">
+                            <input type="text" name="user_telefoonnummer" value="{{Auth::user()->user_telefoonnummer}}">
                         </td>
                     </tr>
                     <tr>
                         <td>Straat</td>
                         <td>
-                            <input class="profielPaginaInputStyle" type="text" name="user_straat" value="{{Auth::user()->user_straat}}">
+                            <input type="text" name="user_straat" value="{{Auth::user()->user_straat}}">
                         </td>
                     </tr>
                     <tr>
                         <td>Postcode</td>
                         <td>
-                            <input class="profielPaginaInputStyle" type="text" name="user_postcode" value="{{Auth::user()->user_postcode}}">
+                            <input type="text" name="user_postcode" value="{{Auth::user()->user_postcode}}">
                         </td>
                     </tr>
                     <tr>
                         <td>Plaats</td>
                         <td>
-                            <input class="profielPaginaInputStyle" type="text" name="user_plaats" value="{{Auth::user()->user_plaats}}">
+                            <input type="text" name="user_plaats" value="{{Auth::user()->user_plaats}}">
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
-                            <input type="submit" class="btn review-button profielPaginaButton" value="Gegevens Updaten">
-                            {{--<input type="submit" name="submit" value="Gegevens Updaten">--}}
+                            <input type="submit" name="submit" value="Gegevens Updaten">
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
-        <div class="col-12 col-lg-4 center-align profielPaginaStyle">
+        <div class="col-12 col-lg-3 center-align">
             <table>
                 <tr>
                     <th><h1 class="p-profiel"> Uw Reviews</h1></th>
@@ -112,7 +99,7 @@
                 @endif
             </table>
         </div>
-        <div class="col-12 col-lg-4 center-align profielPaginaStyle">
+        <div class="col-12 col-lg-3 center-align">
             <table>
                 <tr>
                     <th><h1 class="p-profiel"> Uw Bestellingen</h1></th>

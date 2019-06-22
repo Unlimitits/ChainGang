@@ -251,10 +251,11 @@
 <div class="row">
     <div class="col">
         <div id="nieuwsbrief" class="my-auto">
-            <form id="nieuwsbrief-form" >
+            <form id="nieuwsbrief-form" method="post" action="{{route('nieuwsbrief-inschrijven.store')}}">
+                @csrf
                 <div class="form-group">
                     <h1>Abonneer op onze nieuwsbrief!</h1>
-                    <input type="email" class="form-control" placeholder="Email" id="email_form">
+                    <input name="email" type="email" class="form-control" placeholder="Email" id="email_form">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>

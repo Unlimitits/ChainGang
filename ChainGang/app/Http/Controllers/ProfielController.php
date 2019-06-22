@@ -49,8 +49,7 @@ class ProfielController extends Controller
         $user->user_postcode = $request->input('user_postcode');
         $user->user_plaats = $request->input('user_plaats');
         $user->save();
-//        return redirect()->back();
-        return redirect()->back()->with('success', 'De gegevens zijn succesvol aangepast!');
+        return redirect()->back();
     }
 
     public function store()

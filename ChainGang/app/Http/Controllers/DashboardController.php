@@ -19,7 +19,6 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
         $review = Review::limit(5)->orderBy('created_at', 'desc')->get();
@@ -30,7 +29,6 @@ class DashboardController extends Controller
 
         return view('Dashboard.index', compact('review', 'user', 'bestelling'));
     }
-
 
     /**
      * Show the form for creating a new resource.

@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-    {{--<link href="{{ asset('style.css') }}" rel="stylesheet" type="text/css">--}}
-    {{--<link href="{{ asset('css/stylebeheer.css') }}" rel="stylesheet" type="text/css">--}}
-    {{--@include('Layout.layout')--}}
+    <link href="{{ asset('style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/stylebeheer.css') }}" rel="stylesheet" type="text/css">
+    @include('Layout.layout')
     {{--@include('Layout.layoutbeheer')--}}
     <style type="text/css">
         body {
@@ -140,9 +140,6 @@
     <link href="{{ asset('css/stylebeheer.css') }}" rel="stylesheet" type="text/css" >
 </head>
 
-<div class="alert alert-danger" role="alert">
-   Pagina is nog in onderhoud
-</div>
 
 <body style="overflow-x: hidden;">
 
@@ -159,17 +156,17 @@
                 </td>
                 <td class="sidebar-content">
                     <h3>
-                        <p>{{{Auth::user()->user_gebruikersnaam}}}</p>
+                        <a href="#" class="whitelink">Gebruikersnaam</a>
                     </h3>
                 </td>
             </tr>
             <tr>
                 <td class="sidebar-image">
-                    <img src="{{ asset('img/Beheer/dashboard1.png') }}">
+                    <img src="{{ asset('img/Beheer/Dashboard.png') }}">
                 </td>
                 <td class="sidebar-content">
                     <h3>
-                        <a href="{{route('dashboard.index')}}" class="whitelink">Dashboard</a>
+                        <a href="#" class="whitelink">Dashboard</a>
                     </h3>
                 </td>
             </tr>
@@ -179,7 +176,7 @@
                 </td>
                 <td class="sidebar-content">
                     <h3>
-                        <a href="{{route('fiets-beheer.index')}}" class="whitelink">Fietsen</a>
+                        <a href="#" class="whitelink">Fietsen</a>
                     </h3>
                 </td>
             </tr>
@@ -189,7 +186,7 @@
                 </td>
                 <td class="sidebar-content">
                     <h3>
-                        <a href="{{route('medewerker.index')}}" class="whitelink">Gebruikers</a>
+                        <a href="#" class="whitelink">Gebruikers</a>
                     </h3>
                 </td>
             </tr>
@@ -199,7 +196,7 @@
                 </td>
                 <td class="sidebar-content">
                     <h3>
-                        <a href="{{route('klant.index')}}" class="whitelink">Klanten</a>
+                        <a href="#" class="whitelink">Klanten</a>
                     </h3>
                 </td>
             </tr>
@@ -210,7 +207,7 @@
                 <td class="sidebar-content">
                     <h3>
                         <h3>
-                            <a href="{{route('bestelling.index')}}" class="whitelink">Bestellingen</a>
+                            <a href="#" class="whitelink">Bestellingen</a>
                         </h3>
                     </h3>
                 </td>
@@ -221,7 +218,7 @@
                 </td>
                 <td class="sidebar-content">
                     <h3>
-                        <a href="{{route('review-beheer.index')}}" class="whitelink">Reviews</a>
+                        <a href="#" class="whitelink">Reviews</a>
                     </h3>
                 </td>
             </tr>
@@ -231,7 +228,7 @@
                 </td>
                 <td class="sidebar-content">
                     <h3>
-                        <a href="{{route('aanbieding.index')}}" class="whitelink">Aanbiedingen</a>
+                        <a href="#" class="whitelink">Aanbiedingen</a>
                     </h3>
                 </td>
             <tr>
@@ -240,7 +237,7 @@
                 </td>
                 <td class="sidebar-content">
                     <h3>
-                        <a href="{{route('nieuwsbrief.index')}}" class="whitelink">Nieuwsbrieven</a>
+                        <a href="#" class="whitelink">Nieuwsbrief</a>
                     </h3>
                 </td>
             </tr>

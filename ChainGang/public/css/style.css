@@ -1482,24 +1482,6 @@ tr {
 /*Profiel css*/
 
 
-.profielPaginaStyle{
-    padding-top: 71px;
-}
-
-.profielPaginaInputStyle{
-    background-color: transparent;
-    border: transparent;
-}
-
-.profielPaginaInputStyle:focus{
-    background-color: transparent;
-    outline: none !important;;
-}
-
-.profielPaginaButton{
-    margin-right: 42px !important;
-}
-
 
 .img-profiel {
     width: 100%;
