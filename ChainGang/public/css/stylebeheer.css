@@ -34,9 +34,9 @@ input
 
 li
 {
-    margin-left: 60px;
+    /*margin-left: 60px;*/
     list-style-type: none;
-    width: 200px;
+    /*width: 200px;*/
     height: 50px;
 }
 ul
@@ -84,4 +84,23 @@ tr{
     border: solid black 1px;
     border-collapse: collapse;
     border-right: solid black 1px;
+}
+
+
+
+
+
+.LineheightStyle{
+    line-height: 3;
+}
+
+.liMarginFiets{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.liMargin{
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }

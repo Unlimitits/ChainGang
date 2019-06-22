@@ -31,14 +31,98 @@
         <div class="row col-12">
             <div class="row col-2">
                 <ul>
-                    <li>Dashboard</li>
-                    <li>Fietsen</li>
-                    <li>Gebruikers</li>
-                    <li>Klanten</li>
-                    <li>Bestellingen</li>
-                    <li>Reviews</li>
-                    <li>Aanbiedingen</li>
-                    <li>Nieuwsbrief</li>
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMarginFiets" src="{{ asset('img/Beheer/user.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li class="LineheightStyle">{{Auth::user()->user_gebruikersnaam}}</li>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMarginFiets" src="{{ asset('img/Beheer/dashboard1.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('dashboard.index')}}">Dashboard</a></li>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMarginFiets" src="{{ asset('img/Beheer/Fiets.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('fiets-beheer.index')}}">Fietsen</a></li>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Gebruikers.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a  class="LineheightStyle" href="{{route('medewerker.index')}}">Gebruikers</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Klanten.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('klant.index')}}">Klanten</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Bestellingen.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('bestelling.index')}}">Bestellingen</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Reviews.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('review-beheer.index')}}">Reviews</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Aanbiedingen.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('aanbieding.index')}}">Aanbiedingen</a></li>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="liMargin" src="{{ asset('img/Beheer/Nieuwsbrief.png') }}">
+
+                        </div>
+                        <div class="col-8">
+                            <li><a class="LineheightStyle" href="{{route('nieuwsbrief.index')}}">Nieuwsbrieven</a></li>
+                        </div>
+                    </div>
                 </ul>
             </div>
             <div class="col-10">
@@ -139,7 +223,7 @@
 
 
 
-<!-- 
+
 
 
 {{--<table style="width:100%" border="1">--}}
@@ -155,4 +239,4 @@
 {{--</tr>--}}
 
 {{--</table>--}}
- -->
+
