@@ -30,6 +30,8 @@ Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
 
 Route::resource('/medewerker', 'MedewerkerController');
 
+Route::resource('/bestelling', 'BestellingController');
+
 Route::resource('/nieuwsbrief-inschrijven', 'InschrijvenNieuwsbriefController');
 
 Route::resource('/klant', 'KlantController');

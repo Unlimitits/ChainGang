@@ -123,7 +123,7 @@ class FietsControllerBeheer extends Controller
         $fiets->fiets_omschrijving = $request->fiets_omschrijving;
         $fiets->aanbieding_id = $request->input('aanbieding_id');
 
-        dd($fiets);
+//        dd($fiets);
 
         $fiets->save();
 
