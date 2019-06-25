@@ -24,6 +24,7 @@ Route::get('/categoriepaginaBrand/{brand}', 'FietsController@filterBrand')->name
 
 Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
 
+
 //Route::resource('/medewerker', 'MedewerkerController');
 //
 //Route::resource('/klant', 'KlantController');
@@ -39,6 +40,7 @@ Route::get('/detailpagina', 'Fietscontroller@show')->name('detailpagina');
 //Route::resource('/fiets-beheer', 'FietsControllerBeheer');
 //
 //Route::resource('review', 'ReviewController');
+
 
 Route::get('/categoriepagina', 'FietsController@index')->name('categoriepagina');
 

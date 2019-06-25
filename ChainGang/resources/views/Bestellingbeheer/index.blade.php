@@ -1,3 +1,4 @@
+
 {{--<h1>index</h1>--}}
 
 {{--@include('Layout.layout')--}}
@@ -177,5 +178,4 @@
 
 </body>
 </html>
-
 
